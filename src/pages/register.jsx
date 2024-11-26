@@ -23,7 +23,7 @@ export default function Register(){
     return(
         <motion.div className="bg-[url('/bg.png')] bg-cover bg-center bg-fixed flex flex-col space-y-11 justify-start items-center w-full "
         initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} transition={{duration: 0.2, delay:0.1}} >
-            <div className="flex items-center justify-center bg-[url('./resgistrationTitleBg.png')] bg-no-repeat bg-cover bg-center w-[90svw] min-h-[60px] md:min-h-[80px] my-16
+            <div className="flex items-center justify-center bg-[url('/resgistrationTitleBg.png')] bg-no-repeat bg-cover bg-center w-[90svw] min-h-[60px] md:min-h-[80px] my-16
                             font-josefin text-white font-bold text-[1.7rem] md:text-4xl tracking-[3.8px]
                             rounded-3xl outline outline-1 outline-black">REGISTRATION</div>
 
