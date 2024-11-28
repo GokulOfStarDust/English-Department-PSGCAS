@@ -106,24 +106,24 @@ This project is deployed on **Vercel** for live access. To deploy your own versi
 ---
 
 
-### 🖤 Show Your Support
+## 🖤 Show Your Support
 
 If you like this project, consider giving it a ⭐️ on GitHub!
 
 ---
 
-##Contribution
+## Contribution
 
 Feel free to fork this repository and contribute! Submit a pull request with any feature improvements or bug fixes.
 
 ---
 
-##Maintainer
+## Maintainer
 
 This website is created and maintained by Gokul, GitHub username: GokulOfStarDust.
 
 ---
 
-##License
+## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
