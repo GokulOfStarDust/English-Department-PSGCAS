@@ -1,5 +1,5 @@
 
-# 🌟 English Department (Aided) of PSGCAS Website 🌟
+# 🌟 Website for English Department (Aided) of PSGCAS 🌟
 
 [![Website](https://img.shields.io/website?down_color=red&down_message=offline&up_color=green&up_message=online&url=https%3A%2F%2Fenglish-department-psgcas.vercel.app)](https://english-department-psgcas.vercel.app)
 [![Made with React](https://img.shields.io/badge/Made%20with-React-blue)](https://reactjs.org/)
