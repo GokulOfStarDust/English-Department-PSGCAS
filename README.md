@@ -120,7 +120,8 @@ Feel free to fork this repository and contribute! Submit a pull request with any
 
 ## Maintainer
 
-This website is created and maintained by Gokul, GitHub username: GokulOfStarDust.
+This website is created and maintained by **Gokul**.  
+GitHub username: [GokulOfStarDust](https://github.com/GokulOfStarDust)
 
 ---
 
