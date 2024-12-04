@@ -1,12 +1,37 @@
 import { motion } from "motion/react"
+import { useEffect, useState } from "react"
+import '/src/index.css'
+import './EventsData'
+
+
 
 export default function Homepage({ isVisible }) {
+
+    const [loadingState, setLoadingState] = useState(true)
+    const [imageLoaded, setImageLoaded] = useState(0)
+
+    useEffect(()=>{
+        if(imageLoaded === 2){
+            setTimeout(()=>{setLoadingState(false)},1500)
+        }
+    },[imageLoaded])
+
+    const imageLoadHandle = () => {
+        setImageLoaded((prev)=> prev + 1)
+    }
+
     return(
         <>
+            <motion.div exit={{opacity: 0}} transition={{duration: 0.5, delay: 0.1}}
+            className={`${loadingState ? "" : "hidden"} fixed flex justify-center items-center w-full h-lvh z-[100] inset-0 bg-event-card-black`}>
+                <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} transition={{duration: 0.5, delay: 0.1}} className={`${loadingState ? "loader" : "hidden"} w-full`}></motion.div>
+
+            </motion.div>
+
             <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} transition={{duration: 0.2, delay: 0.1}}
                         className="flex justify-center items-center w-full h-full mt-3">
 
-                <img src="/intro-img.jpeg" alt="introduction-page-image" className="w-[97vw] h-[90svh] max-w-full max-h-full object-cover rounded-2xl" />
+                <img src="/intro-img.jpeg" alt="introduction-page-image" onLoad={imageLoadHandle} className="w-[97vw] h-[90svh] max-w-full max-h-full object-cover rounded-2xl" />
                 
                 {/* <p className="absolute top-1/4 w-[88vw] rounded-3xl max-w-full
                 animate-fadeIn
@@ -39,7 +64,7 @@ export default function Homepage({ isVisible }) {
                     With a comprehensive curriculum that spans classical and contemporary literature, language studies, and communication, the department empowers students to explore diverse perspectives and enhances critical thinking.
                     Through engaging courses, workshops, and literary events, students are encouraged to develop creativity, analytical skills, and effective communication, preparing them for successful careers in academia, media, and other fields.
                     </motion.p>
-                    <img src="/dept-logo.png" alt="" className="w-[60%] sm:w-[43%] md:w-[20%] md:min-w-[319px] lg:w-[27%] h-[60%] lg:h-[70%] my-10 object-contain mx-auto" />
+                    <img src="/dept-logo.png" alt="" onLoad={imageLoadHandle} className="w-[60%] sm:w-[43%] md:w-[20%] md:min-w-[319px] lg:w-[27%] h-[60%] lg:h-[70%] my-10 object-contain mx-auto" />
                 </div>
             </motion.div>
             

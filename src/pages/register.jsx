@@ -28,7 +28,7 @@ export default function Register(){
                             rounded-3xl outline outline-1 outline-black">REGISTRATION</div>
 
             <form className="flex flex-col items-center space-y-5" onSubmit={handleSubmit(formDataHandler)}>
-                <div className="bg-[url('/registrationFormBg.png')] bg-cover bg-center w-[88svw] max-w-[1280px] p-5 pt-10 md:p-8 flex flex-row flex-wrap rounded-3xl" >
+                <div onLoad={()=>{console.log("Bgloaded")}} className="bg-[url('/registrationFormBg.png')] bg-cover bg-center w-[88svw] max-w-[1280px] p-5 pt-10 md:p-8 flex flex-row flex-wrap rounded-3xl" >
 
                     <div className="flex flex-col w-[90%] md:w-2/4 min-w-[260px] space-y-2 mb-9 md:mb-16">
                         <label className="font-plex text-white tracking-widest font-medium text-md md:text-xl ml-2" htmlFor="name">NAME  </label>
