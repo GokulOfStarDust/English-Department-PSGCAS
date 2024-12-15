@@ -57,9 +57,9 @@ export default function Homepage({ isVisible }) {
                     text-4xl md:text-5xl">About</p>
                 </div>
 
-                <div className="w-[95vw] lg:h-[80%] between-lg-xl:h-[70%] flex flex-row flex-wrap-reverse justify-around items-center bg-[#F6F2E4] bg-opacity-50 rounded-3xl mx-auto mt-5 gap-x-6">
+                <div className="overflow-hidden w-[95vw] lg:h-[80%] between-lg-xl:h-[70%] flex flex-row flex-wrap-reverse justify-around items-center bg-[#F6F2E4] bg-opacity-50 rounded-3xl mx-auto mt-5 gap-x-6">
                     <motion.p initial={{x: -150 }} whileInView={{x:0}} transition={{duration: 1}}
-                    className="w-full md:min-w-[450px] lg:w-2/4 text-justify lg:text-md xl:text-lg xxl:text-xl md:tracking-wider p-8 lg:pl-14 text-text-black font-plex font-normal">
+                    className=" w-full md:min-w-[450px] lg:w-2/4 text-justify lg:text-md xl:text-lg xxl:text-xl md:tracking-wider p-8 lg:pl-14 text-text-black font-plex font-normal">
                     The English Department at PSG College of Arts & Science is dedicated to fostering a love for literature and advancing language skills that are essential in today’s global landscape.
                     With a comprehensive curriculum that spans classical and contemporary literature, language studies, and communication, the department empowers students to explore diverse perspectives and enhances critical thinking.
                     Through engaging courses, workshops, and literary events, students are encouraged to develop creativity, analytical skills, and effective communication, preparing them for successful careers in academia, media, and other fields.

@@ -27,7 +27,8 @@ export default function Register(){
                             font-josefin text-white font-bold text-[1.7rem] md:text-4xl tracking-[3.8px]
                             rounded-3xl outline outline-1 outline-black">REGISTRATION</div>
 
-            <form className="flex flex-col items-center space-y-5" onSubmit={handleSubmit(formDataHandler)}>
+            <form className="flex flex-col items-center space-y-5" 
+            onSubmit={handleSubmit(formDataHandler)}>
                 <div onLoad={()=>{console.log("Bgloaded")}} className="bg-[url('/registrationFormBg.png')] bg-cover bg-center w-[88svw] max-w-[1280px] p-5 pt-10 md:p-8 flex flex-row flex-wrap rounded-3xl" >
 
                     <div className="flex flex-col w-[90%] md:w-2/4 min-w-[260px] space-y-2 mb-9 md:mb-16">
@@ -42,8 +43,8 @@ export default function Register(){
                         <input id="phoneNumber" className="w-[90%] min-w-[300px] font-poppins text-black rounded-3xl p-2 pl-4 focus:outline-none" type="number" 
                             {...register("phoneNumber",
                                 {required: "Number is required", 
-                                minLength: {value:10, message:"There must be 10 digits"}, 
-                                maxLength:{value:10, message:"There must be 10 digits"}
+                                minLength: {value: 10, message:"There must be 10 digits"}, 
+                                maxLength: {value: 10, message:"There must be 10 digits"}
                                 }
                                 )} />
                         {errors.phoneNumber && <p className="text-red-500 text-sm">{errors.phoneNumber.message}</p>}
