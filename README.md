@@ -1,4 +1,3 @@
-
 # 🌟 Website for English Department (Aided) of PSGCAS 🌟
 
 [![Website](https://img.shields.io/website?down_color=red&down_message=offline&up_color=green&up_message=online&url=https%3A%2F%2Fenglish-department-psgcas.vercel.app)](https://english-department-psgcas.vercel.app)
@@ -56,23 +55,27 @@ lit-assoc/
 Follow these steps to run the project locally:
 
 ### Prerequisites
+
 - **Node.js** (v14+)
 - **npm** or **yarn**
 
 ### Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/GokulOfStarDust/lit-assoc.git
    cd lit-assoc
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
 
 3. Start the development server:
+
    ```bash
    npm run dev
    ```
@@ -104,7 +107,6 @@ This project is deployed on **Vercel** for live access. To deploy your own versi
 - Expand support for multi-language content.
 
 ---
-
 
 ## 🖤 Show Your Support
 
