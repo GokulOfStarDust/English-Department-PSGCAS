@@ -3,6 +3,7 @@ import Layout from "./components/Layout.jsx";
 import Homepage from "./pages/home-page";
 import Register from "./pages/register";
 import Events from "./pages/Events.jsx";
+import Competition from "./pages/Competition.jsx";
 import "./index.css";
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
           <Route index element={<Homepage />} />
           <Route path="Register" element={<Register />} />
           <Route path="events" element={<Events />} />
-          <Route path="events/:id" element={<Events />} />
+          <Route path="events/:eventId" element={<Competition />} />
+          <Route path="events/:eventId/:competitionId" element={<Competition />}/>
         </Route>
       </Routes>
     </BrowserRouter>

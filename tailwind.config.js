@@ -5,6 +5,7 @@ export default {
     extend: {
       screens: {
         sm: "480px",
+        "divide-breakpoint" : "625px",
         md: "768px",
         lg: "976px",
         "between-lg-xl": "1067px",

@@ -1,10 +1,10 @@
 import { motion } from "motion/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 
 export default function Register() {
   const [collegeName, setCollegeName] = useState("Select your college");
-  const [dropdown, setDropdown] = useState(false);
+  const [dropdown, setDropdown] = useState(false); 
 
   async function formDataHandler(data) {
     try {
@@ -23,6 +23,7 @@ export default function Register() {
       const result = await response.json();
       alert("Submit Successfully");
       reset();
+      
     } catch (error) {
       console.error("Error posting data:", error);
     }
@@ -33,22 +34,36 @@ export default function Register() {
     handleSubmit,
     reset,
     setValue,
+    watch,
     formState: { errors },
   } = useForm();
+
 
   const events = [
     {
       id: "literature-quiz",
       eventName: "Literature Quiz",
       eventFor: "PSG College of Arts & Science",
+      registrationFee: 20,
     },
     {
       id: "pop-quiz",
       eventName: "Pop Quiz",
       eventFor: "PSG College of Arts & Science",
+      registrationFee: 20,
     },
-    { id: "general-quiz", eventName: "General Quiz", eventFor: "Others" },
+    { id: "general-quiz", eventName: "General Quiz", eventFor: "Others", registrationFee: 30, },
   ];
+
+  // const [eventParticipating, setEventParticipating] = useState([])
+  // setEventParticipating(Array.isArray(watch("eventParticipating")) ? watch("eventParticipating") : [watch("eventParticipating")]);
+  // useEffect(() =>{
+  //   console.log(eventParticipating)
+  // }
+  //  ,[eventParticipating]);
+
+  // useEffect(()=>{console.log(registrationFee)},[registrationFee])
+
 
   return (
     <motion.div
@@ -172,7 +187,7 @@ export default function Register() {
               COLLEGE
             </label>
             <div
-              className="w-[90%] min-w-[300px] h-11 flex flex-row justify-between font-plex font-semibold text-[#373636] bg-white rounded-3xl p-2 pl-5 focus:outline-none cursor-pointer"
+              className="w-[90%] min-w-[300px] h-11 flex flex-row justify-between items-center text-[0.83rem] sm:text-sm lg:text-base font-plex font-semibold text-[#373636] bg-white rounded-3xl p-2 pl-4 focus:outline-none cursor-pointer"
               onClick={() => {
                 setDropdown(true);
               }}
@@ -181,12 +196,12 @@ export default function Register() {
               <img
                 src="/dropdownIcon.png"
                 alt="Dropdown Icon"
-                className="object-contain"
+                className="object-contain size-9 pr-1"
               />
             </div>
 
             <motion.ul
-              className={`${dropdown ? "" : "hidden"} top-[60%] w-[90%] font-plex font-semibold text-[#373636] bg-white p-1 rounded-xl divide-y-2`}
+              className={`${dropdown ? "" : "hidden"} top-[60%] w-[90%] min-w-[285px] text-[0.83rem] sm:text-sm lg:text-base  font-plex font-semibold text-[#373636] bg-white p-1 rounded-xl divide-y-2`}
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: dropdown ? 1 : 0, y: dropdown ? 0 : -20 }}
               exit={{ opacity: 0, y: -20 }}
@@ -290,8 +305,7 @@ export default function Register() {
           </p>
           {events.map((event, index) => {
             return (
-              (collegeName === event.eventFor ||
-                collegeName === "Select your college") && (
+              (collegeName === event.eventFor) && (
                 <div
                   key={index}
                   className="flex flex-row p-3 mx-2 md:mx-6 space-x-3 mt-10"
@@ -301,7 +315,7 @@ export default function Register() {
                     type="checkbox"
                     value={event.eventName}
                     className="size-6 accent-[#ca9b6f] cursor-pointer"
-                    {...register("eventParticipating", {
+                    {...register(`eventParticipating`, {
                       required: "Select atleast one event",
                     })}
                   />
@@ -326,7 +340,7 @@ export default function Register() {
           <p className="font-plex font-bold">SCAN THE QR CODE TO PAY</p>
           <a
             className="pb-8"
-            href="upi://pay?pa=gokulgopalan18-1@oksbi&pn=Gokul%20Gopalan&am=10.00&cu=INR&aid=uGICAgICN1d6XRQ"
+            href={`upi://pay?pa=gokulgopalan18-1@oksbi&pn=Gokul%20Gopalan&am=${registrationFee}.00&cu=INR&aid=uGICAgICN1d6XRQ`}
           >
             <img
               src="/qr.jpeg"

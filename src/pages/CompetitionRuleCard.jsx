@@ -1,17 +1,22 @@
 import { motion } from "motion/react";
-import events from "./EventsData";
-import { useNavigate } from "react-router-dom";
+import competitionData from "./CompetitionData";
+import { useNavigate, useParams } from "react-router-dom";
 
-export default function EventRuleCard({ id }) {
-  const event = events.find((event) => event.id == id);
+export default function EventRuleCard({competitionId}) {
+  const {eventId} = useParams();
   const navigate = useNavigate();
+  const competitions = competitionData[eventId]
+  const competition = competitions.find((eachCompetitions)=> eachCompetitions.id == competitionId)
+
+  const rules = Object.keys(competition.rules)
+  console.log(rules)
 
   return (
     <motion.div
       onClick={() => {
-        navigate("/events");
+        navigate(`/events/${eventId}`);
       }}
-      layoutId={`card-container-${event.id}`}
+      layoutId={`card-container-${competitionId}`}
       className="bg-[url('/PopUpBackground.jpg')] bg-cover bg-center bg-fixed w-[70svw] min-w-[360px] overflow-scroll fixed mx-auto mt-[4.5%] inset-0 my-auto p-3 z-50 rounded-3xl"
     >
       <motion.div
@@ -24,72 +29,66 @@ export default function EventRuleCard({ id }) {
         <div className="flex justify-end">
           <img
             className="size-8 md:size-10 cursor-pointer sticky top-0 -mt-4 -mr-4 -mb-5"
-            onClick={navigate("/events")}
+            onClick={() => navigate(`/events/${eventId}`)}
             src="/close-button-icon.svg"
             alt=""
           />
         </div>
         <motion.div
           className="flex justify-center items-center font-josefin text-event-card-black font-bold italic text-4xl"
-          layoutId={`card-title-container-${event.id}`}
+          layoutId={`card-title-container-${competitionId}`}
         >
-          {event.name}
+          {competition.name}
         </motion.div>
         <motion.div
           className="flex flex-row justify-center"
-          layoutId={`card-image-container-${event.id}`}
+          layoutId={`card-image-container-${competitionId}`}
         >
           <img
             className="w-[35svw] h-[25svh] object-cover rounded-xl"
-            src={event.imageUrl}
+            src={competition.imageUrl}
             alt="Lazy to specify one"
           />
         </motion.div>
         <motion.div
           className="font-plex text-justify font-normal text-event-card-black text-sm md:text-md lg:text-lg"
-          layoutId={`card-desc-container-${event.id}`}
+          layoutId={`card-desc-container-${competitionId}`}
         >
-          {event.description}
+          {competition.description}
         </motion.div>
         <div className="flex flex-col font-plex text-event-card-black">
           <p className="text-xl font-bold">Guidelines :</p>
           <ol className="text-sm md:text-md lg:text-lg space-y-4 mt-4">
-            <li>1. Each team should consist of 2 members.</li>
-            <li>2. The event will feature 2 rounds.</li>
+          {competition.guidelines.map((guideline,index) => {
+              return(
+                  <li key={`${index}`}>{index + 1}. {guideline}</li>
+              )
+            })
+          }
           </ol>
         </div>
         <div className="flex flex-col font-plex text-event-card-black gap-y-5">
           <p className="font-bold text-xl">Rules :</p>
           <div>
-            <p className="font-semibold text-lg">Prelims :</p>
-            <ol className="text-sm md:text-md lg:text-lg space-y-4 mt-4">
-              <li>
-                1. Questions will be based on movies, day-to-day life objects,
-                and proverbs / idioms.
-              </li>
-              <li>
-                2. Splitting words or usage of codes and references are
-                restricted.
-              </li>
-              <li>
-                3. Participants are not allowed to enact the exact word of the
-                movie. They should enact the plot of the movie.
-              </li>
-            </ol>
-          </div>
-
-          <div>
-            <p className="font-semibold text-lg">Finals :</p>
-            <ol className="text-sm md:text-md lg:text-lg space-y-4 mt-4">
-              <li>
-                1. All the rules in the prelims should be followed in finals as
-                well.
-              </li>
-              <li>
-                2. The performance shall be based on the same skill or it might
-                be a different skill from the one performed in the prelims.
-              </li>
-            </ol>
+            {
+              Object.keys(competition.rules).map((round)=>{
+                return(
+                  <>
+                    <p className="font-semibold text-lg mt-4">{round} :</p>
+                    <ol className="text-sm md:text-md lg:text-lg space-y-4 mt-4">
+                    {competition.rules[round].map((rule,index)=>{
+                       return (
+                        <li key={index}>
+                          {index + 1}. {rule}
+                        </li>
+                      );        
+                    })
+                    }
+                    </ol>
+                  </>
+                )
+              })
+            }
           </div>
         </div>
       </motion.div>

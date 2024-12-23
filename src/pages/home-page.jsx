@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 import "/src/index.css";
-import "./EventsData";
+import "./CompetitionData";
 
 export default function Homepage({ isVisible }) {
   const [loadingState, setLoadingState] = useState(true);
@@ -56,7 +56,7 @@ export default function Homepage({ isVisible }) {
                 DEPARTMENT OF <br/> ENGLISH
                 </p> */}
 
-        <p
+        {/* <p
           className="absolute top-1/4 w-[88vw] max-w-full
                 animate-fadeIn 
                 font-holtwood text-stroke text-title font-extralight text-center tracking-wide leading-normal
@@ -66,7 +66,8 @@ export default function Homepage({ isVisible }) {
           <span className="sm:text-4xl sm:leading-tight md:text-5xl lg:text-6xl xl:text-7xl">
             (AIDED)
           </span>
-        </p>
+        </p> */}
+        <img src="/deptEngHeroText.png" alt="deptEngHeroText" className="absolute top-48 p-3 "/>
       </motion.div>
 
       <motion.div
