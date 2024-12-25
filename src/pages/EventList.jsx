@@ -33,7 +33,7 @@ export default function EventList(){
                     <img
                       className={`w-[85svw] h-[45svh] md:h-[55svh] object-cover bg-top rounded-xl text-white`}
                       src={event.imageUrl}
-                      alt="Poster of  font-plex text-white tracking-widest font-medium text-sm md:text-lg mt-10'A Tale of Three Quizzes'"
+                      alt="Poster of 'A Tale of Three Quizzes'"
                     />
                   </motion.div>
                   <motion.div
