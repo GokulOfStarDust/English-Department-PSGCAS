@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import eventData from "./EventData";
 import competitionData from "./CompetitionData";
-import { select } from "framer-motion/client";
 
 export default function Register() {
   const [collegeName, setCollegeName] = useState("Select your college");
