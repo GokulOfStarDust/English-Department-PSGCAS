@@ -67,7 +67,11 @@ export default function Homepage({ isVisible }) {
             (AIDED)
           </span>
         </p> */}
-        <img src="/deptEngHeroText.png" alt="deptEngHeroText" className="absolute top-48 p-3 "/>
+        <img
+          src="/deptEngHeroText.png"
+          alt="deptEngHeroText"
+          className="absolute top-48 p-3 "
+        />
       </motion.div>
 
       <motion.div

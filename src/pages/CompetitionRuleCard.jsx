@@ -2,14 +2,16 @@ import { motion } from "motion/react";
 import competitionData from "./CompetitionData";
 import { useNavigate, useParams } from "react-router-dom";
 
-export default function EventRuleCard({competitionId}) {
-  const {eventId} = useParams();
+export default function EventRuleCard({ competitionId }) {
+  const { eventId } = useParams();
   const navigate = useNavigate();
-  const competitions = competitionData[eventId]
-  const competition = competitions.find((eachCompetitions)=> eachCompetitions.id == competitionId)
+  const competitions = competitionData[eventId];
+  const competition = competitions.find(
+    (eachCompetitions) => eachCompetitions.id == competitionId,
+  );
 
-  const rules = Object.keys(competition.rules)
-  console.log(rules)
+  const rules = Object.keys(competition.rules);
+  console.log(rules);
 
   return (
     <motion.div
@@ -59,36 +61,34 @@ export default function EventRuleCard({competitionId}) {
         <div className="flex flex-col font-plex text-event-card-black">
           <p className="text-xl font-bold">Guidelines :</p>
           <ol className="text-sm md:text-md lg:text-lg space-y-4 mt-4">
-          {competition.guidelines.map((guideline,index) => {
-              return(
-                  <li key={`${index}`}>{index + 1}. {guideline}</li>
-              )
-            })
-          }
+            {competition.guidelines.map((guideline, index) => {
+              return (
+                <li key={`${index}`}>
+                  {index + 1}. {guideline}
+                </li>
+              );
+            })}
           </ol>
         </div>
         <div className="flex flex-col font-plex text-event-card-black gap-y-5">
           <p className="font-bold text-xl">Rules :</p>
           <div>
-            {
-              Object.keys(competition.rules).map((round)=>{
-                return(
-                  <>
-                    <p className="font-semibold text-lg mt-4">{round} :</p>
-                    <ol className="text-sm md:text-md lg:text-lg space-y-4 mt-4">
-                    {competition.rules[round].map((rule,index)=>{
-                       return (
+            {Object.keys(competition.rules).map((round) => {
+              return (
+                <>
+                  <p className="font-semibold text-lg mt-4">{round} :</p>
+                  <ol className="text-sm md:text-md lg:text-lg space-y-4 mt-4">
+                    {competition.rules[round].map((rule, index) => {
+                      return (
                         <li key={index}>
                           {index + 1}. {rule}
                         </li>
-                      );        
-                    })
-                    }
-                    </ol>
-                  </>
-                )
-              })
-            }
+                      );
+                    })}
+                  </ol>
+                </>
+              );
+            })}
           </div>
         </div>
       </motion.div>

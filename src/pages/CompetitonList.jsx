@@ -3,11 +3,11 @@ import competitionData from "./CompetitionData";
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-export default function CompetitionList({eventId}) {
+export default function CompetitionList({ eventId }) {
   const navigate = useNavigate();
   const [loadingState, setLoadingState] = useState(true);
   const [imageLoaded, setImageLoaded] = useState(0);
-  const competitions = competitionData[eventId]
+  const competitions = competitionData[eventId];
 
   useEffect(() => {
     if (imageLoaded === competitions.length) {
@@ -49,7 +49,7 @@ export default function CompetitionList({eventId}) {
                             font-josefin text-event-card-black font-bold text-[1.7rem] md:text-4xl tracking-[3.8px]
                             rounded-3xl outline outline-1 outline-black"
         >
-         COMPETITIONS
+          COMPETITIONS
         </div>
 
         {competitions.map((competition, index) => {
