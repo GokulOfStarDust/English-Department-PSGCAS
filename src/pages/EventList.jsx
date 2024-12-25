@@ -23,9 +23,9 @@ export default function EventList(){
         {eventData.upcomingEvents.map((event) => {
           return (
             <li key={event.id} className="list-none">
-              <div>
+              <div onClick={()=>{navigate(`/events/${event.id}`);}}>
                 <motion.div
-                  className="flex flex-col bg-event-card-black w-[88svw] lg:h-[90svh] p-7 pt-7 space-y-5 rounded-3xl "
+                  className="flex flex-col bg-event-card-black w-[88svw] p-7 pt-7 space-y-5 rounded-3xl "
                 >
                   <motion.div
                     className="flex flex-row justify-center"

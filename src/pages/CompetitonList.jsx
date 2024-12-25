@@ -51,13 +51,13 @@ export default function CompetitionList({ eventId }) {
         >
           COMPETITIONS
         </div>
-
+        {/* lg:h-[90svh] */}
         {competitions.map((competition, index) => {
           return (
             <li key={index} className="list-none">
               <div>
                 <motion.div
-                  className="flex flex-col bg-event-card-black w-[88svw] lg:h-[90svh] p-7 pt-7 space-y-5 rounded-3xl "
+                  className="flex flex-col bg-event-card-black w-[88svw]  p-7 pt-7 space-y-5 rounded-3xl "
                   layoutId={`card-container-${competition.id}`}
                 >
                   <motion.div
@@ -65,7 +65,7 @@ export default function CompetitionList({ eventId }) {
                     layoutId={`card-image-container-${competition.id}`}
                   >
                     <img
-                      className={`w-[85svw] h-[45svh] md:h-[55svh] object-cover  bg-top rounded-xl`}
+                      className={`w-[85svw] h-[45svh] md:h-[50svh] object-cover  bg-top rounded-xl`}
                       src={competition.imageUrl}
                       alt="Lazy to specify one"
                       onLoad={imageLoadHandle}
@@ -78,14 +78,14 @@ export default function CompetitionList({ eventId }) {
                     {competition.name}
                   </motion.div>
                   <motion.div
-                    className="font-plex font-light text-white text-sm md:text-md lg:text-lg"
+                    className="font-plex font-light text-white text-sm md:text-base xxl:text-lg"
                     layoutId={`card-desc-container-${competition.id}`}
                   >
                     {competition.description}
                   </motion.div>
                   <div className="flex flex-row flex-wrap justify-center items-center">
                     <div
-                      className="flex flex-row justify-center bg-[url('/eventSubmitBg.png')] bg-cover w-[20%] min-w-[250px]  mx-4 !mt-9 md:!mt-[1%] text-md md:text-xl font-plex font-bold tracking-widest rounded-full p-4 cursor-pointer"
+                      className="flex flex-row justify-center bg-[url('/eventSubmitBg.png')] bg-cover w-[20%] min-w-[250px]  mx-4 mt-3 xxl:mt-[2.3%] text-md md:text-xl font-plex font-bold tracking-widest rounded-full p-4 cursor-pointer"
                       onClick={() => {
                         navigate(`/events/${eventId}/${competition.id}`);
                       }}
@@ -93,7 +93,7 @@ export default function CompetitionList({ eventId }) {
                       Click For Rules
                     </div>
                     <div
-                      className="flex flex-row justify-center mx-4 bg-[url('/eventSubmitBg.png')] bg-cover w-[20%] min-w-[250px] !mt-9 md:!mt-[1%] text-md md:text-xl font-plex font-bold tracking-widest rounded-full p-4 cursor-pointer"
+                      className="flex flex-row justify-center mx-4 bg-[url('/eventSubmitBg.png')] bg-cover w-[25%] min-w-[250px] mt-3 xxl:mt-[2.3%] bottom-2 text-base md:text-lg xxl:text-xl font-plex font-bold tracking-widest rounded-full p-4 cursor-pointer"
                       onClick={() => {
                         navigate(`/register`);
                       }}
