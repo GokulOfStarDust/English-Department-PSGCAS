@@ -1,6 +1,12 @@
+// tailwind.config.js
 /** @type {import('tailwindcss').Config} */
+import tailwindcssTextshadow from 'tailwindcss-textshadow';
+
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}"
+  ],
   theme: {
     extend: {
       screens: {
@@ -28,11 +34,9 @@ export default {
       textShadow: {
         title: "4px 4px 30px rgba(187, 177, 152, 0.6)",
       },
-
       animation: {
         fadeIn: "FadeIn 2.5s ease-in forwards",
       },
-
       keyframes: {
         FadeIn: {
           "0%": { opacity: "0" },
@@ -41,5 +45,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-textshadow")],
+  plugins: [tailwindcssTextshadow],
 };
