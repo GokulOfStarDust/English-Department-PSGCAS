@@ -31,9 +31,9 @@ export default function EventList(){
                     className="flex flex-row justify-center"
                   >
                     <img
-                      className={`w-[85svw] h-[45svh] md:h-[55svh] object-cover bg-top rounded-xl`}
+                      className={`w-[85svw] h-[45svh] md:h-[55svh] object-cover bg-top rounded-xl text-white`}
                       src={event.imageUrl}
-                      alt="Lazy to specify one"
+                      alt="Poster of 'A Tale of Three Quizzes'"
                     />
                   </motion.div>
                   <motion.div
