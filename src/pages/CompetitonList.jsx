@@ -42,7 +42,7 @@ export default function CompetitionList({eventId}) {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.2, delay: 0.1 }}
-        className="flex flex-row flex-wrap items-center justify-center bg-[url('/bg.png')] bg-cover bg-center bg-fixed space-y-10 scroll-smooth"
+        className="flex flex-row flex-wrap items-center justify-center bg-[url('/bg.png')] bg-cover bg-center bg-fixed space-y-10 pb-32 scroll-smooth"
       >
         <div
           className="flex items-center justify-center bg-[url('/eventTitleBg.png')] bg-no-repeat bg-cover bg-center w-[90svw] min-h-[60px] md:min-h-[80px] my-16 mb-[19svh]
@@ -83,13 +83,23 @@ export default function CompetitionList({eventId}) {
                   >
                     {competition.description}
                   </motion.div>
-                  <div
-                    className="flex flex-row justify-center mx-auto bg-[url('/eventSubmitBg.png')] bg-cover w-[20%] min-w-[250px] !mt-9 md:!mt-[2.7%] text-md md:text-xl font-plex font-bold tracking-widest rounded-full p-4 cursor-pointer"
-                    onClick={() => {
-                      navigate(`/events/${eventId}/${competition.id}`);
-                    }}
-                  >
-                    Click For Rules
+                  <div className="flex flex-row flex-wrap justify-center items-center">
+                    <div
+                      className="flex flex-row justify-center bg-[url('/eventSubmitBg.png')] bg-cover w-[20%] min-w-[250px]  mx-4 !mt-9 md:!mt-[1%] text-md md:text-xl font-plex font-bold tracking-widest rounded-full p-4 cursor-pointer"
+                      onClick={() => {
+                        navigate(`/events/${eventId}/${competition.id}`);
+                      }}
+                    >
+                      Click For Rules
+                    </div>
+                    <div
+                      className="flex flex-row justify-center mx-4 bg-[url('/eventSubmitBg.png')] bg-cover w-[20%] min-w-[250px] !mt-9 md:!mt-[1%] text-md md:text-xl font-plex font-bold tracking-widest rounded-full p-4 cursor-pointer"
+                      onClick={() => {
+                        navigate(`/register`);
+                      }}
+                    >
+                      Click to Regsiter
+                    </div>
                   </div>
                 </motion.div>
               </div>

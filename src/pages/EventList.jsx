@@ -11,7 +11,7 @@ export default function EventList(){
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.2, delay: 0.1 }}
-        className="flex flex-row flex-wrap items-center justify-center bg-[url('/bg.png')] bg-cover bg-center bg-fixed space-y-10 scroll-smooth"
+        className="flex flex-row flex-wrap items-center justify-center bg-[url('/bg.png')] bg-cover bg-center bg-fixed space-y-2 pb-32 scroll-smooth"
       >
         <div
           className="flex items-center justify-center bg-[url('/eventsTitleBg.png')] bg-no-repeat bg-cover bg-center w-[90svw] min-h-[60px] md:min-h-[80px] my-16 mb-[19svh]

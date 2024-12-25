@@ -1,25 +1,32 @@
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
+import eventData from "./EventData";
+import competitionData from "./CompetitionData";
+import { select } from "framer-motion/client";
 
 export default function Register() {
   const [collegeName, setCollegeName] = useState("Select your college");
-  const [dropdown, setDropdown] = useState(false); 
+  const [selectedEvent, setSelectedEvent] = useState("Select any event");
+  const [collegeDropdown, setCollegeDropdown] = useState(false); 
+  const [eventDropdown, setEventDropdown] = useState(false);
+  const [totalRegistrationFee, setTotalRegistrationFee] = useState(0)
 
   async function formDataHandler(data) {
+    data.selectedCompetition = Object.values(data.selectedCompetition).filter((value)=> {return(value != false && value != true)})
     try {
-      const response = await fetch("https://sheetdb.io/api/v1/9qv7pkohx21b7", {
+      const response = await fetch("https://sheetdb.io/api/v1/3yw0iyl2l7e1e", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(data),
       });
-
+  
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
-
+  
       const result = await response.json();
       alert("Submit Successfully");
       reset();
@@ -28,6 +35,9 @@ export default function Register() {
       console.error("Error posting data:", error);
     }
   }
+
+ 
+ 
 
   const {
     register,
@@ -38,32 +48,13 @@ export default function Register() {
     formState: { errors },
   } = useForm();
 
+  useEffect(()=>{
+  console.log(totalRegistrationFee)
+  },[totalRegistrationFee])
 
-  const events = [
-    {
-      id: "literature-quiz",
-      eventName: "Literature Quiz",
-      eventFor: "PSG College of Arts & Science",
-      registrationFee: 20,
-    },
-    {
-      id: "pop-quiz",
-      eventName: "Pop Quiz",
-      eventFor: "PSG College of Arts & Science",
-      registrationFee: 20,
-    },
-    { id: "general-quiz", eventName: "General Quiz", eventFor: "Others", registrationFee: 30, },
-  ];
-
-  // const [eventParticipating, setEventParticipating] = useState([])
-  // setEventParticipating(Array.isArray(watch("eventParticipating")) ? watch("eventParticipating") : [watch("eventParticipating")]);
-  // useEffect(() =>{
-  //   console.log(eventParticipating)
-  // }
-  //  ,[eventParticipating]);
-
-  // useEffect(()=>{console.log(registrationFee)},[registrationFee])
-
+  useEffect(()=>{
+    setTotalRegistrationFee(0)
+  },[collegeName])
 
   return (
     <motion.div
@@ -189,7 +180,7 @@ export default function Register() {
             <div
               className="w-[90%] min-w-[300px] h-11 flex flex-row justify-between items-center text-[0.83rem] sm:text-sm lg:text-base font-plex font-semibold text-[#373636] bg-white rounded-3xl p-2 pl-4 focus:outline-none cursor-pointer"
               onClick={() => {
-                setDropdown(true);
+                setCollegeDropdown(!collegeDropdown);
               }}
             >
               {collegeName}
@@ -201,16 +192,19 @@ export default function Register() {
             </div>
 
             <motion.ul
-              className={`${dropdown ? "" : "hidden"} top-[60%] w-[90%] min-w-[285px] text-[0.83rem] sm:text-sm lg:text-base  font-plex font-semibold text-[#373636] bg-white p-1 rounded-xl divide-y-2`}
+              className={`${collegeDropdown  ? "" : "hidden"} top-[60%] w-[90%] min-w-[285px] text-[0.83rem] sm:text-sm lg:text-base  font-plex font-semibold text-[#373636] bg-white p-1 rounded-xl divide-y-2`}
               initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: dropdown ? 1 : 0, y: dropdown ? 0 : -20 }}
+              animate={{ opacity: collegeDropdown ? 1 : 0, y: collegeDropdown  ? 0 : -20 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
+             
             >
               <li
                 onClick={(event) => {
-                  setDropdown(false);
+                  setCollegeDropdown(false);
                   setCollegeName(event.target.innerText);
+                  reset({...watch(), selectedCompetition: {}})
+                 
                   setValue("collegeName", event.target.innerText);
                 }}
                 className="w-full rounded-xl p-3 hover:bg-[#373636] hover:text-white cursor-pointer"
@@ -220,7 +214,8 @@ export default function Register() {
 
               <li
                 onClick={(event) => {
-                  setDropdown(false);
+                  setCollegeDropdown(false);
+                  reset({...watch(), selectedCompetition: {}})
                   setCollegeName(event.target.innerText);
                   setValue("collegeName", event.target.innerText);
                 }}
@@ -297,50 +292,123 @@ export default function Register() {
         {/*It dynamically adds the events to be selected */}
 
         <div
-          className="bg-[url('/registrationFormBg1.png')] bg-cover bg-center flex flex-row flex-wrap items-center justify-center
+          className="bg-[url('/registrationFormBg1.png')] bg-cover bg-center flex flex-col flex-wrap items-center justify-center
                                 w-[88svw] max-w-[1340px] p-5 pt-10 md:p-8 rounded-3xl"
         >
           <p className="flex justify-center items-center w-[100%] h-[6svh] font-plex font-semibold text-white text-xl md:text-3xl tracking-wider outline outline-1 outline-white rounded-3xl ">
             EVENTS PARTICIPATING
           </p>
-          {events.map((event, index) => {
-            return (
-              (collegeName === event.eventFor) && (
-                <div
-                  key={index}
-                  className="flex flex-row p-3 mx-2 md:mx-6 space-x-3 mt-10"
+          <div className="flex flex-col flex-wrap items-center w-[95%] min-w-[260px] space-y-2 mb-9 md:mb-16">
+                <label
+                  className="font-plex text-white tracking-widest font-medium text-md md:text-xl mt-10 "
+                  htmlFor="eventdropdown"
                 >
-                  <input
-                    id={event.id}
-                    type="checkbox"
-                    value={event.eventName}
-                    className="size-6 accent-[#ca9b6f] cursor-pointer"
-                    {...register(`eventParticipating`, {
-                      required: "Select atleast one event",
-                    })}
+                  SELECT THE EVENT
+                </label>
+                <div
+                  id="eventdropdown"
+                  className="w-[60%] min-w-[300px] h-11 flex flex-row justify-between items-center text-[0.83rem] sm:text-sm lg:text-base font-plex font-semibold text-[#373636] bg-white rounded-3xl p-2 pl-5 focus:outline-none cursor-pointer"
+                  onClick={() => {
+                    setEventDropdown(!eventDropdown);
+                  }}
+                >
+                  {selectedEvent}
+                  <img
+                    src="/dropdownIcon.png"
+                    alt="Dropdown Icon"
+                    className="object-contain size-9 pr-1"
                   />
-                  <label
-                    className="font-plex text-white tracking-widest font-medium text-md md:text-xl cursor-pointer"
-                    htmlFor={event.id}
-                  >
-                    {event.eventName}
-                  </label>
                 </div>
-              )
-            );
-          })}
-          {errors.eventParticipating && (
-            <p className="flex justify-center items-center w-full text-red-500 text-sm mt-5">
-              {errors.eventParticipating.message}
-            </p>
-          )}
+            
+                <motion.ul
+                  className={`${eventDropdown ? "" : "hidden"} top-[60%] w-[60%] min-w-[285px] text-[0.83rem] sm:text-sm lg:text-base  font-plex font-semibold text-[#373636] bg-white p-1 rounded-xl divide-y-2`}
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: eventDropdown ? 1 : 0, y: eventDropdown ? 0 : -20 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                >
+                  {eventData.upcomingEvents.map((event, index) => {
+                    return (
+                        <li key={index}
+                            onClick={(event) => {
+                              setEventDropdown(false);
+                              setSelectedEvent(event.target.innerText);
+                              setValue("selectedEvent", event.target.innerText);
+                            }}
+                            className="w-full rounded-xl p-3 hover:bg-[#373636] hover:text-white cursor-pointer"
+                          >
+                            {event.name}
+                          </li>          
+                    );
+                  })}
+                </motion.ul>
+    
+                <input
+                  type="hidden"
+                  value={selectedEvent}
+                  {...register("selectedEvent", { required: "Select any event" })}
+                />
+    
+                {errors.selectedEvent && (
+                  <p className="text-red-500 text-sm">
+                    {errors.selectedEvent.message}
+                  </p>
+                )}
+             
+            </div>
+            
+          
+          <fieldset className="flex flex-col items-center justify-center border border-gray-400 rounded p-6">
+            <legend className="font-plex text-white tracking-widest font-medium text-sm md:text-lg mt-10 ">SELECT THE COMPETITIONS :</legend>
+            {selectedEvent == "Select any event"? <p className="font-plex text-white font-medium text-sm md:text-lg my-3">(Select any event to view the competitions)</p> :
+            <div className="flex flex-row flex-wrap" >
+              {
+              (competitionData[eventData.upcomingEvents.find((event) => event.name == selectedEvent)?.id] || []).map((event,index) => {
+                          return(collegeName === event.eventFor &&
+                          <div key={index} className="flex flex-row  p-3 mx-2 md:mx-6 space-x-3"> 
+                              <input id={event.id} 
+                              type="checkbox" 
+                              value={event.name} 
+                              className="size-6 accent-[#ca9b6f] cursor-pointer"
+                              {...register(`selectedCompetition.${event.id}`,  {
+                                validate: () => {
+                                    const selected = watch("selectedCompetition");
+                                    const validationResult = (
+                                        selected &&
+                                        Object.values(selected).some((value) => value)
+                                    ) || "Select at least one competition";
+                                    console.log("Validation Result: ", validationResult);
+                                    return validationResult;
+                                },
+                            },{onChange: true})}
+                              onChange={(e)=>{
+                                if(e.target.checked){
+                                  setTotalRegistrationFee((prev)=> prev + event.RegisterationFee)
+                                }
+                                else{
+                                  setTotalRegistrationFee((prev)=> prev - event.RegisterationFee)
+                                }
+
+                              }}
+                              />
+                              <label className="font-plex text-white tracking-widest font-medium text-md md:text-xl cursor-pointer" htmlFor={event.id}>{event.name}</label>
+                          </div>
+                          )
+                      })}
+            </div> } 
+            {errors.selectedCompetition && Object.keys(errors.selectedCompetition).length > 0 && (
+              <p className="flex justify-center items-center w-full text-red-500 text-sm mt-5">
+                Select atleast one competition
+              </p>
+            )}
+          </fieldset>
         </div>
 
         <div className="bg-[url('/registrationFormBg.png')] bg-cover bg-center flex flex-col justify-center items-center w-[88svw] max-w-[1280px] text-white p-5 pt-10 md:p-8 rounded-3xl space-y-2">
           <p className="font-plex font-bold">SCAN THE QR CODE TO PAY</p>
           <a
-            className="pb-8"
-            href={`upi://pay?pa=gokulgopalan18-1@oksbi&pn=Gokul%20Gopalan&am=${registrationFee}.00&cu=INR&aid=uGICAgICN1d6XRQ`}
+            className="pb-1"
+            href={`upi://pay?pa=gokulgopalan18-1@oksbi&pn=Gokul%20Gopalan&am=${totalRegistrationFee}.00&cu=INR&aid=uGICAgICN1d6XRQ`}
           >
             <img
               src="/qr.jpeg"
@@ -348,6 +416,7 @@ export default function Register() {
               className="size-60 object-contain"
             />
           </a>
+          <p className="font-plex font-bold pb-7">Amount to be paid : {totalRegistrationFee}</p>
           <label className="" htmlFor="transactionID">
             Enter UPI transaction ID
           </label>

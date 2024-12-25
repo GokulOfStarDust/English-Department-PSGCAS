@@ -6,8 +6,23 @@ const competitionData = {
           description:
             "Step into the realms of timeless tales, poetic verses, and iconic authors. It challenges your love for the written word, from Shakespearean sonnets to modern-day masterpieces. Whether you're a bookworm, a literary critic, or someone who simply enjoys a good story, this quiz promises an enchanting journey through the world of literature. Will you write your name in the annals of literary legends?",
           imageUrl: "/event-drama.jpg",
-          eventFOr: "PSG College of Arts & Science",
+          eventFor: "PSG College of Arts & Science",
           RegisterationFee: 20,
+          guidelines: [
+            "Each team should consist of 2 members.",
+            "The event consists of two rounds."
+          ],
+          rules: {
+            Prelims : [
+              "Questions will be based on movies, day-to-day life objects,and proverbs / idioms.",
+              "Splitting words or usage of codes and references are restricted.",
+              "Participants are not allowed to enact the exact word of the movie. They should enact the plot of the movie.",
+            ],
+            Finals: [
+              "All the rules in the prelims should be followed in finals as well.",
+              "The performance shall be based on the same skill or it might be a different skill from the one performed in the prelims.",
+            ]
+          }
         },
 
         {
@@ -18,6 +33,21 @@ const competitionData = {
           imageUrl: "/event-debate.jpg",
           eventFor: "PSG College of Arts & Science",
           RegisterationFee: 20,
+          guidelines: [
+            "Each team should consist of 2 members.",
+            "The event consists of two rounds."
+          ],
+          rules: {
+            Prelims : [
+              "Questions will be based on movies, day-to-day life objects,and proverbs / idioms.",
+              "Splitting words or usage of codes and references are restricted.",
+              "Participants are not allowed to enact the exact word of the movie. They should enact the plot of the movie.",
+            ],
+            Finals: [
+              "All the rules in the prelims should be followed in finals as well.",
+              "The performance shall be based on the same skill or it might be a different skill from the one performed in the prelims.",
+            ]
+          }
         },
 
         {
@@ -44,6 +74,7 @@ const competitionData = {
             ]
           }
         },
+        
     ]
 }
 
