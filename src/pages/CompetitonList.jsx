@@ -1,6 +1,6 @@
-import { motion, useScroll } from "motion/react";
+import { motion} from "motion/react";
 import competitionData from "./CompetitionData";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 import { useEffect, useState } from "react";
 
 export default function CompetitionList({ eventId }) {
