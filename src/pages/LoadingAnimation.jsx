@@ -1,4 +1,6 @@
 import { motion } from "framer-motion"
+import "/src/index.css";
+
 
 export default function LoadingAnimation(){
     return(

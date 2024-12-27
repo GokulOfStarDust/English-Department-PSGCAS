@@ -1,5 +1,4 @@
 import { motion } from "motion/react";
-import "/src/index.css";
 import "./CompetitionData";
 
 export default function Homepage() {
