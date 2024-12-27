@@ -1,11 +1,41 @@
 import { motion} from "motion/react";
 import eventData from "./EventData.jsx";
 import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+
 
 export default function EventList(){
     const navigate = useNavigate();
+    const [loadingState, setLoadingState] = useState(true);
+    const [imageLoaded, setImageLoaded] = useState(0);
+    
+      useEffect(() => {
+        if (imageLoaded === eventData.upcomingEvents.length) {
+          setTimeout(() => {
+            setLoadingState(false);
+          }, 1500);
+        }
+      }, [imageLoaded]);
+    
+      const imageLoadHandle = () => {
+        setImageLoaded((prev) => prev + 1);
+      };
 
     return(
+    <>
+      <motion.div
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+        className={`${loadingState ? "" : "hidden"} fixed flex justify-center items-center w-full h-lvh z-[100] inset-0 bg-event-card-black`}
+      >
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className={`${loadingState ? "loader" : "hidden"} w-full`}
+        ></motion.div>
+      </motion.div>
         <motion.ul
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -34,6 +64,7 @@ export default function EventList(){
                       className={`w-[85svw] h-[45svh] md:h-[55svh] object-cover bg-top rounded-xl text-white`}
                       src={event.imageUrl}
                       alt="Poster of 'A Tale of Three Quizzes'"
+                      onLoad={imageLoadHandle}
                     />
                   </motion.div>
                   <motion.div
@@ -76,5 +107,6 @@ export default function EventList(){
           );
         })}
       </motion.ul>
+    </>
     )
 }
