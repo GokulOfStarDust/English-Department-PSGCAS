@@ -1,39 +1,26 @@
 import { motion } from "motion/react";
-import { useEffect, useState } from "react";
 import "/src/index.css";
 import "./CompetitionData";
 
 export default function Homepage({ isVisible }) {
-  const [loadingState, setLoadingState] = useState(true);
-  const [imageLoaded, setImageLoaded] = useState(0);
+  // const [loadingState, setLoadingState] = useState(true);
+  // const [imageLoaded, setImageLoaded] = useState(0);
 
-  useEffect(() => {
-    if (imageLoaded === 2) {
-      setTimeout(() => {
-        setLoadingState(false);
-      }, 1500);
-    }
-  }, [imageLoaded]);
+  // useEffect(() => {
+  //   if (imageLoaded === 2) {
+  //     setTimeout(() => {
+  //       setLoadingState(false);
+  //     }, 1500);
+  //   }
+  // }, [imageLoaded]);
 
-  const imageLoadHandle = () => {
-    setImageLoaded((prev) => prev + 1);
-  };
+  // const imageLoadHandle = () => {
+  //   setImageLoaded((prev) => prev + 1);
+  // };
 
   return (
     <>
-      <motion.div
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.5, delay: 0.1 }}
-        className={`${loadingState ? "" : "hidden"} fixed flex justify-center items-center w-full h-lvh z-[100] inset-0 bg-event-card-black`}
-      >
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className={`${loadingState ? "loader" : "hidden"} w-full`}
-        ></motion.div>
-      </motion.div>
+      
 
       <motion.div
         initial={{ opacity: 0 }}
@@ -67,6 +54,7 @@ export default function Homepage({ isVisible }) {
             (AIDED)
           </span>
         </p> */}
+        
         <img
           src="/deptEngHeroText.png"
           alt="deptEngHeroText"
