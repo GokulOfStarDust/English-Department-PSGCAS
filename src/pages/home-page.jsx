@@ -2,21 +2,7 @@ import { motion } from "motion/react";
 import "/src/index.css";
 import "./CompetitionData";
 
-export default function Homepage({ isVisible }) {
-  // const [loadingState, setLoadingState] = useState(true);
-  // const [imageLoaded, setImageLoaded] = useState(0);
-
-  // useEffect(() => {
-  //   if (imageLoaded === 2) {
-  //     setTimeout(() => {
-  //       setLoadingState(false);
-  //     }, 1500);
-  //   }
-  // }, [imageLoaded]);
-
-  // const imageLoadHandle = () => {
-  //   setImageLoaded((prev) => prev + 1);
-  // };
+export default function Homepage() {
 
   return (
     <>
@@ -32,7 +18,6 @@ export default function Homepage({ isVisible }) {
         <img
           src="/intro-img.jpeg"
           alt="introduction-page-image"
-          onLoad={imageLoadHandle}
           className="w-[97vw] h-[90svh] max-w-full max-h-full object-cover rounded-2xl"
         />
 
@@ -54,7 +39,7 @@ export default function Homepage({ isVisible }) {
             (AIDED)
           </span>
         </p> */}
-        
+
         <img
           src="/deptEngHeroText.png"
           alt="deptEngHeroText"
@@ -99,7 +84,6 @@ export default function Homepage({ isVisible }) {
           <img
             src="/dept-logo.png"
             alt=""
-            onLoad={imageLoadHandle}
             className="w-[60%] sm:w-[43%] md:w-[20%] md:min-w-[319px] lg:w-[27%] h-[60%] lg:h-[70%] my-10 object-contain mx-auto"
           />
         </div>
