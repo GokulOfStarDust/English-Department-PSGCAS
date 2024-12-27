@@ -7,7 +7,7 @@ const eventData = {
       time: "10:00 a.m - 02:00 p.m",
       date: "6 JAN 2025 - 8 JAN 2025",
       location: "PSG College of Arts & Science",
-      imageUrl: " ",
+      imageUrl: "/aTaleofThreeQuizzes-poster.png",
     },
   ],
 
