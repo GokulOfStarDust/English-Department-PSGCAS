@@ -14,7 +14,7 @@ export default function LoadingAnimation(){
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className={`"loader" : "hidden"} w-full`}
+          className={`loader w-full`}
         ></motion.div>
       </motion.div>
     )

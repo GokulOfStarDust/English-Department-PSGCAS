@@ -1,11 +1,39 @@
 import { motion } from "motion/react";
+import { useEffect, useState } from "react";
+import "/src/index.css";
 import "./CompetitionData";
 
 export default function Homepage() {
+  const [loadingState, setLoadingState] = useState(true);
+  const [imageLoaded, setImageLoaded] = useState(0);
+
+  useEffect(() => {
+    if (imageLoaded === 2) {
+      setTimeout(() => {
+        setLoadingState(false);
+      }, 1500);
+    }
+  }, [imageLoaded]);
+
+  const imageLoadHandle = () => {
+    setImageLoaded((prev) => prev + 1);
+  };
 
   return (
     <>
-      
+      <motion.div
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+        className={`${loadingState ? "" : "hidden"} fixed flex justify-center items-center w-full h-lvh z-[100] inset-0 bg-event-card-black`}
+      >
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className={`${loadingState ? "loader" : "hidden"} w-full`}
+        ></motion.div>
+      </motion.div>
 
       <motion.div
         initial={{ opacity: 0 }}
@@ -17,6 +45,7 @@ export default function Homepage() {
         <img
           src="/intro-img.jpeg"
           alt="introduction-page-image"
+          onLoad={imageLoadHandle}
           className="w-[97vw] h-[90svh] max-w-full max-h-full object-cover rounded-2xl"
         />
 
@@ -38,7 +67,6 @@ export default function Homepage() {
             (AIDED)
           </span>
         </p> */}
-
         <img
           src="/deptEngHeroText.png"
           alt="deptEngHeroText"
@@ -83,6 +111,7 @@ export default function Homepage() {
           <img
             src="/dept-logo.png"
             alt=""
+            onLoad={imageLoadHandle}
             className="w-[60%] sm:w-[43%] md:w-[20%] md:min-w-[319px] lg:w-[27%] h-[60%] lg:h-[70%] my-10 object-contain mx-auto"
           />
         </div>

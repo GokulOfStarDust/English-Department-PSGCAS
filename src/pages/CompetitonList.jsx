@@ -1,14 +1,41 @@
 import { motion} from "motion/react";
 import competitionData from "./CompetitionData";
 import { useNavigate} from "react-router-dom";
+import { useEffect, useState } from "react";
 
 export default function CompetitionList({ eventId }) {
   const navigate = useNavigate();
+  const [loadingState, setLoadingState] = useState(true);
+  const [imageLoaded, setImageLoaded] = useState(0);
   const competitions = competitionData[eventId];
+
+  useEffect(() => {
+    if (imageLoaded === competitions.length) {
+      setTimeout(() => {
+        setLoadingState(false);
+      }, 1500);
+    }
+  }, [imageLoaded]);
+
+  const imageLoadHandle = () => {
+    setImageLoaded((prev) => prev + 1);
+  };
 
   return (
     <>
-      
+      <motion.div
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+        className={`${loadingState ? "" : "hidden"} fixed flex justify-center items-center w-full h-lvh z-[100] inset-0 bg-event-card-black`}
+      >
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className={`${loadingState ? "loader" : "hidden"} w-full`}
+        ></motion.div>
+      </motion.div>
 
       <motion.ul
         initial={{ opacity: 0 }}
@@ -24,7 +51,6 @@ export default function CompetitionList({ eventId }) {
         >
           COMPETITIONS
         </div>
-
         {/* lg:h-[90svh] */}
         {competitions.map((competition, index) => {
           return (
@@ -42,7 +68,8 @@ export default function CompetitionList({ eventId }) {
                       className={`w-[85svw] h-[45svh] md:h-[50svh] object-cover  bg-top rounded-xl`}
                       src={competition.imageUrl}
                       alt="Lazy to specify one"
-                      />
+                      onLoad={imageLoadHandle}
+                    />
                   </motion.div>
                   <motion.div
                     className="font-josefin text-white font-bold italic text-3xl xl:text-4xl"
