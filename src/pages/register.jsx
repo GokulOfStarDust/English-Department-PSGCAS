@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import eventData from "./EventData";
+import { QRCodeCanvas } from "qrcode.react";
 import competitionData from "./CompetitionData";
 
 export default function Register() {
@@ -10,6 +11,7 @@ export default function Register() {
   const [collegeDropdown, setCollegeDropdown] = useState(false);
   const [eventDropdown, setEventDropdown] = useState(false);
   const [totalRegistrationFee, setTotalRegistrationFee] = useState(0);
+  const [UPIRegistratoinLink, setUPIRegistratoinLink] = useState(" ")
 
   async function formDataHandler(data) {
     data.selectedCompetition = Object.values(data.selectedCompetition).filter(
@@ -49,6 +51,7 @@ export default function Register() {
 
   useEffect(() => {
     console.log(totalRegistrationFee);
+    setUPIRegistratoinLink(`upi://pay?pa=gokulgopalan18-1@oksbi&pn=Gokul%20Gopalan&am=${totalRegistrationFee}.00&cu=INR&aid=uGICAgICN1d6XRQ`)
   }, [totalRegistrationFee]);
 
   useEffect(() => {
@@ -443,15 +446,13 @@ export default function Register() {
         </div>
 
         <div className="bg-[url('/registrationFormBg.png')] bg-cover bg-center flex flex-col justify-center items-center w-[88svw] max-w-[1280px] text-white p-5 pt-10 md:p-8 rounded-3xl space-y-2">
-          <p className="font-plex font-bold">SCAN THE QR CODE TO PAY</p>
+          <p className="font-plex font-bold mb-4">SCAN THE QR CODE TO PAY</p>
           <a
-            className="pb-1"
-            href={`upi://pay?pa=gokulgopalan18-1@oksbi&pn=Gokul%20Gopalan&am=${totalRegistrationFee}.00&cu=INR&aid=uGICAgICN1d6XRQ`}
+            className="pb-1 bg-white"
+            href={UPIRegistratoinLink}
           >
-            <img
-              src="/qr.jpeg"
-              alt="QR code for payment"
-              className="size-60 object-contain"
+            <QRCodeCanvas value= {UPIRegistratoinLink}
+              className="size-60 object-contain m-3"
             />
           </a>
           <p className="font-plex font-bold pb-7">
