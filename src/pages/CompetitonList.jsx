@@ -59,9 +59,6 @@ export default function CompetitionList({ eventId }) {
                 <motion.div
                   className="flex flex-col bg-event-card-black w-[88svw] p-7 pt-3 space-y-5 rounded-3xl "
                   layoutId={`card-container-${competition.id}`}
-                  onClick={() => {
-                    navigate(`/events/${eventId}/${competition.id}`);
-                  }}
                 >
                   <motion.div
                     className="flex flex-row justify-center"
