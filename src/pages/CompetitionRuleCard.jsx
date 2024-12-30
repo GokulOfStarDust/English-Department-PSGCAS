@@ -91,6 +91,15 @@ export default function EventRuleCard({ competitionId }) {
             })}
           </div>
         </div>
+        <div
+                      className="flex flex-row justify-center items-center mx-auto bg-[url('/eventSubmitBg.png')]  bg-cover w-[25%] min-w-[250px] mt-9 xxl:mt-[2.3%] bottom-2 text-base md:text-lg xxl:text-xl font-plex font-bold tracking-widest rounded-full p-4 cursor-pointer hover:underline"
+                      onClick={() => {
+                        navigate(`/register`);
+                      }}
+                    >
+                      Click to Regsiter
+                    </div>
+
       </motion.div>
     </motion.div>
   );

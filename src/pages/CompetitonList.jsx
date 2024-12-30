@@ -57,15 +57,18 @@ export default function CompetitionList({ eventId }) {
             <li key={index} className="list-none">
               <div>
                 <motion.div
-                  className="flex flex-col bg-event-card-black w-[88svw] p-7 pt-7 space-y-5 rounded-3xl "
+                  className="flex flex-col bg-event-card-black w-[88svw] p-7 pt-3 space-y-5 rounded-3xl "
                   layoutId={`card-container-${competition.id}`}
+                  onClick={() => {
+                    navigate(`/events/${eventId}/${competition.id}`);
+                  }}
                 >
                   <motion.div
                     className="flex flex-row justify-center"
                     layoutId={`card-image-container-${competition.id}`}
                   >
                     <img
-                      className={`w-[85svw] h-[45svh] md:h-[50svh] object-cover  bg-top rounded-xl`}
+                      className={`w-[85svw] h-[45svh] md:h-[50svh] object-cover mt-3 bg-top rounded-xl`}
                       src={competition.imageUrl}
                       alt="Lazy to specify one"
                       onLoad={imageLoadHandle}

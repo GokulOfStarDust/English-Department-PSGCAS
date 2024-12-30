@@ -40,13 +40,14 @@ export default function Homepage() {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.2, delay: 0.1 }}
-        className="flex justify-center items-center w-full h-full mt-3"
+        className="relative flex justify-center items-center w-full h-full mt-3"
       >
         <img
+          rel="preload"
           src="/intro-img.jpeg"
           alt="introduction-page-image"
           onLoad={imageLoadHandle}
-          className="w-[97vw] h-[90svh] max-w-full max-h-full object-cover rounded-2xl"
+          className="w-[97vw] h-[90svh] max-w-full max-h-full object-cover rounded-2xl blur-[0.5px] relative"
         />
 
         {/* <p className="absolute top-1/4 w-[88vw] rounded-3xl max-w-full
@@ -56,22 +57,24 @@ export default function Homepage() {
                 DEPARTMENT OF <br/> ENGLISH
                 </p> */}
 
-        {/* <p
-          className="absolute top-1/4 w-[88vw] max-w-full
+        <p
+          className="absolute top-[15%] w-[88vw] max-w-full drop-shadow-md mx-auto flex flex-col
                 animate-fadeIn 
-                font-holtwood text-stroke text-title font-extralight text-center tracking-wide leading-normal
-                text-4xl sm:text-5xl sm:leading-tight md:text-7xl lg:text-8xl xl:text-9xl z-10"
+                font-bebas  text-[#2F2F2F] font-extrabold text-center tracking-[0.12em] leading-[1.15] lg:leading-none mr-3
+                text-[14vw]
+                divide-breakpoint:text-[12vw] z-10"
         >
-          DEPARTMENT OF <br /> ENGLISH <br />{" "}
-          <span className="sm:text-4xl sm:leading-tight md:text-5xl lg:text-6xl xl:text-7xl">
+          DEPARTMENT&nbsp;OF <br/> ENGLISH <br />{" "}
+          <span className="font-extrabold text-center leading-tight lg:leading-none text-[6vw] divide-breakpoint:text-[5vw]">
             (AIDED)
           </span>
-        </p> */}
-        <img
+        </p>  
+
+        {/* <img
           src="/deptEngHeroText.png"
           alt="deptEngHeroText"
-          className="absolute top-48 p-3 "
-        />
+          className="absolute animate-fadeIn top-28 p-3 "
+        /> */}
       </motion.div>
 
       <motion.div
@@ -79,9 +82,9 @@ export default function Homepage() {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 2 }}
-        className="bg-[url('/deptAbout.jpg')] bg-cover bg-center flex flex-col justify-around items-center w-[97svw] lg:h-[90svh] rounded-2xl mt-3 mx-auto "
+        className="bg-[url('/deptAbout.jpg')] bg-cover bg-center flex flex-col justify-around items-center w-[97svw] min-h-[644px] lg:h-[90svh] rounded-2xl mt-3 mx-auto "
       >
-        <div className="w-[95vw] h-[9svh] mt-3 flex flex-row justify-center items-center border border-black outline-1 outline-gray-900 backdrop-blur-lg rounded-[45px]">
+        <div className="w-[95vw] h-[9svh] min-h-[64px] mt-3 flex flex-row justify-center items-center border border-black outline-1 outline-gray-900 backdrop-blur-lg rounded-[45px]">
           <p
             className=" text-text-black-black text-center font-josefin rounded-[45px]
                     text-4xl md:text-5xl"
@@ -90,7 +93,7 @@ export default function Homepage() {
           </p>
         </div>
 
-        <div className="overflow-hidden w-[95vw] lg:h-[80%] between-lg-xl:h-[70%] flex flex-row flex-wrap-reverse justify-around items-center bg-[#F6F2E4] bg-opacity-50 rounded-3xl mx-auto mt-5 gap-x-6">
+        <div className="overflow-hidden w-[95vw] min-h-[447px] lg:h-[80%] between-lg-xl:h-[70%] flex flex-row flex-wrap-reverse justify-around items-center bg-[#F6F2E4] bg-opacity-50 rounded-3xl mx-auto mt-5 gap-x-6">
           <motion.p
             initial={{ x: -150 }}
             whileInView={{ x: 0 }}

@@ -51,12 +51,14 @@ export default function Register() {
 
   useEffect(() => {
     console.log(totalRegistrationFee);
-    setUPIRegistratoinLink(`upi://pay?pa=gokulgopalan18-1@oksbi&pn=Gokul%20Gopalan&am=${totalRegistrationFee}.00&cu=INR&aid=uGICAgICN1d6XRQ`)
+    
+    setUPIRegistratoinLink(`upi://pay?pa=vidhyahanumanthk@okicici&pn=Vidhya%20Hanumanth%20Kanagaraj&am=${totalRegistrationFee}.00&cu=INR&aid=uGICAgMDoj7-7Jg`)
   }, [totalRegistrationFee]);
 
   useEffect(() => {
     setTotalRegistrationFee(0);
   }, [collegeName]);
+
 
   return (
     <motion.div
@@ -82,14 +84,15 @@ export default function Register() {
           onLoad={() => {
             console.log("Bgloaded");
           }}
-          className="bg-[url('/registrationFormBg.png')] bg-cover bg-center w-[88svw] max-w-[1280px] p-5 pt-10 md:p-8 flex flex-row flex-wrap rounded-3xl"
+          className="bg-[url('/registrationFormBg.jpg')] bg-cover bg-center w-[88svw] max-w-[1280px] p-5 pt-10 md:p-8 flex flex-row flex-wrap rounded-3xl"
         >
           <div className="flex flex-col w-[90%] md:w-2/4 min-w-[260px] space-y-2 mb-9 md:mb-16">
             <label
               className="font-plex text-white tracking-widest font-medium text-md md:text-xl ml-2"
               htmlFor="name"
             >
-              NAME{" "}
+              {/* styling of <sup> is available in index.css */}
+              NAME<sup>*</sup>
             </label>
             <input
               id="name"
@@ -107,7 +110,7 @@ export default function Register() {
               className=" font-plex text-white tracking-widest font-medium text-md md:text-xl ml-2"
               htmlFor="phoneNumber"
             >
-              PHONE NO
+              PHONE NO<sup>*</sup>
             </label>
             <input
               id="phoneNumber"
@@ -131,7 +134,7 @@ export default function Register() {
               className="font-plex text-white tracking-widest font-medium text-md md:text-xl ml-2"
               htmlFor="email"
             >
-              EMAIL ID
+              EMAIL ID<sup>*</sup>
             </label>
             <input
               id="email"
@@ -156,7 +159,7 @@ export default function Register() {
               className="font-plex text-white tracking-widest font-medium text-md md:text-xl ml-2"
               htmlFor="department"
             >
-              DEPARTMENT
+              DEPARTMENT<sup>*</sup>
             </label>
             <input
               type="text"
@@ -177,7 +180,7 @@ export default function Register() {
               className="font-plex text-white tracking-widest font-medium text-md md:text-xl ml-2"
               htmlFor="collegeName"
             >
-              COLLEGE
+              COLLEGE<sup>*</sup>
             </label>
             <div
               className="w-[90%] min-w-[300px] h-11 flex flex-row justify-between items-center text-[0.83rem] sm:text-sm lg:text-base font-plex font-semibold text-[#373636] bg-white rounded-3xl p-2 pl-4 focus:outline-none cursor-pointer"
@@ -232,7 +235,7 @@ export default function Register() {
             <input
               type="hidden"
               value={collegeName}
-              {...register("collegeName", { required: "Select your college" })}
+              {...register("collegeName", { validate: (value)=> value == "PSG College of Arts & Science" || value == "Others" || "Oops! Looks like you forgot to tell us your college."  })}
             />
 
             {errors.collegeName && (
@@ -248,7 +251,7 @@ export default function Register() {
                 className="font-plex text-white tracking-widest font-medium text-md md:text-xl ml-2"
                 htmlFor="rollNumber"
               >
-                ROLL NUMBER
+                ROLL NUMBER<sup>*</sup>
               </label>
               <input
                 id="rollNumber"
@@ -273,7 +276,7 @@ export default function Register() {
                 className="font-plex text-white tracking-widest font-medium text-md md:text-xl ml-2"
                 htmlFor="otherCollegeName"
               >
-                COLLEGE NAME
+                COLLEGE NAME<sup>*</sup>
               </label>
               <input
                 id="otherCollegeName"
@@ -296,7 +299,7 @@ export default function Register() {
         {/*It dynamically adds the events to be selected */}
 
         <div
-          className="bg-[url('/registrationFormBg1.png')] bg-cover bg-center flex flex-col flex-wrap items-center justify-center
+          className="bg-[url('/registrationFormBg1.jpg')] bg-cover bg-center flex flex-col flex-wrap items-center justify-center
                                 w-[88svw] max-w-[1340px] p-5 pt-10 md:p-8 rounded-3xl"
         >
           <p className="flex justify-center items-center w-[100%] h-[6svh] font-plex font-semibold text-white text-xl md:text-3xl tracking-wider outline outline-1 outline-white rounded-3xl ">
@@ -307,7 +310,7 @@ export default function Register() {
               className="font-plex text-white tracking-widest font-medium text-md md:text-xl mt-10 "
               htmlFor="eventdropdown"
             >
-              SELECT THE EVENT
+              SELECT THE EVENT<sup>*</sup>
             </label>
             <div
               id="eventdropdown"
@@ -354,7 +357,7 @@ export default function Register() {
             <input
               type="hidden"
               value={selectedEvent}
-              {...register("selectedEvent", { required: "Select any event" })}
+              {...register("selectedEvent", { validate: (value)=> value !== "Select any event" || "Oops! You forgot to select an event." })}
             />
 
             {errors.selectedEvent && (
@@ -370,7 +373,7 @@ export default function Register() {
             </legend>
             {selectedEvent == "Select any event" ? (
               <p className="font-plex text-white font-medium text-sm md:text-lg my-3">
-                (Select any event to view the competitions)
+                (Select your college & any event to view the competitions)
               </p>
             ) : (
               <div className="flex flex-row flex-wrap">
@@ -382,7 +385,7 @@ export default function Register() {
                   ] || []
                 ).map((event, index) => {
                   return (
-                    collegeName === event.eventFor && (
+                    (collegeName === event.eventFor || event.eventFor == "All") && (
                       <div
                         key={index}
                         className="flex flex-row  p-3 mx-2 md:mx-6 space-x-3"
@@ -403,10 +406,6 @@ export default function Register() {
                                       (value) => value,
                                     )) ||
                                   "Select at least one competition";
-                                console.log(
-                                  "Validation Result: ",
-                                  validationResult,
-                                );
                                 return validationResult;
                               },
                             },
@@ -445,7 +444,7 @@ export default function Register() {
           </fieldset>
         </div>
 
-        <div className="bg-[url('/registrationFormBg.png')] bg-cover bg-center flex flex-col justify-center items-center w-[88svw] max-w-[1280px] text-white p-5 pt-10 md:p-8 rounded-3xl space-y-2">
+        <div className="bg-[url('/registrationFormBg.jpg')] bg-cover bg-center flex flex-col justify-center items-center w-[88svw] max-w-[1280px] text-white p-5 pt-10 md:p-8 rounded-3xl space-y-2">
           <p className="font-plex font-bold mb-4">SCAN THE QR CODE TO PAY</p>
           <a
             className="pb-1 bg-white"
@@ -458,8 +457,8 @@ export default function Register() {
           <p className="font-plex font-bold pb-7">
             Amount to be paid : {totalRegistrationFee}
           </p>
-          <label className="" htmlFor="transactionID">
-            Enter UPI transaction ID
+          <label className="font-plex text-sm font-medium" htmlFor="transactionID">
+            Enter UPI transaction ID<sup>*</sup>
           </label>
           <input
             id="transactionID"
@@ -481,7 +480,7 @@ export default function Register() {
 
         <button
           type="submit"
-          className="bg-[url('/registrationFormBg.png')] bg-cover bg-center w-[30%] min-w-[200px] text-lg md:text-3xl text-white font-plex font-bold tracking-widest rounded-3xl p-4 !my-32 "
+          className="bg-[url('/registrationFormBg.jpg')] bg-cover bg-center w-[30%] min-w-[200px] text-lg md:text-3xl text-white font-plex font-bold tracking-widest rounded-3xl p-4 !my-32 "
         >
           SUBMIT
         </button>
