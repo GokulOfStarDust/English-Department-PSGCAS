@@ -11,7 +11,7 @@ export default function UpperNavbar() {
             className="w-14 h-14"
           />
           <p className="font-hanuman text-black text-base xl:text-xl tracking-wide font-bold ">
-            DEPARTMENT OF ENGLISH
+            DEPARTMENT OF ENGLISH (AIDED)
           </p>
         </li>
         <div className="list-none hidden md:flex flex-row justify-around font-plex text-black w-6/12 md:text-base xl:text-xl">

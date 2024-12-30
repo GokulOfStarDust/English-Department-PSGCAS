@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
+
 import "/src/index.css";
 import "./CompetitionData";
 
@@ -115,7 +116,7 @@ export default function Homepage() {
             src="/dept-logo.png"
             alt=""
             onLoad={imageLoadHandle}
-            className="w-[60%] sm:w-[43%] md:w-[20%] md:min-w-[319px] lg:w-[27%] h-[60%] lg:h-[70%] my-10 object-contain mx-auto"
+            className="w-[70%] sm:w-[60%] md:w-[40%] md:min-w-[319px] lg:w-[40%] h-[70%] lg:h-[80%] mt-10 -mb-5 lg:!mb-10 object-contain mx-auto"
           />
         </div>
       </motion.div>
