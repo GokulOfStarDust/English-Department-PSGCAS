@@ -83,7 +83,7 @@ export default function Homepage() {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 2 }}
-        className="bg-[url('/deptAbout.jpg')] bg-cover bg-center flex flex-col justify-around items-center w-[97svw] min-h-[644px] lg:h-[90svh] rounded-2xl mt-3 pb-4 mx-auto "
+        className="bg-[url('/deptAbout.jpg')] bg-cover bg-center flex flex-col justify-around items-center w-[97svw] min-h-[644px] lg:h-[90svh] rounded-2xl mt-4 pb-4 mb-9 mx-auto "
       >
         <div className="w-[95vw] h-[9svh] min-h-[64px] mt-3 flex flex-row justify-center items-center border border-black outline-1 outline-gray-900 backdrop-blur-lg rounded-[45px]">
           <p
