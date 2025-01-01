@@ -23,8 +23,9 @@ export default function Register() {
         return value != false && value != true;
       },
     );
+    console.log(data)
     try {
-      const response = await fetch("https://sheetdb.io/api/v1/3yw0iyl2l7e1e", {
+      const response = await fetch("https://sheetdb.io/api/v1/fw4hbmv2bvf1e", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
