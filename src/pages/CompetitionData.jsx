@@ -1,5 +1,5 @@
 const competitionData = {
-  aTailOfThreeQuizzes: [
+  aTaleOfThreeQuizzes: [
     {
       id: "literature-quiz",
       name: "Literature Quiz",
