@@ -5,10 +5,10 @@ export default function Footer(){
     const navigate = useNavigate();
 
     return(
-        <footer className="flex flex-col w-[99.8%] mx-auto rounded-tl-[2rem] rounded-tr-[2rem] text-sm text-background-brown">
-            <div className="flex flex-row flex-wrap items-center justify-between bg-[#242424] w-full rounded-tl-[2rem] rounded-tr-[2rem] pt-8 lg:pt-0">
+        <footer className="flex flex-col w-[99.8%] mx-auto rounded-tl-[2rem] rounded-tr-[2rem] text-sm text-white font-plex">
+            <div className="flex flex-row flex-wrap items-center justify-between bg-event-card-black w-full rounded-tl-[2rem] rounded-tr-[2rem] pt-8 lg:pt-0">
                     <div className="flex flex-row divide-x-[1px] divide-[rgba(255,255,255,0.5)]">
-                        <ul className="font-plex font-normal space-y-3 py-3 pl-7 pr-9 cursor-pointer">
+                        <ul className="font-normal space-y-3 py-3 pl-7 pr-9 cursor-pointer">
                             <li className="hover:underline hover:underline-offset-4" onClick={()=>{navigate("/")}}>Home</li>
                             <li className="hover:underline hover:underline-offset-4" onClick={()=>{navigate("/events")}}>Events</li>
                             <li className="hover:underline hover:underline-offset-4" onClick={()=>{navigate("/register")}}>Registeration</li>
@@ -25,17 +25,17 @@ export default function Footer(){
                         </div>
                     </div>
 
-                    <div className="flex flex-col items-start justify-center font-plex space-y-4 pl-6 pr-2 pt-12 pb-7 lg:py-10 between-lg-xl:mr-24">                             
+                    <div className="flex flex-col items-start justify-center space-y-4 pl-6 pr-2 pt-8 pb-7 lg:py-10 between-lg-xl:mr-24">                             
                         <h1 className="text-base font-semibold">Contact Us</h1>                   
                         <div className="flex flex-col items-start space-y-2 w-full text-[0.75rem] md:text-sm">
                             <p className="font-light">
                                 <span className="">N S Muguntharajan</span> 
-                                <span className="text-[#faf7e6]"> (Staff Incharge)</span> - 
+                                <span className="text-gray-200"> (Staff Incharge)</span> - 
                                 <a href="tel:9789642676" className=" hover:underline"> 9789642676</a>
                             </p>                                
                             <p className="font-light">
                                 <span className="">Gopika</span> 
-                                <span className="text-[#faf7e6]"> (Chairperson)</span> - 
+                                <span className="text-gray-200"> (Chairperson)</span> - 
                                 <a href="tel:9789642676" className=" hover:underline"> 9789642676</a>
                             </p>
                         </div>
@@ -45,9 +45,9 @@ export default function Footer(){
 
                
            
-            <div className="flex flex-row items-center justify-center text-background-brown bg-[#232323] h-[55px] divide-x-2 space-x-3  border-t-2">
+            <div className="flex flex-row items-center justify-center text-white bg-event-card-black h-[55px] divide-x-2 space-x-3  border-t-2">
                 <div>
-                    <p className="text-[0.75rem] md:text-sm font-medium font-plex">
+                    <p className="text-[0.75rem] md:text-sm font-medium">
                     Crafted with love by <span className="font-bold">Gokul G</span>
                     </p>
                 </div>

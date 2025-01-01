@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React, { Suspense } from "react";
 import Layout from "./components/Layout.jsx";
 import LoadingAnimation from "./pages/LoadingAnimation.jsx";
+import ScrollToTop from './pages/ScrollToTop.jsx';
 import "./index.css";
 
 const Competition = React.lazy(()=> import("./pages/Competition.jsx"))
@@ -12,6 +13,7 @@ const Events = React.lazy(()=> import("./pages/Events.jsx"))
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop/>
       <Suspense fallback={<LoadingAnimation />}>
         <Routes>
           <Route path="/" element={<Layout />}>

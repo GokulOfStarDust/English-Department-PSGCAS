@@ -57,7 +57,7 @@ export default function CompetitionList({ eventId }) {
             <li key={index} className="list-none">
               <div>
                 <motion.div
-                  className="flex flex-col bg-event-card-black w-[88svw] p-7 pt-3 space-y-5 rounded-3xl "
+                  className="flex flex-col bg-event-card-black w-[88svw] md:w-[75svw] p-7 pt-3 space-y-5 rounded-3xl "
                   layoutId={`card-container-${competition.id}`}
                 >
                   <motion.div

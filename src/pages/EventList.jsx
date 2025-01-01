@@ -55,7 +55,7 @@ export default function EventList(){
             <li key={event.id} className="list-none">
               <div onClick={()=>{navigate(`/events/${event.id}`);}}>
                 <motion.div
-                  className="flex flex-col bg-event-card-black w-[88svw] p-7 pt-7 space-y-5 rounded-3xl "
+                  className="flex flex-col bg-event-card-black w-[88svw] md:w-[75svw] p-7 pt-7 space-y-5 rounded-3xl "
                 >
                   <motion.div
                     className="flex flex-row justify-center"
@@ -73,7 +73,7 @@ export default function EventList(){
                     {event.name}
                   </motion.div>
                   <motion.div
-                    className="font-plex font-light text-white text-sm md:text-md lg:text-lg -mt-6"
+                    className="font-plex font-light text-white text-sm md:text-md lg:text-lg -mt-9"
                   >
                     <div className="flex flex-col w-full">
                         <div className="flex flex-row flex-wrap w-full items-center">

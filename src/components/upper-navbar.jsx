@@ -2,19 +2,19 @@ import { NavLink } from "react-router-dom";
 
 export default function UpperNavbar() {
   return (
-    <nav className="bg-navbar-brown text-black md:sticky top-0 flex flex-row rounded-b-2xl w-screen max-w-full h-20 shadow-md border-[0.1px] border-black z-30">
+    <nav className="bg-navbar-brown text-black sticky top-0 flex flex-row rounded-b-2xl w-screen max-w-full h-20 shadow-md border-[0.1px] border-black z-30">
       <ul className="flex flex-row justify-between items-center ml-3 w-screen max-w-full ">
-        <li className="list-none flex flex-row items-center md:w-6/12">
+        <li className="list-none flex flex-row items-center">
           <img
             src="/navbar-logo.png"
             alt="english-dept-logo"
             className="w-14 h-14"
           />
-          <p className="font-hanuman text-black text-base xl:text-xl tracking-wide font-bold ">
+          <p className="font-hanuman hidden md:flex text-black text-base xl:text-xl tracking-wide font-bold ">
             DEPARTMENT OF ENGLISH (AIDED)
           </p>
         </li>
-        <div className="list-none hidden md:flex flex-row justify-around font-plex text-black w-6/12 md:text-base xl:text-xl">
+        <div className="list-none flex flex-row justify-around font-plex text-black space-x-4 sm:w-1/2 text-sm divide-breakpoint:text-base xl:text-xl">
           <NavLink
             to={"/"}
             className={({ isActive }) =>
