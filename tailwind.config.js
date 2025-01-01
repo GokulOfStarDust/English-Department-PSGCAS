@@ -1,12 +1,9 @@
 // tailwind.config.js
 /** @type {import('tailwindcss').Config} */
-import tailwindcssTextshadow from 'tailwindcss-textshadow';
+import tailwindcssTextshadow from "tailwindcss-textshadow";
 
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}"
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       screens: {
@@ -31,7 +28,7 @@ export default {
         holtwood: ["Holtwood One SC", "serif"],
         josefin: ["Josefin Slab", "serif"],
         bebas: ["Bebas Neue", "serif"],
-        poppins: ["Poppins","sans-serif"]
+        poppins: ["Poppins", "sans-serif"],
       },
       textShadow: {
         title: "4px 4px 30px rgba(187, 177, 152, 0.6)",

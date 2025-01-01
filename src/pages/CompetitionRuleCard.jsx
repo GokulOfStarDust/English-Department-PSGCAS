@@ -15,7 +15,6 @@ export default function EventRuleCard({ competitionId }) {
 
   return (
     <motion.div
-      
       layoutId={`card-container-${competitionId}`}
       className="bg-[url('/PopUpBackground.jpg')] bg-cover bg-center bg-fixed w-[70svw] min-w-[360px] overflow-scroll fixed mx-auto mt-[4.5%] inset-0 my-auto p-3 z-50 rounded-3xl"
     >
@@ -90,14 +89,13 @@ export default function EventRuleCard({ competitionId }) {
           </div>
         </div>
         <div
-            className="flex flex-row justify-center items-center mx-auto  bg-cover w-[25%] min-w-[250px] mt-9 xxl:mt-[2.3%] bottom-2 text-base md:text-lg xxl:text-xl font-plex font-bold tracking-widest rounded-full p-4 pt-12 cursor-pointer hover:underline"
-            onClick={() => {
-              navigate(`/register`);
-            }}
+          className="flex flex-row justify-center items-center mx-auto  bg-cover w-[25%] min-w-[250px] mt-9 xxl:mt-[2.3%] bottom-2 text-base md:text-lg xxl:text-xl font-plex font-bold tracking-widest rounded-full p-4 pt-12 cursor-pointer hover:underline"
+          onClick={() => {
+            navigate(`/register`);
+          }}
         >
           Click to Regsiter
         </div>
-
       </motion.div>
     </motion.div>
   );

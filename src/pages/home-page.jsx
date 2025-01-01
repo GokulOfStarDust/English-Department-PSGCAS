@@ -65,11 +65,11 @@ export default function Homepage() {
                 text-[14vw]
                 divide-breakpoint:text-[12vw] z-10"
         >
-          DEPARTMENT&nbsp;OF <br/> ENGLISH <br />{" "}
+          DEPARTMENT&nbsp;OF <br /> ENGLISH <br />{" "}
           <span className="font-extrabold text-center leading-tight lg:leading-none text-[6vw] divide-breakpoint:text-[5vw]">
             (AIDED)
           </span>
-        </p>  
+        </p>
 
         {/* <img
           src="/deptEngHeroText.png"

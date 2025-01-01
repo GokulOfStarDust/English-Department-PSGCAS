@@ -2,18 +2,18 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React, { Suspense } from "react";
 import Layout from "./components/Layout.jsx";
 import LoadingAnimation from "./pages/LoadingAnimation.jsx";
-import ScrollToTop from './pages/ScrollToTop.jsx';
+import ScrollToTop from "./pages/ScrollToTop.jsx";
 import "./index.css";
 
-const Competition = React.lazy(()=> import("./pages/Competition.jsx"))
-const Homepage = React.lazy(()=> import("./pages/home-page"))
-const Register = React.lazy(()=> import("./pages/register"))
-const Events = React.lazy(()=> import("./pages/Events.jsx"))
+const Competition = React.lazy(() => import("./pages/Competition.jsx"));
+const Homepage = React.lazy(() => import("./pages/home-page"));
+const Register = React.lazy(() => import("./pages/register"));
+const Events = React.lazy(() => import("./pages/Events.jsx"));
 
 function App() {
   return (
     <BrowserRouter>
-      <ScrollToTop/>
+      <ScrollToTop />
       <Suspense fallback={<LoadingAnimation />}>
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -21,11 +21,14 @@ function App() {
             <Route path="Register" element={<Register />} />
             <Route path="events" element={<Events />} />
             <Route path="events/:eventId" element={<Competition />} />
-            <Route path="events/:eventId/:competitionId" element={<Competition />} />
+            <Route
+              path="events/:eventId/:competitionId"
+              element={<Competition />}
+            />
           </Route>
         </Routes>
       </Suspense>
-  </BrowserRouter>
+    </BrowserRouter>
   );
 }
 

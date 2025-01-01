@@ -1,14 +1,17 @@
 import { NavLink, useNavigate } from "react-router-dom";
 
-
 export default function UpperNavbar() {
-
   const navigate = useNavigate();
 
   return (
     <nav className="bg-navbar-brown text-black sticky top-0 flex flex-row rounded-b-2xl w-screen max-w-full h-20 shadow-md border-[0.1px] border-black z-30">
       <ul className="flex flex-row justify-between items-center ml-3 w-screen max-w-full ">
-        <li onClick={()=>{navigate("/")}} className="list-none flex flex-row items-center hover:cursor-pointer">
+        <li
+          onClick={() => {
+            navigate("/");
+          }}
+          className="list-none flex flex-row items-center hover:cursor-pointer"
+        >
           <img
             src="/navbar-logo.png"
             alt="english-dept-logo"

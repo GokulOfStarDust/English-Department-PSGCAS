@@ -7,9 +7,9 @@ export default function Layout() {
   return (
     <>
       <UpperNavbar />
-      
+
       <Outlet />
-      <Footer/>
+      <Footer />
     </>
   );
 }
