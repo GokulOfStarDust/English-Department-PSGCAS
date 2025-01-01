@@ -48,7 +48,7 @@ export default function Homepage() {
           src="/intro-img.jpeg"
           alt="introduction-page-image"
           onLoad={imageLoadHandle}
-          className="w-[97vw] h-[90svh] max-w-full max-h-full object-cover rounded-2xl blur-[0.5px] relative"
+          className="w-[97vw] h-[90svh] max-w-full max-h-full object-cover rounded-2xl blur-[0.2px] relative"
         />
 
         {/* <p className="absolute top-1/4 w-[88vw] rounded-3xl max-w-full
@@ -61,7 +61,7 @@ export default function Homepage() {
         <p
           className="absolute top-[15%] w-[88vw] max-w-full drop-shadow-md mx-auto flex flex-col
                 animate-fadeIn 
-                font-bebas  text-[#2F2F2F] font-extrabold text-center tracking-[0.12em] leading-[1.15] lg:leading-none mr-3
+                font-bebas  text-[#242424] font-extrabold text-center tracking-[0.12em] leading-[1.15] lg:leading-none mr-3
                 text-[14vw]
                 divide-breakpoint:text-[12vw] z-10"
         >
@@ -83,7 +83,7 @@ export default function Homepage() {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 2 }}
-        className="bg-[url('/deptAbout.jpg')] bg-cover bg-center flex flex-col justify-around items-center w-[97svw] min-h-[644px] lg:h-[90svh] rounded-2xl mt-3 mx-auto "
+        className="bg-[url('/deptAbout.jpg')] bg-cover bg-center flex flex-col justify-around items-center w-[97svw] min-h-[644px] lg:h-[90svh] rounded-2xl mt-3 pb-4 mx-auto "
       >
         <div className="w-[95vw] h-[9svh] min-h-[64px] mt-3 flex flex-row justify-center items-center border border-black outline-1 outline-gray-900 backdrop-blur-lg rounded-[45px]">
           <p
@@ -99,7 +99,7 @@ export default function Homepage() {
             initial={{ x: -150 }}
             whileInView={{ x: 0 }}
             transition={{ duration: 1 }}
-            className="w-full md:min-w-[450px] lg:w-2/4 text-justify lg:text-md xl:text-lg xxl:text-xl md:tracking-wider p-8 lg:pl-14 text-text-black font-plex font-normal"
+            className="w-full md:min-w-[450px] lg:w-2/4 text-justify text-sm lg:text-base xl:text-lg xxl:text-xl md:tracking-wider p-8 lg:pl-14 text-text-black font-plex font-normal"
           >
             The English Department at PSG College of Arts & Science is dedicated
             to fostering a love for literature and advancing language skills

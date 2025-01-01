@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import eventData from "./EventData";
@@ -12,8 +12,12 @@ export default function Register() {
   const [eventDropdown, setEventDropdown] = useState(false);
   const [totalRegistrationFee, setTotalRegistrationFee] = useState(0);
   const [UPIRegistratoinLink, setUPIRegistratoinLink] = useState(" ")
+  const [submitInfo, setSubmitInfo] = useState(false)
+  const [submitMessage, setSubmitMessage] = useState(" ")
+  const [loadingAnimation, setLoadindAnimation] = useState(false)
 
   async function formDataHandler(data) {
+    setSubmitInfo(true);
     data.selectedCompetition = Object.values(data.selectedCompetition).filter(
       (value) => {
         return value != false && value != true;
@@ -33,10 +37,13 @@ export default function Register() {
       }
 
       const result = await response.json();
-      alert("Submit Successfully");
+      setLoadindAnimation(false)
+      setSubmitMessage("THANK YOU FOR REGISTERING!!");
+      setSubmitInfo(true)
       reset();
     } catch (error) {
-      console.error("Error posting data:", error);
+      setSubmitMessage("Error Occured. Contact the concerned.");
+      setSubmitInfo(true)
     }
   }
 
@@ -68,8 +75,29 @@ export default function Register() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.2, delay: 0.1 }}
     >
+        <motion.div
+        initial={{ opacity: 0, y: 200 }} // Start with opacity 0 and slightly below the viewport
+        animate={{ opacity: 1, y: 0 }} // Fade in and slide to its final position
+        exit={{ opacity: 0, y: 200 }} // On exit, slide down and fade out
+        transition={{ duration: 2, ease: "easeInOut" }}
+          className={`${submitInfo? "": "hidden"} flex flex-row items-center justify-center bg-[rgba(0,0,0,0.5)] fixed w-[100vw] h-[100svh] !-mt-20 z-40`}
+          >
+            <div className="bg-[url('/PopUpBackground.jpg')] flex flex-row items-center justify-center w-[94%] max-w-[481px] h-[250px] rounded-xl">
+                <div className="flex flex-col  justify-center items-center border border-black w-[97%] max-w-[481px] h-[235px] rounded-lg">               
+                    <h1 className="text-xl sm:text-2xl font-plex font-semibold">{submitMessage}</h1>
+                    {loadingAnimation || <p className="text-sm font-plex pt-2 px-5 text-center">You'll receive confirmation mail in couple of days</p>}
+                    {loadingAnimation && 
+                    <div class="loaderRegisterPage"></div> }
+                    {loadingAnimation || <button className="mt-14 p-3 px-8 text-lg font-plex rounded-3xl bg-event-card-black text-white"
+                    onClick={()=>{setSubmitInfo(false); setSubmitMessage("")}}
+                    >
+                      Close
+                    </button>}
+                </div>
+            </div>
+          </motion.div>
       <div
-        className="flex items-center justify-center bg-[url('/resgistrationTitleBg.png')] bg-no-repeat bg-cover bg-center w-[90svw] min-h-[60px] md:min-h-[80px] my-16
+        className="flex items-center justify-center bg-[url('/resgistrationTitleBg.png')] bg-no-repeat bg-cover bg-center w-[90svw] min-h-[60px] md:min-h-[80px] !my-16
                             font-josefin text-white font-bold text-[1.7rem] md:text-4xl tracking-[3.8px]
                             rounded-3xl outline outline-1 outline-black"
       >
@@ -481,6 +509,7 @@ export default function Register() {
         <button
           type="submit"
           className="bg-[url('/registrationFormBg.jpg')] bg-cover bg-center w-[30%] min-w-[200px] text-lg md:text-3xl text-white font-plex font-bold tracking-widest rounded-3xl p-4 !my-32 "
+          onClick={()=>{ setLoadindAnimation(true)}}
         >
           SUBMIT
         </button>

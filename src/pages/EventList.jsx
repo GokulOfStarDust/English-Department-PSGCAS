@@ -61,7 +61,7 @@ export default function EventList(){
                     className="flex flex-row justify-center"
                   >
                     <img
-                      className={`w-[85svw] h-[45svh] md:h-[55svh] object-cover bg-top rounded-xl text-white`}
+                      className={`w-[85svw]  h-[45svh] md:h-[55svh] object-cover object-center rounded-xl text-white`}
                       src={event.imageUrl}
                       alt="Poster of 'A Tale of Three Quizzes'"
                       onLoad={imageLoadHandle}
@@ -73,7 +73,7 @@ export default function EventList(){
                     {event.name}
                   </motion.div>
                   <motion.div
-                    className="font-plex font-light text-white text-sm md:text-md lg:text-lg -mt-4"
+                    className="font-plex font-light text-white text-sm md:text-md lg:text-lg -mt-6"
                   >
                     <div className="flex flex-col w-full">
                         <div className="flex flex-row flex-wrap w-full items-center">
@@ -90,6 +90,10 @@ export default function EventList(){
                         <div className="flex flex-row items-center p-4 pl-0 pt-0 space-x-2">
                             <img src="/locationPin-event-icon.png" alt="location pin icon to represent event location" className="object-contain size-5"/>
                             <p>{event.location}</p>
+                        </div>
+                        <div className="flex flex-row items-center p-4 pl-0 pt-0 space-x-2">
+                            <img src="/cash-pool-logo.png" alt="cash pool icon to represent event cash prize" className="object-contain size-5"/>
+                            <p>{event.cashPrizeInfo}</p>
                         </div>
                     </div>
                   </motion.div>

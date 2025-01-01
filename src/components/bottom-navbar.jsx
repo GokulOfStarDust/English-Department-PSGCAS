@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 export default function BottomNavbar() {
   return (
     <nav
-      className="fixed bottom-[5lvh] left-0 right-0 top-[85svh] flex md:hidden flex-row justify-around items-center
+      className="fixed left-0 right-0 bottom-[30px] flex md:hidden flex-row justify-around items-center
          bg-event-card-black bg-opacity-80 border-2 border-black border-opacity-20 rounded-xl h-20 w-2/4 min-w-[308px] mx-auto z-40"
     >
       <NavLink

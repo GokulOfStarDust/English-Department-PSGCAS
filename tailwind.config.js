@@ -31,6 +31,7 @@ export default {
         holtwood: ["Holtwood One SC", "serif"],
         josefin: ["Josefin Slab", "serif"],
         bebas: ["Bebas Neue", "serif"],
+        poppins: ["Poppins","sans-serif"]
       },
       textShadow: {
         title: "4px 4px 30px rgba(187, 177, 152, 0.6)",

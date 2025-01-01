@@ -6,7 +6,7 @@ export default function UpperNavbar() {
       <ul className="flex flex-row justify-between items-center ml-3 w-screen max-w-full ">
         <li className="list-none flex flex-row items-center md:w-6/12">
           <img
-            src="./navbar-logo.png"
+            src="/navbar-logo.png"
             alt="english-dept-logo"
             className="w-14 h-14"
           />

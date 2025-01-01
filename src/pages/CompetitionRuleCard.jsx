@@ -15,9 +15,7 @@ export default function EventRuleCard({ competitionId }) {
 
   return (
     <motion.div
-      onClick={() => {
-        navigate(`/events/${eventId}`);
-      }}
+      
       layoutId={`card-container-${competitionId}`}
       className="bg-[url('/PopUpBackground.jpg')] bg-cover bg-center bg-fixed w-[70svw] min-w-[360px] overflow-scroll fixed mx-auto mt-[4.5%] inset-0 my-auto p-3 z-50 rounded-3xl"
     >
@@ -28,11 +26,11 @@ export default function EventRuleCard({ competitionId }) {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.2 }}
       >
-        <div className="flex justify-end">
+        <div className="flex justify-end relative bg-slate-5">
           <img
-            className="size-8 md:size-10 cursor-pointer sticky top-0 -mt-4 -mr-4 -mb-5"
+            className="size-9 md:size-12 cursor-pointer absolute top-0 -mt-3 -mr-3 -mb-4"
             onClick={() => navigate(`/events/${eventId}`)}
-            src="/close-button-icon.svg"
+            src="/close-circle-icon.png"
             alt=""
           />
         </div>
@@ -47,7 +45,7 @@ export default function EventRuleCard({ competitionId }) {
           layoutId={`card-image-container-${competitionId}`}
         >
           <img
-            className="w-[35svw] h-[25svh] object-cover rounded-xl"
+            className="w-[55svw] h-[45svh] object-contain rounded-xl"
             src={competition.imageUrl}
             alt="Lazy to specify one"
           />
@@ -92,13 +90,13 @@ export default function EventRuleCard({ competitionId }) {
           </div>
         </div>
         <div
-                      className="flex flex-row justify-center items-center mx-auto bg-[url('/eventSubmitBg.png')]  bg-cover w-[25%] min-w-[250px] mt-9 xxl:mt-[2.3%] bottom-2 text-base md:text-lg xxl:text-xl font-plex font-bold tracking-widest rounded-full p-4 cursor-pointer hover:underline"
-                      onClick={() => {
-                        navigate(`/register`);
-                      }}
-                    >
-                      Click to Regsiter
-                    </div>
+            className="flex flex-row justify-center items-center mx-auto  bg-cover w-[25%] min-w-[250px] mt-9 xxl:mt-[2.3%] bottom-2 text-base md:text-lg xxl:text-xl font-plex font-bold tracking-widest rounded-full p-4 pt-12 cursor-pointer hover:underline"
+            onClick={() => {
+              navigate(`/register`);
+            }}
+        >
+          Click to Regsiter
+        </div>
 
       </motion.div>
     </motion.div>
