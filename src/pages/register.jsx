@@ -25,7 +25,7 @@ export default function Register() {
     );
     console.log(data)
     try {
-      const response = await fetch("https://sheetdb.io/api/v1/fw4hbmv2bvf1e", {
+      const response = await fetch("https://sheetdb.io/api/v1/7egulrlzjjdai", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
