@@ -27,7 +27,7 @@ export default function Footer(){
 
                     <div className="flex flex-col items-start justify-center space-y-4 pl-6 pr-2 pt-8 pb-7 lg:py-10 between-lg-xl:mr-24">                             
                         <h1 className="text-base font-semibold">Contact Us</h1>                   
-                        <div className="flex flex-col items-start space-y-2 w-full text-[0.75rem] md:text-sm">
+                        <div className="flex flex-col items-start space-y-1 md:space-y-2 w-full text-[0.75rem] md:text-sm">
                             <p className="font-light">
                                 <span className="">N S Muguntharajan</span> 
                                 <span className="text-gray-200"> (Staff Incharge)</span> - 

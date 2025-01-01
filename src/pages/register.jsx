@@ -85,7 +85,7 @@ export default function Register() {
             <div className="bg-[url('/PopUpBackground.jpg')] flex flex-row items-center justify-center w-[94%] max-w-[481px] h-[250px] rounded-xl">
                 <div className="flex flex-col  justify-center items-center border border-black w-[97%] max-w-[481px] h-[235px] rounded-lg">               
                     <h1 className="text-xl sm:text-2xl font-plex font-semibold">{submitMessage}</h1>
-                    {loadingAnimation || <p className="text-sm font-plex pt-2 px-5 text-center">You'll receive confirmation mail soon. <br/>Remind your partner to register for the event </p>}
+                    {loadingAnimation || <p className="text-sm font-plex pt-2 px-5 text-center">You'll receive a confirmation mail soon.<br/>Don’t let your partner miss out! Drag them here to register! </p>}
                     {loadingAnimation && 
                     <div class="loaderRegisterPage"></div> }
                     {loadingAnimation || <button className="mt-14 p-3 px-8 text-lg font-plex rounded-3xl bg-event-card-black text-white"
