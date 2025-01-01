@@ -6,15 +6,15 @@ export default function Footer(){
 
     return(
         <footer className="flex flex-col w-[99.8%] mx-auto rounded-tl-[2rem] rounded-tr-[2rem] text-sm text-white font-plex">
-            <div className="flex flex-row flex-wrap items-center justify-between bg-event-card-black w-full rounded-tl-[2rem] rounded-tr-[2rem] pt-8 lg:pt-0">
+            <div className="flex flex-row flex-wrap items-center justify-between bg-event-card-black w-full rounded-tl-[2rem] rounded-tr-[2rem] pt-8 lg:pt-0 lg:pl-4">
                     <div className="flex flex-row divide-x-[1px] divide-[rgba(255,255,255,0.5)]">
-                        <ul className="font-normal space-y-3 py-3 pl-7 pr-9 cursor-pointer">
+                        <ul className="font-normal text-[0.76rem] md:text-sm space-y-3 py-3 pl-7 pr-9 cursor-pointer">
                             <li className="hover:underline hover:underline-offset-4" onClick={()=>{navigate("/")}}>Home</li>
                             <li className="hover:underline hover:underline-offset-4" onClick={()=>{navigate("/events")}}>Events</li>
                             <li className="hover:underline hover:underline-offset-4" onClick={()=>{navigate("/register")}}>Registeration</li>
                         </ul>
                         
-                        <div className="flex flex-row flex-wrap items-center justify-center font-plex pl-5 -space-y-7 sm:space-y-0">
+                        <div className="flex flex-row flex-wrap items-center justify-center text-[0.76rem] md:text-sm font-plex pl-5 -space-y-7 sm:space-y-0">
                             <h1 className="mr-4 font-medium">Follow us on</h1>
                             <a href="https://www.instagram.com/englishdept.psgcas/?utm_source=ig_web_button_share_sheet" target="_blank">
                                 <div className="flex flex-row items-center space-x-2 p-2 border border-white rounded-xl">
