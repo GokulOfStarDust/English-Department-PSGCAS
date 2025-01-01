@@ -10,13 +10,15 @@ const competitionData = {
       eventFor: "PSG College of Arts & Science",
       time: "09:00 a.m - 01:00 p.m",
       date: "6 JAN 2025",
-      location: "Kaveri Hall, Q-Block, PSG College of Arts & Science",
+      location: "Vaigai Hall, Q-Block, PSG College of Arts & Science",
       quizMaster: "Vidhya Hanumanth K",
       RegisterationFee: 20,
       guidelines: [
         "Each team can have upto 2 members.",
         "Solo Participation is Allowed",
         "The event consists of two rounds.",
+        "OD will be provided for PSGCAS students.",
+        "Cash prize will be awarded at the end of each event.",
       ],
       rules: {
         "General Rules": [
@@ -38,13 +40,14 @@ const competitionData = {
       eventFor: "PSG College of Arts & Science",
       time: "09:00 a.m - 01:00 p.m",
       date: "7 JAN 2025",
-      location: "Kaveri Hall, Q-Block, PSG College of Arts & Science",
+      location: "Vaigai Hall, Q-Block, PSG College of Arts & Science",
       quizMaster: "Manashika 🤝 Mithra",
       RegisterationFee: 20,
       guidelines: [
         "Each team can have upto 2 members.",
         "Solo Participation is Allowed",
         "The event consists of two rounds.",
+        "OD will be provided for PSGCAS students.",
       ],
       rules: {
         "General Rules": [
@@ -66,13 +69,15 @@ const competitionData = {
       eventFor: "All",
       time: "09:00 a.m - 01:00 p.m",
       date: "8 JAN 2025",
-      location: "Kaveri Hall, Q-Block, PSG College of Arts & Science",
+      location: "Vaigai Hall, Q-Block, PSG College of Arts & Science",
       quizMaster: "RK Rohit 🤝 JS Rohit",
       RegisterationFee: 30,
       guidelines: [
         "Each team can have upto 2 members.",
         "Solo Participation is Allowed",
         "The event consists of two rounds.",
+        "Cross college registration is allowed.",
+        "OD will be provided for PSGCAS students.",
       ],
       rules: {
         "General Rules": [
