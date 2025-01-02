@@ -67,6 +67,8 @@ export default function Register() {
 
   useEffect(() => {
     setTotalRegistrationFee(0);
+    setValue("selectedCompetition.general-quiz", "");  // Reset all checkboxes
+    reset({ ...watch(), selectedCompetition: [] });
   }, [collegeName]);
 
   return (
@@ -207,6 +209,7 @@ export default function Register() {
             <input
               type="text"
               id="department"
+              placeholder="Eg:  B.A. English (SF / Aided)"
               className="w-[90%] min-w-[300px] font-poppins text-black rounded-3xl p-2 pl-4 focus:outline-none"
               {...register("department", { required: "Enter your department" })}
             />
@@ -254,7 +257,7 @@ export default function Register() {
                   setCollegeDropdown(false);
                   setCollegeName(event.target.innerText);
                   reset({ ...watch(), selectedCompetition: {} });
-
+                  
                   setValue("collegeName", event.target.innerText);
                 }}
                 className="w-full rounded-xl p-3 hover:bg-[#373636] hover:text-white cursor-pointer"
@@ -267,6 +270,7 @@ export default function Register() {
                   setCollegeDropdown(false);
                   reset({ ...watch(), selectedCompetition: {} });
                   setCollegeName(event.target.innerText);
+                  
                   setValue("collegeName", event.target.innerText);
                 }}
                 className="w-full rounded-xl p-3 hover:bg-[#373636] hover:text-white cursor-pointer"
@@ -423,7 +427,7 @@ export default function Register() {
             <legend className="font-plex text-white tracking-widest font-medium text-sm md:text-lg mt-10 ">
               SELECT THE COMPETITIONS :
             </legend>
-            {selectedEvent == "Select any event" ? (
+            {(collegeName == "Select your college" || selectedEvent == "Select any event") ? (
               <p className="font-plex text-white font-medium text-sm md:text-lg my-3">
                 (Select your college & any event to view the competitions)
               </p>

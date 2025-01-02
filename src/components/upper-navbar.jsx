@@ -25,7 +25,7 @@ export default function UpperNavbar() {
           <NavLink
             to={"/"}
             className={({ isActive }) =>
-              `p-3 transition hover:bg-[#2B2B2B] hover:text-[#EFEFEF] hover:outline hover:outline-1 hover:outline-black cursor-pointer duration-700 rounded-lg ${isActive && `underline`}`
+              `p-3 transition hover:bg-[#2B2B2B] hover:text-[#EFEFEF] hover:outline hover:outline-1 hover:outline-black cursor-pointer duration-700 rounded-lg `
             }
           >
             Home
@@ -33,7 +33,7 @@ export default function UpperNavbar() {
           <NavLink
             to={"events"}
             className={({ isActive }) =>
-              `p-3 transition hover:bg-[#2B2B2B] hover:text-[#EFEFEF] hover:outline hover:outline-1 hover:outline-black cursor-pointer duration-700 rounded-lg ${isActive && `underline`}`
+              `p-3 transition hover:bg-[#2B2B2B] hover:text-[#EFEFEF] hover:outline hover:outline-1 hover:outline-black cursor-pointer duration-700 rounded-lg `
             }
           >
             Events
@@ -41,7 +41,7 @@ export default function UpperNavbar() {
           <NavLink
             to={"register"}
             className={({ isActive }) =>
-              `p-3 transition hover:bg-[#2B2B2B] hover:text-[#EFEFEF] hover:outline hover:outline-1 hover:outline-black cursor-pointer duration-700 rounded-lg ${isActive && `underline`}`
+              `p-3 transition hover:bg-[#2B2B2B] hover:text-[#EFEFEF] hover:outline hover:outline-1 hover:outline-black cursor-pointer duration-700 rounded-lg `
             }
           >
             Register

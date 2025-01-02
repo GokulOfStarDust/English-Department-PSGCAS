@@ -131,7 +131,15 @@ export default function CompetitionList({ eventId }) {
                           alt="cash pool icon to represent event cash prize"
                           className="object-contain size-5"
                         />
-                        <p>Registeration Fee: {competition.RegisterationFee}</p>
+                        <p>Registeration Fee: ₹{competition.RegisterationFee} per person (Individual Registration)</p>
+                      </div>
+                      <div className="flex flex-row items-center p-4 pl-0 pt-0 space-x-2">
+                        <img
+                          src="/register-icon.png"
+                          alt="register icon to represent on-spot registration"
+                          className="object-contain size-6 opacity-70"
+                        />
+                        <p>On-spot registration is available on the event day.</p>
                       </div>
                     </div>
                   </motion.div>

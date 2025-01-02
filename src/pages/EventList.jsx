@@ -110,6 +110,14 @@ export default function EventList() {
                         />
                         <p>{event.cashPrizeInfo}</p>
                       </div>
+                      <div className="flex flex-row items-center p-4 pl-0 pt-0 space-x-2">
+                        <img
+                          src="/register-icon.png"
+                          alt="register icon to represent on-spot registration"
+                          className="object-contain size-6 opacity-70"
+                        />
+                        <p>On-spot registration is available.</p>
+                      </div>
                     </div>
                   </motion.div>
                   <div
