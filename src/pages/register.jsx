@@ -503,12 +503,16 @@ export default function Register() {
 
         <div className="bg-[url('/registrationFormBg.jpg')] bg-cover bg-center flex flex-col justify-center items-center w-[88svw] max-w-[1280px] text-white p-5 pt-10 md:p-8 rounded-3xl space-y-2">
           <p className="font-plex font-bold mb-4">SCAN THE QR CODE TO PAY</p>
-          <a className="pb-1 bg-white" href={UPIRegistratoinLink}>
+          {totalRegistrationFee == 0 ? <p className="size-[18.2rem] flex flex-row items-center justify-center text-sm outline outline-white outline-1 p-7">(Select the competition to view the QR Code.)</p> :
+            <img src={`${totalRegistrationFee}.jpeg`} alt="QR Code to pay the registration fee" className="size-72 object-contain"/>
+          }
+          
+          {/* <a className="pb-1 bg-white" href={UPIRegistratoinLink}>
             <QRCodeCanvas
               value={UPIRegistratoinLink}
               className="size-60 object-contain m-3"
             />
-          </a>
+          </a> */}
           <p className="font-plex font-bold pb-7">
             Amount to be paid : {totalRegistrationFee}
           </p>
