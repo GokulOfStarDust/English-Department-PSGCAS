@@ -61,7 +61,7 @@ export default function Register() {
     console.log(totalRegistrationFee);
 
     setUPIRegistratoinLink(
-      `upi://pay?pa=vidhyahanumanthk@okicici&pn=Vidhya%20Hanumanth%20Kanagaraj&am=${totalRegistrationFee}.00&cu=INR&aid=uGICAgMDoj7-7Jg`,
+      `upi://pay?pa=vidhyahanumanthk@okicici&pn=Vidhya%20Hanumanth%20Kanagaraj&am=${totalRegistrationFee}&cu=INR&aid=uGICAgMDoj7-7Jg`,
     );
   }, [totalRegistrationFee]);
 
@@ -511,6 +511,9 @@ export default function Register() {
           </a>
           <p className="font-plex font-bold pb-7">
             Amount to be paid : {totalRegistrationFee}
+          </p>
+          <p className="font-plex text-center text-[0.75rem] sm:text-sm lg:text-base font-medium pb-7">
+            If the QR Code doesn't work, send the coressponding registration fee this to number: 9791440504 <br/> (Sorry for the Inconvenicence :/ )
           </p>
           <label
             className="font-plex text-sm font-medium"
