@@ -92,8 +92,8 @@ export default function CompetitionList({ eventId }) {
                   >
                     {competition.description}
                   </motion.div>
-                  <motion.div className="font-plex font-light text-white text-sm md:text-md lg:text-lg -mt-6">
-                    <div className="flex flex-col w-full">
+                  <motion.div className="font-plex font-light text-white text-sm md:text-base xxl:text-lg -mt-6">
+                    <div className="flex flex-col w-full ">
                       <div className="flex flex-row flex-wrap w-full items-center">
                         <div className="flex flex-row items-center p-4 pl-0 space-x-2 mr-9 divide-breakpoint:mr-0">
                           <img
@@ -101,7 +101,7 @@ export default function CompetitionList({ eventId }) {
                             alt="Calendar Icon to represent event date"
                             className="object-contain size-5"
                           />
-                          <p>{competition.date}</p>
+                          <p >{competition.date}</p>
                         </div>
                         <img
                           src="/separatorLine.png"
@@ -153,7 +153,7 @@ export default function CompetitionList({ eventId }) {
                       Click For Rules
                     </div>
                     <div
-                      className="flex flex-row justify-center mx-4 bg-[url('/eventSubmitBg.png')] bg-cover w-[25%] min-w-[250px] mt-3 xxl:mt-[2.3%] bottom-2 text-base md:text-lg xxl:text-xl font-plex font-bold tracking-widest rounded-full p-4 cursor-pointer"
+                      className="flex flex-row justify-center items-center mx-4 bg-[url('/eventSubmitBg.png')] bg-cover mt-3 xxl:mt-[2.3%] bottom-2 text-center text-base md:text-lg xxl:text-xl font-plex font-bold tracking-widest rounded-full px-5 py-4 cursor-pointer"
                       onClick={() => {
                         competition.status == "open" &&  navigate(`/register`);
                       }}
