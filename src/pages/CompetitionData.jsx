@@ -2,6 +2,7 @@ const competitionData = {
   aTaleOfThreeQuizzes: [
     {
       id: "literature-quiz",
+      status: "closed",
       name: "Literature Quiz",
       description:
         "Embark on a journey through timeless tales, poetic verses, and iconic authors. From Shakespearean sonnets to modern masterpieces, this quiz celebrates the written word. Whether you're a bookworm, critic, or story lover, will you join the ranks of literary legends?",
@@ -32,6 +33,7 @@ const competitionData = {
 
     {
       id: "pop-quiz",
+      status: "open",
       name: "Pop Quiz",
       description:
         "Lights, camera, action! Dive into Pop Quiz and test your knowledge of music hits, movie blockbusters, viral trends, and celebrity gossip. From chart-toppers to internet sensations, prove your pop-culture prowess and claim the spotlight. Ready to trend?",
@@ -61,6 +63,7 @@ const competitionData = {
 
     {
       id: "general-quiz",
+      status: "open",
       name: "General Quiz",
       description:
         "Are you the jack of all trades or the master of some? General Quiz is here to put your wits to the ultimate test. From history to science, geography to current affairs, this quiz spans the breadth of human knowledge. Compete with the best minds, unravel intriguing facts, and prove your prowess. Who will rise as the trivia titan? Find out at General Quiz!",

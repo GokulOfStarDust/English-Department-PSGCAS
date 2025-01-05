@@ -155,10 +155,10 @@ export default function CompetitionList({ eventId }) {
                     <div
                       className="flex flex-row justify-center mx-4 bg-[url('/eventSubmitBg.png')] bg-cover w-[25%] min-w-[250px] mt-3 xxl:mt-[2.3%] bottom-2 text-base md:text-lg xxl:text-xl font-plex font-bold tracking-widest rounded-full p-4 cursor-pointer"
                       onClick={() => {
-                        navigate(`/register`);
+                        competition.status == "open" &&  navigate(`/register`);
                       }}
                     >
-                      Click to Register
+                      {competition.status == "open" ? "Click to Register" : "Registration Closed"}
                     </div>
                   </div>
                 </motion.div>

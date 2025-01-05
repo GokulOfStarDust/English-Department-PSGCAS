@@ -11,7 +11,6 @@ export default function EventRuleCard({ competitionId }) {
   );
 
   const rules = Object.keys(competition.rules);
-  console.log(rules);
 
   return (
     <motion.div
@@ -91,10 +90,10 @@ export default function EventRuleCard({ competitionId }) {
         <div
           className="flex flex-row justify-center items-center mx-auto  bg-cover w-[25%] min-w-[250px] mt-9 xxl:mt-[2.3%] bottom-2 text-base md:text-lg xxl:text-xl font-plex font-bold tracking-widest rounded-full p-4 pt-12 cursor-pointer hover:underline"
           onClick={() => {
-            navigate(`/register`);
+            competition.status == "open" && navigate(`/register`);
           }}
         >
-          Click to Regsiter
+          {competition.status == "open" ? "Click to Register" : "Registration Closed"}
         </div>
       </motion.div>
     </motion.div>

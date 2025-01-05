@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import eventData from "./EventData";
-import { QRCodeCanvas } from "qrcode.react";
 import competitionData from "./CompetitionData";
 
 export default function Register() {
@@ -11,7 +10,7 @@ export default function Register() {
   const [collegeDropdown, setCollegeDropdown] = useState(false);
   const [eventDropdown, setEventDropdown] = useState(false);
   const [totalRegistrationFee, setTotalRegistrationFee] = useState(0);
-  const [UPIRegistratoinLink, setUPIRegistratoinLink] = useState(" ");
+  const [UPIRegistratoinLink, setUPIRegistratoinLink] = useState("");
   const [submitInfo, setSubmitInfo] = useState(false);
   const [submitMessage, setSubmitMessage] = useState(" ");
   const [loadingAnimation, setLoadindAnimation] = useState(false);
@@ -59,6 +58,7 @@ export default function Register() {
 
   useEffect(() => {
     console.log(totalRegistrationFee);
+    
 
     setUPIRegistratoinLink(
       `upi://pay?pa=vidhyahanumanthk@okicici&pn=Vidhya%20Hanumanth%20Kanagaraj&am=${totalRegistrationFee}&cu=INR&aid=uGICAgMDoj7-7Jg`,
@@ -210,7 +210,7 @@ export default function Register() {
               type="text"
               id="department"
               placeholder="Eg:  B.A. English (SF / Aided)"
-              className="w-[90%] min-w-[300px] font-poppins text-black rounded-3xl p-2 pl-4 focus:outline-none"
+              className="w-[90%] min-w-[300px] font-poppins text-black rounded-3xl p-2 pl-4 focus:outline-none placeholder:text-sm"
               {...register("department", { required: "Enter your department" })}
             />
 
@@ -442,7 +442,7 @@ export default function Register() {
                 ).map((event, index) => {
                   return (
                     (collegeName === event.eventFor ||
-                      event.eventFor == "All") && (
+                      event.eventFor == "All") && (event.status == "open") && (
                       <div
                         key={index}
                         className="flex flex-row  p-3 mx-2 md:mx-6 space-x-3"
@@ -504,7 +504,10 @@ export default function Register() {
         <div className="bg-[url('/registrationFormBg.jpg')] bg-cover bg-center flex flex-col justify-center items-center w-[88svw] max-w-[1280px] text-white p-5 pt-10 md:p-8 rounded-3xl space-y-2">
           <p className="font-plex font-bold mb-4">SCAN THE QR CODE TO PAY</p>
           {totalRegistrationFee == 0 ? <p className="size-[18.2rem] flex flex-row items-center justify-center text-sm outline outline-white outline-1 p-7">(Select the competition to view the QR Code.)</p> :
-            <img src={`${totalRegistrationFee}.jpeg`} alt="QR Code to pay the registration fee" className="size-72 object-contain"/>
+          <a href={UPIRegistratoinLink} target="_blank">
+              <img src={`${totalRegistrationFee}.jpeg`} alt="QR Code to pay the registration fee" className="size-72 object-contain"/>
+          </a>
+            
           }
           
           {/* <a className="pb-1 bg-white" href={UPIRegistratoinLink}>
@@ -517,7 +520,7 @@ export default function Register() {
             Amount to be paid : {totalRegistrationFee}
           </p>
           <p className="font-plex text-center text-[0.75rem] sm:text-sm lg:text-base font-medium pb-7">
-            If the QR Code doesn't work, send the coressponding registration fee this to number: 9791440504 <br/> (Sorry for the Inconvenicence :/ )
+            If the QR Code doesn't work, send the coressponding registration fee to this number: 9791440504 <br/> (Sorry for the Inconvenicence :/ )
           </p>
           <label
             className="font-plex text-sm font-medium"
