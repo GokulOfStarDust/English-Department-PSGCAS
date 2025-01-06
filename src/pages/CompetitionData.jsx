@@ -33,7 +33,7 @@ const competitionData = {
 
     {
       id: "pop-quiz",
-      status: "open",
+      status: "closed",
       name: "Pop Quiz",
       description:
         "Lights, camera, action! Dive into Pop Quiz and test your knowledge of music hits, movie blockbusters, viral trends, and celebrity gossip. From chart-toppers to internet sensations, prove your pop-culture prowess and claim the spotlight. Ready to trend?",
