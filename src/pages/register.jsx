@@ -389,7 +389,12 @@ export default function Register() {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
             >
-              {eventData.upcomingEvents.map((event, index) => {
+              {eventData.upcomingEvents.length == 0 ? 
+              <li className="w-full rounded-xl p-3 hover:bg-[#373636] hover:text-white cursor-pointer"
+              onClick={()=>{setEventDropdown(false);}}>
+                No events at the moment.
+              </li> :
+              eventData.upcomingEvents.map((event, index) => {
                 return (
                   <li
                     key={index}

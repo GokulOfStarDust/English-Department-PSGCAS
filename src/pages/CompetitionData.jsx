@@ -63,7 +63,7 @@ const competitionData = {
 
     {
       id: "general-quiz",
-      status: "open",
+      status: "closed",
       name: "General Quiz",
       description:
         "Are you the jack of all trades or the master of some? General Quiz is here to put your wits to the ultimate test. From history to science, geography to current affairs, this quiz spans the breadth of human knowledge. Compete with the best minds, unravel intriguing facts, and prove your prowess. Who will rise as the trivia titan? Find out at General Quiz!",

@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import eventData from "./EventData.jsx";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { li } from "framer-motion/client";
 
 export default function EventList() {
   const navigate = useNavigate();
@@ -49,7 +50,8 @@ export default function EventList() {
         >
           UPCOMING EVENTS
         </div>
-        {eventData.upcomingEvents.map((event) => {
+        {eventData.upcomingEvents.length ==  0 ? <li className="font-bebas text-4xl md:text-5xl text-[#232323] font-medium text-center p-6">ALL THE WORLD'S A STAGE, BUT NO EVENTS ARE PLAYING RIGHT NOW—<br/>STAY TUNED FOR THE NEXT ACT!</li> :
+        eventData.upcomingEvents.map((event) => {
           return (
             <li key={event.id} className="list-none">
               <div
@@ -128,6 +130,96 @@ export default function EventList() {
                   >
                     Click For More
                   </div>
+                </motion.div>
+              </div>
+            </li>
+          );
+        })}
+      </motion.ul>
+
+      {/*worst way (increase redunduncy) used to display past events */}
+
+      <motion.ul
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.2, delay: 0.1 }}
+        className="flex flex-row flex-wrap items-center justify-center bg-[url('/bg.png')] bg-cover bg-center bg-fixed space-y-2 pb-32 scroll-smooth"
+      >
+        <div
+          className="flex items-center justify-center bg-[url('/eventsTitleBg.png')] bg-no-repeat bg-cover bg-center w-[90svw] min-h-[60px] md:min-h-[80px] my-16 mb-[19svh]
+                            font-josefin text-event-card-black font-bold text-[1.7rem] md:text-4xl tracking-[3.8px]
+                            rounded-3xl outline outline-1 outline-black"
+        >
+          PAST EVENTS
+        </div>
+        {eventData.pastEvents.map((event) => {
+          return (
+            <li key={event.id} className="list-none">
+              <div>
+                <motion.div className="flex flex-col bg-event-card-black w-[88svw] md:w-[75svw] p-7 pt-7 space-y-5 rounded-3xl ">
+                  <motion.div className="flex flex-row justify-center">
+                    <img
+                      className={`w-[85svw]  h-[45svh] md:h-[55svh] object-cover object-center rounded-xl text-white`}
+                      src={event.imageUrl}
+                      alt="Poster of 'A Tale of Three Quizzes'"
+                      onLoad={imageLoadHandle}
+                    />
+                  </motion.div>
+                  <motion.div className="font-josefin text-white font-bold italic text-3xl xl:text-4xl">
+                    {event.name}
+                  </motion.div>
+                  <motion.div className="font-plex font-light text-white text-sm md:text-md lg:text-lg -mt-9">
+                    <div className="flex flex-col w-full">
+                      <div className="flex flex-row flex-wrap w-full items-center">
+                        <div className="flex flex-row items-center p-4 pl-0 space-x-2 mr-9 divide-breakpoint:mr-0">
+                          <img
+                            src="/calendar-event-icon.png"
+                            alt="Calendar Icon to represent event date"
+                            className="object-contain size-5"
+                          />
+                          <p>{event.date}</p>
+                        </div>
+                        <img
+                          src="/separatorLine.png"
+                          alt="line"
+                          className="hidden divide-breakpoint:block object-contain size-7 md-4 mr-3 "
+                        />
+                        <div className="flex flex-row items-center p-4 pl-0 pt-0 divide-breakpoint:pt-4  space-x-2">
+                          <img
+                            src="/time-event-icon.png"
+                            alt="Clock icon to represent event time"
+                            className="object-contain size-5 "
+                          />
+                          <p>{event.time}</p>
+                        </div>
+                      </div>
+                      <div className="flex flex-row items-center p-4 pl-0 pt-0 space-x-2">
+                        <img
+                          src="/locationPin-event-icon.png"
+                          alt="location pin icon to represent event location"
+                          className="object-contain size-5"
+                        />
+                        <p>{event.location}</p>
+                      </div>
+                      <div className="flex flex-row items-center p-4 pl-0 pt-0 space-x-2">
+                        <img
+                          src="/cash-pool-logo.png"
+                          alt="cash pool icon to represent event cash prize"
+                          className="object-contain size-5"
+                        />
+                        <p>{event.cashPrizeInfo}</p>
+                      </div>
+                      <div className="flex flex-row items-center p-4 pl-0 pt-0 space-x-2">
+                        <img
+                          src="/register-icon.png"
+                          alt="register icon to represent on-spot registration"
+                          className="object-contain size-6 opacity-70"
+                        />
+                        <p>On-spot registration is available.</p>
+                      </div>
+                    </div>
+                  </motion.div>
                 </motion.div>
               </div>
             </li>

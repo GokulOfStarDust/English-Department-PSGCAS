@@ -1,6 +1,10 @@
 const eventData = {
   //array of upcoming event's objects
   upcomingEvents: [
+    
+  ],
+
+  pastEvents: [
     {
       id: "aTaleOfThreeQuizzes",
       name: "A Tale of Three Quizzes",
@@ -11,8 +15,6 @@ const eventData = {
       imageUrl: "/aTaleOfThreeQuizzes-poster.jpg",
     },
   ],
-
-  pastEvents: [],
 };
 
 export default eventData;
