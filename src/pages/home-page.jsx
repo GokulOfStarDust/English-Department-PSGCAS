@@ -56,7 +56,7 @@ export default function Homepage() {
         >
           <img
             rel="preload"
-            src="/intro-img.jpeg"
+            src="/intro-img.webp"
             alt="English Department building and campus view"
             onLoad={imageLoadHandle}
             onError={handleImageError}
@@ -114,8 +114,9 @@ export default function Homepage() {
               in academia, media, and other fields.
             </motion.p>
             <img
+              loading="lazy" 
               src="/dept-logo.png"
-              alt="Department of English logo and seal"
+              alt="Department of English logo"
               onLoad={imageLoadHandle}
               onError={handleImageError}
               className="w-[70%] sm:w-[60%] md:w-[40%] md:min-w-[319px] lg:w-[40%] h-[70%] lg:h-[80%] mt-10 -mb-5 lg:!mb-10 object-contain mx-auto"
