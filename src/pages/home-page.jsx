@@ -55,7 +55,6 @@ export default function Homepage() {
           className="relative flex justify-center items-center w-full h-full mt-3"
         >
           <img
-            loading="lazy"
             src="/intro-img.webp"
             alt="English Department building and campus view"
             onLoad={imageLoadHandle}
