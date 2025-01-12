@@ -1,5 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import React, { Suspense } from "react";
+import React, { StrictMode, Suspense } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/react"
+import { Analytics } from "@vercel/analytics/react"
 import Layout from "./components/Layout.jsx";
 import LoadingAnimation from "./pages/LoadingAnimation.jsx";
 import ScrollToTop from "./pages/ScrollToTop.jsx";
@@ -12,23 +14,28 @@ const Events = React.lazy(() => import("./pages/Events.jsx"));
 
 function App() {
   return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <Suspense fallback={<LoadingAnimation />}>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Homepage />} />
-            <Route path="Register" element={<Register />} />
-            <Route path="events" element={<Events />} />
-            <Route path="events/:eventId" element={<Competition />} />
-            <Route
-              path="events/:eventId/:competitionId"
-              element={<Competition />}
-            />
-          </Route>
-        </Routes>
-      </Suspense>
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <ScrollToTop />
+        <Suspense fallback={<LoadingAnimation />}>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Homepage />} />
+              <Route path="Register" element={<Register />} />
+              <Route path="events" element={<Events />} />
+              <Route path="events/:eventId" element={<Competition />} />
+              <Route
+                path="events/:eventId/:competitionId"
+                element={<Competition />}
+              />
+            </Route>
+          </Routes>
+        </Suspense>
+      </BrowserRouter>
+      
+      <SpeedInsights/>
+      <Analytics/>
+    </>
   );
 }
 
