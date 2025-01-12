@@ -42,10 +42,10 @@ export default function CompetitionList({ eventId }) {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.2, delay: 0.1 }}
-        className="flex flex-row flex-wrap items-center justify-center bg-[url('/bg.png')] bg-cover bg-center bg-fixed space-y-10 pb-32 scroll-smooth"
+        className="flex flex-row flex-wrap items-center justify-center bg-[url('/bg.webp')] bg-cover bg-center bg-fixed space-y-10 pb-32 scroll-smooth"
       >
         <div
-          className="flex items-center justify-center bg-[url('/eventTitleBg.png')] bg-no-repeat bg-cover bg-center w-[90svw] min-h-[60px] md:min-h-[80px] my-16 mb-[19svh]
+          className="flex items-center justify-center bg-[url('/eventTitleBg.png')] bg-no-repeat bg-cover bg-center w-[90svw] min-h-[60px] md:min-h-[80px] my-16 mb-[10svh]
                             font-josefin text-event-card-black font-bold text-[1.7rem] md:text-4xl tracking-[3.8px]
                             rounded-3xl outline outline-1 outline-black"
         >

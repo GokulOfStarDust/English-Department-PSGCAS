@@ -1,7 +1,7 @@
 const eventData = {
   //array of upcoming event's objects
   upcomingEvents: [
-    
+
   ],
 
   pastEvents: [

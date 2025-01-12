@@ -73,7 +73,7 @@ export default function Register() {
 
   return (
     <motion.div
-      className="bg-[url('/bg.png')] bg-cover bg-center bg-fixed flex flex-col space-y-11 justify-start items-center w-full "
+      className="bg-[url('/bg.webp')] bg-cover bg-center bg-fixed flex flex-col space-y-11 justify-start items-center w-full "
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
