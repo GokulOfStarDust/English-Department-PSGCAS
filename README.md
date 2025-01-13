@@ -6,6 +6,7 @@
 
 Welcome to the repository of the **Department of English (Aided)** official website! This site serves as an interactive platform showcasing departmental activities, event registrations, and announcements. Built with cutting-edge web technologies, it is designed for a seamless and dynamic user experience.
 
+![Project Preview](https://english-department-psgcas.vercel.app/)
 🔗 **Live Demo**: [english-department-psgcas.vercel.app](https://english-department-psgcas.vercel.app)
 
 ---
@@ -57,20 +58,9 @@ lit-assoc/
 
 Follow these steps to run the project locally:
 
-```mermaid
-graph TD
-    A[React 18.3.1] --> B[Vite]
-    B --> C[Vercel Deployment]
-    A --> D[React Router 6.28.0]
-    A --> E[Framer Motion 11.11.17]
-    A --> F[React Hook Form 7.53.2]
-    C --> G[Vercel Analytics]
-    C --> H[Speed Insights]
-```
+### 📦 Dependencies:
 
-### Dependencies:
-
-```bash
+```json
 {
   "@vercel/analytics": "^1.4.1",
   "@vercel/speed-insights": "^1.1.0",
@@ -93,14 +83,16 @@ graph TD
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/GokulOfStarDust/lit-assoc.git
-   cd lit-assoc
+   git clone https://github.com/GokulOfStarDust/English-Department-PSGCAS.git
+   cd English-Department-PSGCAS
    ```
 
 2. Install dependencies:
 
    ```bash
    npm install
+   # or
+   yarn install
    ```
 
 3. Start the development server:
@@ -109,22 +101,44 @@ graph TD
    npm run dev
    ```
 
-4. Open the app in your browser:
-   ```plaintext
-   http://localhost:5173
+4. Build for production:
+5. 
+   ```bash
+   npm run build
+   # or
+   yarn build
    ```
 
 ---
 
-## 🌐 Deployment
+## 🤝 Contributing Guidelines
 
-This project is deployed on **Vercel** for live access. To deploy your own version:
+We welcome contributions from the community!
+Feel free to fork this repository and contribute! Submit a pull request with any feature improvements or bug fixes.
 
-1. Link your repository with Vercel.
-2. Configure build settings:
-   - **Framework**: React
-   - **Build Command**: `npm run build`
-   - **Output Directory**: `dist`
+Here's how you can help:
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+Please check the to-do list above for priority tasks that need attention.
+
+### 📋 Code Style Guidelines
+- Follow existing code formatting patterns
+- Write meaningful commit messages
+- Add appropriate comments for complex logic
+- Write clear, descriptive commit messages
+- Include screenshots for UI changes
+- Test your changes thoroughly
+- Focus on content and user experience
+- Optimize for speed and efficiency
+- Follow WCAG guidelines
+
+## 📄 License
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
 
 ---
 
@@ -143,19 +157,9 @@ If you like this project, consider giving it a ⭐️ on GitHub!
 
 ---
 
-## Contribution
-
-Feel free to fork this repository and contribute! Submit a pull request with any feature improvements or bug fixes.
-
----
-
 ## Maintainer
 
 This website is created and maintained by **Gokul**.  
 GitHub username: [GokulOfStarDust](https://github.com/GokulOfStarDust)
+Email: (mailto:gokulgopalan18@gmail.com)
 
----
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
