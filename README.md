@@ -6,7 +6,6 @@
 
 Welcome to the repository of the **Department of English (Aided)** official website! This site serves as an interactive platform showcasing departmental activities, event registrations, and announcements. Built with cutting-edge web technologies, it is designed for a seamless and dynamic user experience.
 
-![Project Preview](https://english-department-psgcas.vercel.app/)
 🔗 **Live Demo**: [english-department-psgcas.vercel.app](https://english-department-psgcas.vercel.app)
 
 ---
@@ -124,7 +123,16 @@ Here's how you can help:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-Please check the to-do list above for priority tasks that need attention.
+Please check the list below for tasks that need attention.
+
+## 💡 Future Development Trajectory
+
+- A dedicated section for uploading and showcasing departmental activities to ensure all events and achievements are well-documented.
+- Adding engaging animations to improve user experience and visual appeal.
+- Enhance SEO with meta tags and structured data.
+- Optimize image loading and compression.
+- Implement Locomotive Scroll for smooth scrolling
+
 
 ### 📋 Code Style Guidelines
 - Follow existing code formatting patterns
@@ -142,15 +150,6 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 
 ---
 
-## 💡 Future Enhancements
-
-- A dedicated section for uploading and showcasing departmental activities to ensure all events and achievements are well-documented.
-- Adding engaging animations to improve user experience and visual appeal.
-- Introduce a CMS for dynamic content updates.
-- Expand support for multi-language content.
-
----
-
 ## 🖤 Show Your Support
 
 If you like this project, consider giving it a ⭐️ on GitHub!
@@ -161,5 +160,5 @@ If you like this project, consider giving it a ⭐️ on GitHub!
 
 This website is created and maintained by **Gokul**.  
 GitHub username: [GokulOfStarDust](https://github.com/GokulOfStarDust)
-Email: (mailto:gokulgopalan18@gmail.com)
+Email: [Click here to mail](mailto:gokulgopalan18@gmail.com)
 
