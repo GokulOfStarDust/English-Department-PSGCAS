@@ -57,6 +57,11 @@ lit-assoc/
 
 Follow these steps to run the project locally:
 
+### Prerequisites
+
+- **Node.js** (v14+)
+- **npm** or **yarn**
+
 ### 📦 Dependencies:
 
 ```json
@@ -71,11 +76,6 @@ Follow these steps to run the project locally:
   "react-router-dom": "^6.28.0"
 }
 ```
-
-### Prerequisites
-
-- **Node.js** (v14+)
-- **npm** or **yarn**
 
 ### Installation
 
