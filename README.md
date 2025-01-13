@@ -123,7 +123,7 @@ Here's how you can help:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-Please check the list below for tasks that need attention.
+### Please check the list below for tasks that need attention.
 
 ## 💡 Future Development Trajectory
 
@@ -137,7 +137,6 @@ Please check the list below for tasks that need attention.
 ### 📋 Code Style Guidelines
 - Follow existing code formatting patterns
 - Write meaningful commit messages
-- Add appropriate comments for complex logic
 - Write clear, descriptive commit messages
 - Include screenshots for UI changes
 - Test your changes thoroughly
