@@ -1,10 +1,10 @@
-# 🌟 Website for English Department (Aided) of PSGCAS 🌟
+# Website for Department of English (Aided) of PSGCAS 
 
 [![Website](https://img.shields.io/website?down_color=red&down_message=offline&up_color=green&up_message=online&url=https%3A%2F%2Fenglish-department-psgcas.vercel.app)](https://english-department-psgcas.vercel.app)
 [![Made with React](https://img.shields.io/badge/Made%20with-React-blue)](https://reactjs.org/)
 [![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black)](https://vercel.com)
 
-Welcome to the official **English Department (Aided)** website! This site serves as an interactive platform showcasing departmental activities, event registrations, and announcements. Built with cutting-edge web technologies, it is designed for a seamless and dynamic user experience.
+Welcome to the repository of the **Department of English (Aided)** official website! This site serves as an interactive platform showcasing departmental activities, event registrations, and announcements. Built with cutting-edge web technologies, it is designed for a seamless and dynamic user experience.
 
 🔗 **Live Demo**: [english-department-psgcas.vercel.app](https://english-department-psgcas.vercel.app)
 
@@ -18,17 +18,20 @@ Welcome to the official **English Department (Aided)** website! This site serves
 - 🎨 **Responsive Design**  
   Optimized for all devices, ensuring accessibility for everyone.
 
-- 🚀 **Smooth Animations**  
-  Includes enhanced scrolling effects for an engaging user experience using Locomotive Scroll.
+- 🚀 **Interactive UI**  
+  User-friendly interface with modern design principles.
 
 ---
 
 ## ⚙️ Tech Stack
 
 - **Frontend**: React, React Router, React Hook Form
+- **Animation**: Framer Motion
+- **Routing**: React Router
+- **Form Handling**: React Hook Form
 - **Styling**: Tailwind CSS
-- **Smooth Scrolling**: Locomotive Scroll
 - **Deployment**: Vercel
+- **Performance Monitoring**: Vercel Analytics & Speed Insights
 
 ---
 
@@ -50,9 +53,18 @@ lit-assoc/
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Installation Guide
 
 Follow these steps to run the project locally:
+
+graph TD
+    A[React 18.3.1] --> B[Vite]
+    B --> C[Vercel Deployment]
+    A --> D[React Router 6.28.0]
+    A --> E[Framer Motion 11.11.17]
+    A --> F[React Hook Form 7.53.2]
+    C --> G[Vercel Analytics]
+    C --> H[Speed Insights]
 
 ### Prerequisites
 
