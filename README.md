@@ -57,14 +57,18 @@ lit-assoc/
 
 Follow these steps to run the project locally:
 
-graph TD
-    A[React 18.3.1] --> B[Vite]
-    B --> C[Vercel Deployment]
-    A --> D[React Router 6.28.0]
-    A --> E[Framer Motion 11.11.17]
-    A --> F[React Hook Form 7.53.2]
-    C --> G[Vercel Analytics]
-    C --> H[Speed Insights]
+# Dependencies:
+
+{
+  "@vercel/analytics": "^1.4.1",
+  "@vercel/speed-insights": "^1.1.0",
+  "framer-motion": "^11.11.17",
+  "hamburger-react": "^2.5.2",
+  "react": "^18.3.1",
+  "react-dom": "^18.3.1",
+  "react-hook-form": "^7.53.2",
+  "react-router-dom": "^6.28.0"
+}
 
 ### Prerequisites
 
