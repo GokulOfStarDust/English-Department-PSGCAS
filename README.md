@@ -57,12 +57,12 @@ lit-assoc/
 
 Follow these steps to run the project locally:
 
-### Prerequisites
+### Prerequisites:
 
 - **Node.js** (v14+)
 - **npm** or **yarn**
 
-### 📦 Dependencies:
+### 📦 Dependencies
 
 ```json
 {
@@ -77,7 +77,7 @@ Follow these steps to run the project locally:
 }
 ```
 
-### Installation
+### Installation:
 
 1. Clone the repository:
 
