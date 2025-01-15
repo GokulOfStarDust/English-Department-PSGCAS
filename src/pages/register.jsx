@@ -114,7 +114,7 @@ export default function Register() {
         </div>
       </motion.div>
       <div
-        className="flex items-center justify-center bg-[url('/resgistrationTitleBg.png')] bg-no-repeat bg-cover bg-center w-[90svw] min-h-[60px] md:min-h-[80px] !my-16
+        className="flex items-center justify-center bg-[url('/resgistrationTitleBg.webp')] bg-no-repeat bg-cover bg-center w-[90svw] min-h-[60px] md:min-h-[80px] !my-16
                             font-josefin text-white font-bold text-[1.7rem] md:text-4xl tracking-[3.8px]
                             rounded-3xl outline outline-1 outline-black"
       >
@@ -129,7 +129,7 @@ export default function Register() {
           onLoad={() => {
             console.log("Bgloaded");
           }}
-          className="bg-[url('/registrationFormBg.jpg')] bg-cover bg-center w-[88svw] max-w-[1280px] p-5 pt-10 md:p-8 flex flex-row flex-wrap rounded-3xl"
+          className="bg-[url('/registrationFormBg.webp')] bg-cover bg-center w-[88svw] max-w-[1280px] p-5 pt-10 md:p-8 flex flex-row flex-wrap rounded-3xl"
         >
           <div className="flex flex-col w-[90%] md:w-2/4 min-w-[260px] space-y-2 mb-9 md:mb-16">
             <label
@@ -351,7 +351,7 @@ export default function Register() {
         {/*It dynamically adds the events to be selected */}
 
         <div
-          className="bg-[url('/registrationFormBg1.jpg')] bg-cover bg-center flex flex-col flex-wrap items-center justify-center
+          className="bg-[url('/registrationFormBg1.webp')] bg-cover bg-center flex flex-col flex-wrap items-center justify-center
                                 w-[88svw] max-w-[1340px] p-5 pt-10 md:p-8 rounded-3xl"
         >
           <p className="flex justify-center items-center w-[100%] h-[6svh] font-plex font-semibold text-white text-xl md:text-3xl tracking-wider outline outline-1 outline-white rounded-3xl ">
@@ -390,14 +390,16 @@ export default function Register() {
               transition={{ duration: 0.3, ease: "easeInOut" }}
             >
               {eventData.upcomingEvents.length == 0 ? 
-              <li className="w-full rounded-xl p-3 hover:bg-[#373636] hover:text-white cursor-pointer"
+              <li key={"noEvents"} className="w-full rounded-xl p-3 hover:bg-[#373636] hover:text-white cursor-pointer"
               onClick={()=>{setEventDropdown(false);}}>
                 No events at the moment.
               </li> :
               eventData.upcomingEvents.map((event, index) => {
                 return (
-                  <li
-                    key={index}
+                 (collegeName === event.eventFor ||
+                  event.eventFor == "All") ?
+                   <li
+                    key={`${index}`}
                     onClick={(event) => {
                       setEventDropdown(false);
                       setSelectedEvent(event.target.innerText);
@@ -406,6 +408,11 @@ export default function Register() {
                     className="w-full rounded-xl p-3 hover:bg-[#373636] hover:text-white cursor-pointer"
                   >
                     {event.name}
+                  </li>
+                  :
+                  <li key={"noEventsDropdown"} className="w-full rounded-xl p-3 hover:bg-[#373636] hover:text-white cursor-pointer"
+                    onClick={()=>{setEventDropdown(false);}}>
+                      No events at the moment.
                   </li>
                 );
               })}
@@ -467,7 +474,7 @@ export default function Register() {
                                     Object.values(selected).some(
                                       (value) => value,
                                     )) ||
-                                  "Select at least one competition";
+                                  "Select atleast one competition";
                                 return validationResult;
                               },
                             },
@@ -506,7 +513,7 @@ export default function Register() {
           </fieldset>
         </div>
 
-        <div className="bg-[url('/registrationFormBg.jpg')] bg-cover bg-center flex flex-col justify-center items-center w-[88svw] max-w-[1280px] text-white p-5 pt-10 md:p-8 rounded-3xl space-y-2">
+        <div className="bg-[url('/registrationFormBg.webp')] bg-cover bg-center flex flex-col justify-center items-center w-[88svw] max-w-[1280px] text-white p-5 pt-10 md:p-8 rounded-3xl space-y-2">
           <p className="font-plex font-bold mb-4">SCAN THE QR CODE TO PAY</p>
           {totalRegistrationFee == 0 ? <p className="size-[18.2rem] flex flex-row items-center justify-center text-sm outline outline-white outline-1 p-7">(Select the competition to view the QR Code.)</p> :
           <a href={UPIRegistratoinLink} target="_blank">
@@ -553,7 +560,7 @@ export default function Register() {
 
         <button
           type="submit"
-          className="bg-[url('/registrationFormBg.jpg')] bg-cover bg-center w-[30%] min-w-[200px] text-lg md:text-3xl text-white font-plex font-bold tracking-widest rounded-3xl p-4 !my-32 "
+          className="bg-[url('/registrationFormBg.webp')] bg-cover bg-center w-[30%] min-w-[200px] text-lg md:text-3xl text-white font-plex font-bold tracking-widest rounded-3xl p-4 !my-32 "
           onClick={() => {
             setLoadindAnimation(true);
           }}
