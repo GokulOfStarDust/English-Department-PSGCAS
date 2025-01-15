@@ -1,8 +1,21 @@
+# Enhanced SEO Configuration for Maximum Visibility
+# Last updated: 2025-01-16
 
-User-agent: *
+# Google Bot Family
+User-agent: Googlebot
+User-agent: Googlebot-News
+User-agent: Googlebot-Image
+User-agent: Googlebot-Video
+User-agent: Googlebot-Mobile
+User-agent: AdsBot-Google
+User-agent: AdsBot-Google-Mobile
+User-agent: Mediapartners-Google
+User-agent: APIs-Google
+User-agent: Google-InspectionTool
 Allow: /
 Allow: /events
 Allow: /Register
+Allow: /events/*
 Allow: /*.js
 Allow: /*.css
 Allow: /*.png
@@ -10,17 +23,120 @@ Allow: /*.jpg
 Allow: /*.gif
 Allow: /*.svg
 Allow: /*.ico
+Allow: /*.webp
+Allow: /*.avif
+Allow: /sitemap*.xml
+Request-rate: 1/1s # Optimized for Google's crawl rate
 
-# Prevent indexing of dynamic routes and system files
+# Bing Bot Family
+User-agent: Bingbot
+User-agent: MSNBot
+User-agent: MSNBot-Media
+User-agent: AdIdxBot
+User-agent: BingPreview
+Allow: /
+Request-rate: 2/1s
+
+# Yandex Bot Family (International SEO)
+User-agent: Yandex
+User-agent: YandexBot
+User-agent: YandexImages
+User-agent: YandexVideo
+User-agent: YandexMedia
+Allow: /
+Clean-param: yclid
+
+# Baidu Bot (Chinese Market)
+User-agent: Baiduspider
+User-agent: Baiduspider-image
+User-agent: Baiduspider-video
+User-agent: Baiduspider-news
+Allow: /
+Request-rate: 1/2s
+
+# Social Media & Preview Bots
+User-agent: Twitterbot
+User-agent: facebookexternalhit
+User-agent: LinkedInBot
+User-agent: Pinterest
+User-agent: Slackbot
+User-agent: TelegramBot
+User-agent: WhatsApp
+User-agent: Discordbot
+Allow: /
+Allow: /events/*
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.png
+Allow: /*.webp
+Allow: /*.avif
+Request-rate: 1/1s
+
+# AI & Analysis Bots
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: anthropic-ai
+User-agent: CCBot
+User-agent: Claude-Web
+Disallow: /
+
+# Archive Bots
+User-agent: ia_archiver
+User-agent: archive.org_bot
+Allow: /
+Request-rate: 1/10s
+
+# General rules for all other bots
+User-agent: *
+Allow: /
+Allow: /events
+Allow: /Register
+Allow: /events/*
+Allow: /*.js
+Allow: /*.css
+Allow: /fonts/*
+Allow: /images/*
+Allow: /assets/*
+Request-rate: 1/5s
+
+# Enhanced Security & System Protection
 Disallow: /_next/
 Disallow: /api/
-Disallow: /events/*/
-Disallow: /events/*/*
+Disallow: /debug/
+Disallow: /admin/
+Disallow: /draft/
+Disallow: /test/
+Disallow: /.env
+Disallow: /.git*
+Disallow: /node_modules/
+Disallow: /coverage/
+Disallow: /build/
+Disallow: /dist/
+Disallow: /*?preview=*
+Disallow: /*?draft=*
+Disallow: /*?debug=*
+Disallow: /*?dev=*
+Disallow: /*?test=*
 
-# Prevent indexing of client-side routes that should be handled by React Router
-Disallow: /*?*
+# URL Parameter Handling
+Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content&fbclid&gclid&msclkid&_ga&_gl&yclid&dclid
+Clean-param: ref&source&affiliate&partner
 
-# Add crawl delay to prevent server overload
-Crawl-delay: 10
+# Performance & Crawling Optimizations
+Crawl-delay: 1
+Request-rate: 1/1s
+
+# International Language Support
+Allow: /en/*
+Allow: /es/*
+Allow: /fr/*
+Allow: /de/*
+Allow: /zh/*
+Allow: /ja/*
 
 Sitemap: https://english-department-psgcas.vercel.app/sitemap.xml
+
+# Host Configuration
+Host: https://english-department-psgcas.vercel.app
+
