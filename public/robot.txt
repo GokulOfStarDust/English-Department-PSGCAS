@@ -1,0 +1,20 @@
+
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /user/
+Disallow: /profile/
+Disallow: /account/
+
+
+Allow: /images/
+Allow: /assets/
+Allow: /public/
+
+
+User-agent: Baiduspider
+Disallow: /
+
+Sitemap: https://english-department-psgcas.vercel.app/sitemap.xml
