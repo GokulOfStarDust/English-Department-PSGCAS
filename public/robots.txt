@@ -1,20 +1,26 @@
 
 User-agent: *
-Disallow: /admin/
-Disallow: /login/
-Disallow: /cart/
-Disallow: /checkout/
-Disallow: /user/
-Disallow: /profile/
-Disallow: /account/
+Allow: /
+Allow: /events
+Allow: /Register
+Allow: /*.js
+Allow: /*.css
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.ico
 
+# Prevent indexing of dynamic routes and system files
+Disallow: /_next/
+Disallow: /api/
+Disallow: /events/*/
+Disallow: /events/*/*
 
-Allow: /images/
-Allow: /assets/
-Allow: /public/
+# Prevent indexing of client-side routes that should be handled by React Router
+Disallow: /*?*
 
-
-User-agent: Baiduspider
-Disallow: /
+# Add crawl delay to prevent server overload
+Crawl-delay: 10
 
 Sitemap: https://english-department-psgcas.vercel.app/sitemap.xml
