@@ -67,6 +67,7 @@ export default function Register() {
 
   useEffect(() => {
     setTotalRegistrationFee(0);
+    setSelectedEvent("Select any event")
     setValue("selectedCompetition.general-quiz", "");  // Reset all checkboxes
     reset({ ...watch(), selectedCompetition: [] });
   }, [collegeName]);
