@@ -6,8 +6,8 @@ const competitionData = {
       name: "Literature Quiz",
       description:
         "Embark on a journey through timeless tales, poetic verses, and iconic authors. From Shakespearean sonnets to modern masterpieces, this quiz celebrates the written word. Whether you're a bookworm, critic, or story lover, will you join the ranks of literary legends?",
-      imageUrl: "/literature-quiz-poster.jpg",
-      imageCompactURL: "/literature-quiz-poster-compact.jpg",
+      imageUrl: "/literature-quiz-poster.webp",
+      imageCompactURL: "/literature-quiz-poster-compact.webp",
       eventFor: "PSG College of Arts & Science",
       time: "09:00 a.m - 01:00 p.m",
       date: "6 JAN 2025",
@@ -37,8 +37,8 @@ const competitionData = {
       name: "Pop Quiz",
       description:
         "Lights, camera, action! Dive into Pop Quiz and test your knowledge of music hits, movie blockbusters, viral trends, and celebrity gossip. From chart-toppers to internet sensations, prove your pop-culture prowess and claim the spotlight. Ready to trend?",
-      imageUrl: "/pop-quiz-poster.jpg",
-      imageCompactURL: "/pop-quiz-poster-compact.jpg",
+      imageUrl: "/pop-quiz-poster.webp",
+      imageCompactURL: "/pop-quiz-poster-compact.webp",
       eventFor: "PSG College of Arts & Science",
       time: "09:00 a.m - 01:00 p.m",
       date: "7 JAN 2025",
@@ -67,8 +67,8 @@ const competitionData = {
       name: "General Quiz",
       description:
         "Are you the jack of all trades or the master of some? General Quiz is here to put your wits to the ultimate test. From history to science, geography to current affairs, this quiz spans the breadth of human knowledge. Compete with the best minds, unravel intriguing facts, and prove your prowess. Who will rise as the trivia titan? Find out at General Quiz!",
-      imageUrl: "/general-quiz-poster.jpg",
-      imageCompactURL: "/general-quiz-poster-compact.jpg",
+      imageUrl: "/general-quiz-poster.webp",
+      imageCompactURL: "/general-quiz-poster-compact.webp",
       eventFor: "All",
       time: "09:00 a.m - 01:00 p.m",
       date: "8 JAN 2025",

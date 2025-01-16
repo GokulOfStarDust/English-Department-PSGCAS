@@ -44,13 +44,15 @@ export default function EventList() {
         style={{ backgroundImage: `url('/bg.webp')` }}
       >
         <div
-          className="flex items-center justify-center bg-[url('/eventsTitleBg.png')] bg-no-repeat bg-cover bg-center w-[90svw] min-h-[60px] md:min-h-[80px] my-16 mb-[10svh]
+          className="flex items-center justify-center bg-[url('/eventsTitleBg.png')] bg-no-repeat bg-cover bg-center w-[90svw] min-h-[60px] md:min-h-[80px] my-16 !mb-[15svh]
                             font-josefin text-event-card-black font-bold text-[1.7rem] md:text-4xl tracking-[3.8px]
                             rounded-3xl outline outline-1 outline-black"
         >
           UPCOMING EVENTS
         </div>
-        {eventData.upcomingEvents.length ==  0 ? <li className="font-bebas text-4xl md:text-5xl text-[#232323] font-medium text-center p-6">ALL THE WORLD'S A STAGE, BUT NO EVENTS ARE PLAYING RIGHT NOW—<br/>STAY TUNED FOR THE NEXT ACT!</li> :
+        {eventData.upcomingEvents.length ==  0 ? 
+        <li className="font-bebas text-4xl md:text-5xl text-[#232323] font-medium text-center p-6">ALL THE WORLD'S A STAGE, BUT NO EVENTS ARE PLAYING RIGHT NOW—<br/>STAY TUNED FOR THE NEXT ACT!</li> 
+        :
         eventData.upcomingEvents.map((event) => {
           return (
             <li key={event.id} className="list-none">
@@ -59,10 +61,10 @@ export default function EventList() {
                 //   navigate(`/events/${event.id}`);
                 // }}
               >
-                <motion.div className="flex flex-col bg-event-card-black w-[88svw] md:w-[75svw] p-7 pt-7 space-y-5 rounded-3xl ">
+                <motion.div className="flex flex-col bg-event-card-black w-[88svw] md:w-[65svw] p-7 pt-7 space-y-5 rounded-3xl ">
                   <motion.div className="flex flex-row justify-center">
                     <img
-                      className={`w-[85svw]  h-[45svh] md:h-[55svh] object-cover object-center rounded-xl text-white`}
+                      className={`w-[85svw] md:w-[75svw] h-[45svh] md:h-[45svh] object-cover object-center rounded-xl text-white`}
                       src={event.imageUrl}
                       alt="Poster of 'A Tale of Three Quizzes'"
                       onLoad={imageLoadHandle}
@@ -71,7 +73,7 @@ export default function EventList() {
                   <motion.div className="font-josefin text-white font-bold italic text-3xl xl:text-4xl">
                     {event.name}
                   </motion.div>
-                  <motion.div className="font-plex font-light text-white text-sm md:text-md lg:text-lg !mt-2">
+                  <motion.div className="font-plex font-light text-white text-sm md:text-sm lg:text-base !mt-2">
                     <div className="flex flex-col w-full">
                       <div className="flex flex-row flex-wrap w-full items-center">
                         <div className="flex flex-row items-center p-4 pl-0 space-x-2 mr-9 divide-breakpoint:mr-0">
@@ -123,7 +125,7 @@ export default function EventList() {
                     </div>
                   </motion.div>
                   <div
-                    className="flex flex-row justify-center mx-auto bg-[url('/eventSubmitBg.png')] bg-cover  min-w-[250px] !mt-9 md:!mt-[2%] text-md md:text-xl font-plex font-bold tracking-widest rounded-full p-4 cursor-pointer"
+                    className="flex flex-row justify-center mx-auto bg-[url('/eventSubmitBg.png')] bg-cover  min-w-[250px] !mt-9 md:!mt-[2%] text-md md:text-lg text-center font-plex font-bold tracking-widest rounded-full p-4 cursor-pointer"
                     // onClick={() => {
                     //   navigate(`/events/${event.id}`);
                     // }}
@@ -158,10 +160,10 @@ export default function EventList() {
           return (
             <li key={event.id} className="list-none">
               <div>
-                <motion.div className="flex flex-col bg-event-card-black w-[88svw] md:w-[75svw] p-7 pt-7 space-y-5 rounded-3xl ">
+                <motion.div className="flex flex-col bg-event-card-black w-[88svw] md:w-[65svw] p-7 pt-7 space-y-5 rounded-3xl ">
                   <motion.div className="flex flex-row justify-center">
                     <img
-                      className={`w-[85svw]  h-[45svh] md:h-[55svh] object-cover object-center rounded-xl text-white`}
+                      className={`w-[85svw] md:w-[75svw] h-[45svh] md:h-[45svh] object-cover object-center rounded-xl text-white`}
                       src={event.imageUrl}
                       alt="Poster of 'A Tale of Three Quizzes'"
                     />
@@ -169,7 +171,7 @@ export default function EventList() {
                   <motion.div className="font-josefin text-white font-bold italic text-3xl xl:text-4xl">
                     {event.name}
                   </motion.div>
-                  <motion.div className="font-plex font-light text-white text-sm md:text-md lg:text-lg !mt-2">
+                  <motion.div className="font-plex font-light text-white text-sm md:text-sm lg:text-base !mt-2">
                     <div className="flex flex-col w-full">
                       <div className="flex flex-row flex-wrap w-full items-center">
                         <div className="flex flex-row items-center p-4 pl-0 space-x-2 mr-9 divide-breakpoint:mr-0">
@@ -220,6 +222,14 @@ export default function EventList() {
                       </div>
                     </div>
                   </motion.div>
+                  <div
+                    className="flex flex-row justify-center mx-auto bg-[url('/eventSubmitBg.png')] bg-cover  min-w-[250px] !mt-9 md:!mt-[2%] text-md md:text-lg text-center font-plex font-bold tracking-widest rounded-full p-4 cursor-pointer"
+                    onClick={() => {
+                      navigate(`/events/${event.id}`);
+                    }}
+                  >
+                    Click for More!
+                  </div>
                 </motion.div>
               </div>
             </li>

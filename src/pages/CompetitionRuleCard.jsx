@@ -15,7 +15,7 @@ export default function EventRuleCard({ competitionId }) {
   return (
     <motion.div
       layoutId={`card-container-${competitionId}`}
-      className="bg-[url('/PopUpBackground.jpg')] bg-cover bg-center bg-fixed w-[70svw] min-w-[360px] overflow-scroll fixed mx-auto mt-[4.5%] inset-0 my-auto p-3 z-50 rounded-3xl"
+      className="bg-[url('/PopUpBackground.webp')] bg-cover bg-center bg-fixed w-[70svw] min-w-[360px] overflow-scroll fixed mx-auto mt-[4.5%] inset-0 my-auto p-3 z-50 rounded-3xl"
     >
       <motion.div
         className="flex flex-col justify-center border border-black p-5 lg:p-8 rounded-xl space-y-8"

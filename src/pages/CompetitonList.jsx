@@ -57,7 +57,7 @@ export default function CompetitionList({ eventId }) {
             <li key={index} className="list-none">
               <div>
                 <motion.div
-                  className="flex flex-col bg-event-card-black w-[88svw] md:w-[75svw] p-7 pt-3 space-y-5 rounded-3xl "
+                  className="flex flex-col bg-event-card-black w-[88svw] md:w-[65svw] p-7 pt-3 space-y-5 rounded-3xl "
                   layoutId={`card-container-${competition.id}`}
                 >
                   <motion.div
@@ -65,7 +65,7 @@ export default function CompetitionList({ eventId }) {
                     layoutId={`card-image-container-${competition.id}`}
                   >
                     <img
-                      className={`w-[90svw] h-[45svh] md:h-[55svh] object-cover mt-3  bg-top rounded-xl`}
+                      className={`w-[85svw] md:w-[75svw] h-[45svh] md:h-[45svh] object-cover mt-3  bg-top rounded-xl`}
                       src={competition.imageCompactURL}
                       alt="Lazy to specify one"
                       onLoad={imageLoadHandle}
@@ -79,7 +79,7 @@ export default function CompetitionList({ eventId }) {
                   </motion.div>
                   {"quizMaster" in competition && (
                     <motion.div
-                      className="font-plex font-light text-white text-sm md:text-base xxl:text-lg !mt-1 !mb-4
+                      className="font-plex font-light text-white text-sm md:text-base xxl:text-lg !mt-1 !-mb-1
                     "
                       layoutId={`card-title-container-${competition.id}`}
                     >
@@ -92,7 +92,7 @@ export default function CompetitionList({ eventId }) {
                   >
                     {competition.description}
                   </motion.div>
-                  <motion.div className="font-plex font-light text-white text-sm md:text-base xxl:text-lg -mt-6">
+                  <motion.div className="font-plex font-light text-white text-sm md:text-sm xxl:text-base -mt-6">
                     <div className="flex flex-col w-full ">
                       <div className="flex flex-row flex-wrap w-full items-center">
                         <div className="flex flex-row items-center p-4 pl-0 space-x-2 mr-9 divide-breakpoint:mr-0">

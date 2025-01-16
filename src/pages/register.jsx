@@ -87,7 +87,7 @@ export default function Register() {
         transition={{ duration: 2, ease: "easeInOut" }}
         className={`${submitInfo ? "" : "hidden"} flex flex-row items-center justify-center bg-[rgba(0,0,0,0.5)] fixed w-[100vw] h-[100svh] !-mt-20 z-40`}
       >
-        <div className="bg-[url('/PopUpBackground.jpg')] flex flex-row items-center justify-center w-[94%] max-w-[481px] h-[250px] rounded-xl">
+        <div className="bg-[url('/PopUpBackground.webp')] flex flex-row items-center justify-center w-[94%] max-w-[481px] h-[250px] rounded-xl">
           <div className="flex flex-col  justify-center items-center border border-black w-[97%] max-w-[481px] h-[235px] rounded-lg">
             <h1 className="text-xl sm:text-2xl font-plex font-semibold">
               {submitMessage}

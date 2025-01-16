@@ -99,7 +99,7 @@ export default function Homepage() {
               initial={{ x: -150 }}
               whileInView={{ x: 0 }}
               transition={{ duration: 1 }}
-              className="w-full md:min-w-[450px] lg:w-2/4 text-justify text-sm lg:text-base xl:text-lg xxl:text-xl md:tracking-wider p-8 lg:pl-14 text-text-black font-plex font-normal"
+              className="w-full md:min-w-[450px] lg:w-2/4 text-justify text-sm md:text-base lg:text-base xl:text-lg xxl:text-xl tracking-tighter lg:tracking-wide p-8 lg:pl-14 text-text-black font-plex font-normal"
             >
               The English Department at PSG College of Arts & Science is dedicated
               to fostering a love for literature and advancing language skills
@@ -114,7 +114,7 @@ export default function Homepage() {
             </motion.p>
             <img
               loading="lazy" 
-              src="/dept-logo.png"
+              src="/dept-logo.webp"
               alt="Department of English logo"
               onLoad={imageLoadHandle}
               onError={handleImageError}
