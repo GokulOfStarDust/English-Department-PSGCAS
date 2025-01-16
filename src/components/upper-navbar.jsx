@@ -21,7 +21,7 @@ export default function UpperNavbar() {
             DEPARTMENT OF ENGLISH (AIDED)
           </p>
         </li>
-        <div className="list-none flex flex-row justify-around font-plex text-black space-x-4 sm:w-1/2 text-sm divide-breakpoint:text-base xl:text-xl">
+        <div className="list-none flex flex-row justify-around font-plex text-black space-x-4 sm:w-1/2 text-sm divide-breakpoint:text-base xl:text-xl mr-6 sm:mr-8 md:mr-0">
           <NavLink
             to={"/"}
             className={({ isActive }) =>
