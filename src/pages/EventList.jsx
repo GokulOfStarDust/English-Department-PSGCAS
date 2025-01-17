@@ -57,9 +57,9 @@ export default function EventList() {
           return (
             <li key={event.id} className="list-none">
               <div
-                // onClick={() => {
-                //   navigate(`/events/${event.id}`);
-                // }}
+                onClick={() => {
+                  navigate(`/events/${event.id}`);
+                }}
               >
                 <motion.div className="flex flex-col bg-event-card-black w-[88svw] md:w-[65svw] p-7 pt-7 space-y-5 rounded-3xl ">
                   <motion.div className="flex flex-row justify-center">
@@ -122,15 +122,23 @@ export default function EventList() {
                         />
                         <p>On-spot registration is available.</p>
                       </div>
+                      <div className="flex flex-row items-center p-4 pl-0 pt-0 space-x-2">
+                        <img
+                          src="/cash-pool-logo.png"
+                          alt="register icon to represent on-spot registration"
+                          className="object-contain size-6 opacity-70"
+                        />
+                        <p>Registeration Fee: {event.registerationFeeInfo}</p>
+                      </div>
                     </div>
                   </motion.div>
                   <div
                     className="flex flex-row justify-center mx-auto bg-[url('/eventSubmitBg.png')] bg-cover  min-w-[250px] !mt-9 md:!mt-[2%] text-md md:text-lg text-center font-plex font-bold tracking-widest rounded-full p-4 cursor-pointer"
-                    // onClick={() => {
-                    //   navigate(`/events/${event.id}`);
-                    // }}
+                    onClick={() => {
+                      navigate(`/events/${event.id}`);
+                    }}
                   >
-                    Competitions will be announced soon!
+                    Click to view the competitions!
                   </div>
                 </motion.div>
               </div>
@@ -219,6 +227,14 @@ export default function EventList() {
                           className="object-contain size-6 opacity-70"
                         />
                         <p>On-spot registration is available.</p>
+                      </div>
+                      <div className="flex flex-row items-center p-4 pl-0 pt-0 space-x-2">
+                        <img
+                          src="/cash-pool-logo.png"
+                          alt="register icon to represent on-spot registration"
+                          className="object-contain size-6 opacity-70"
+                        />
+                        <p>Registeration Fee: {event.registerationFeeInfo}</p>
                       </div>
                     </div>
                   </motion.div>

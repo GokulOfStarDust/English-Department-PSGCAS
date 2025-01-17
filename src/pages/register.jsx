@@ -24,7 +24,8 @@ export default function Register() {
     );
     console.log(data)
     try {
-      const response = await fetch("https://sheetdb.io/api/v1/7egulrlzjjdai", {
+      const response = await fetch("https://sheetdb.io/api/v1/89rbvgd4govry", {
+        //have to change the api endpoint
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -58,19 +59,23 @@ export default function Register() {
 
   useEffect(() => {
     console.log(totalRegistrationFee);
-    
-
     setUPIRegistratoinLink(
-      `upi://pay?pa=vidhyahanumanthk@okicici&pn=Vidhya%20Hanumanth%20Kanagaraj&am=${totalRegistrationFee}&cu=INR&aid=uGICAgMDoj7-7Jg`,
-    );
+        `upi://pay?pa=vidhyahanumanthk@okicici&pn=Vidhya%20Hanumanth%20Kanagaraj&am=${totalRegistrationFee}&cu=INR&aid=uGICAgMDoj7-7Jg`,
+      );
   }, [totalRegistrationFee]);
 
+//As general quiz had same name and as it was under eventFor: "All" category, when psgcas user selected general quiz, and shift to select other college, the general quiz checkbox was already selected without increment in the total registration fee. So, to avoid this, the checkboxes are reset when the college name is changed.
   useEffect(() => {
     setTotalRegistrationFee(0);
     setSelectedEvent("Select any event")
     setValue("selectedCompetition.general-quiz", "");  // Reset all checkboxes
     reset({ ...watch(), selectedCompetition: [] });
   }, [collegeName]);
+
+//There is no registration fee for particular competition, therefore set the total registration fee to 30 (registration fee for the whole event -> As You Like It)
+  useEffect(() => {
+    selectedEvent == "As You Like Lit" && setTotalRegistrationFee(30)
+  }, [selectedEvent]);
 
   return (
     <motion.div

@@ -10,7 +10,7 @@ export default function CompetitionList({ eventId }) {
   const competitions = competitionData[eventId];
 
   useEffect(() => {
-    if (imageLoaded === competitions.length) {
+    if (imageLoaded <= competitions.length) {
       setTimeout(() => {
         setLoadingState(false);
       }, 1500);
@@ -125,14 +125,14 @@ export default function CompetitionList({ eventId }) {
                         />
                         <p>{competition.location}</p>
                       </div>
-                      <div className="flex flex-row items-center p-4 pl-0 pt-0 space-x-2">
+                      {"RegisterationFee" in competition && <div className="flex flex-row items-center p-4 pl-0 pt-0 space-x-2">
                         <img
                           src="/cash-pool-logo.png"
                           alt="cash pool icon to represent event cash prize"
                           className="object-contain size-5"
                         />
-                        <p>Registeration Fee: ₹{competition.RegisterationFee} per person (Individual Registration)</p>
-                      </div>
+                        <p>Registeration Fee: ₹{competition.RegisterationFee} {competition.registerationFeeInfo}</p>
+                      </div>}
                       <div className="flex flex-row items-center p-4 pl-0 pt-0 space-x-2">
                         <img
                           src="/register-icon.png"
