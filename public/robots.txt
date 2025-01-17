@@ -26,7 +26,6 @@ Allow: /*.ico
 Allow: /*.webp
 Allow: /*.avif
 Allow: /sitemap*.xml
-Request-rate: 1/1s # Optimized for Google's crawl rate
 
 # Bing Bot Family
 User-agent: Bingbot
@@ -35,7 +34,7 @@ User-agent: MSNBot-Media
 User-agent: AdIdxBot
 User-agent: BingPreview
 Allow: /
-Request-rate: 2/1s
+
 
 # Yandex Bot Family (International SEO)
 User-agent: Yandex
@@ -44,7 +43,7 @@ User-agent: YandexImages
 User-agent: YandexVideo
 User-agent: YandexMedia
 Allow: /
-Clean-param: yclid
+
 
 # Baidu Bot (Chinese Market)
 User-agent: Baiduspider
@@ -52,7 +51,7 @@ User-agent: Baiduspider-image
 User-agent: Baiduspider-video
 User-agent: Baiduspider-news
 Allow: /
-Request-rate: 1/2s
+
 
 # Social Media & Preview Bots
 User-agent: Twitterbot
@@ -71,7 +70,6 @@ Allow: /*.gif
 Allow: /*.png
 Allow: /*.webp
 Allow: /*.avif
-Request-rate: 1/1s
 
 # AI & Analysis Bots
 User-agent: GPTBot
@@ -85,7 +83,6 @@ Disallow: /
 User-agent: ia_archiver
 User-agent: archive.org_bot
 Allow: /
-Request-rate: 1/10s
 
 # General rules for all other bots
 User-agent: *
@@ -98,7 +95,6 @@ Allow: /*.css
 Allow: /fonts/*
 Allow: /images/*
 Allow: /assets/*
-Request-rate: 1/5s
 
 # Enhanced Security & System Protection
 Disallow: /_next/
@@ -119,14 +115,6 @@ Disallow: /*?debug=*
 Disallow: /*?dev=*
 Disallow: /*?test=*
 
-# URL Parameter Handling
-Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content&fbclid&gclid&msclkid&_ga&_gl&yclid&dclid
-Clean-param: ref&source&affiliate&partner
-
-# Performance & Crawling Optimizations
-Crawl-delay: 1
-Request-rate: 1/1s
-
 # International Language Support
 Allow: /en/*
 Allow: /es/*
@@ -140,6 +128,4 @@ Sitemap: https://english-department-psgcas.vercel.app/sitemap-events-aTaleOfThre
 Sitemap: https://english-department-psgcas.vercel.app/sitemap-register.xml
 Sitemap: https://english-department-psgcas.vercel.app/sitemap-events.xml
 
-# Host Configuration
-Host: https://english-department-psgcas.vercel.app
 

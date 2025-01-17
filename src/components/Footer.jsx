@@ -68,7 +68,7 @@ export default function Footer() {
               <span className="text-gray-200"> (Chairperson)</span> -
               <a href="tel:9789642676" className=" hover:underline">
                 {" "}
-                9789642676
+                8248598428
               </a>
             </p>
           </div>
