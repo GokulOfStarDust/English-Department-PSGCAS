@@ -136,6 +136,9 @@ Allow: /zh/*
 Allow: /ja/*
 
 Sitemap: https://english-department-psgcas.vercel.app/sitemap.xml
+Sitemap: https://english-department-psgcas.vercel.app/sitemap-events-aTaleOfThreeQuizzes.xml
+Sitemap: https://english-department-psgcas.vercel.app/sitemap-register.xml
+Sitemap: https://english-department-psgcas.vercel.app/sitemap-events.xml
 
 # Host Configuration
 Host: https://english-department-psgcas.vercel.app

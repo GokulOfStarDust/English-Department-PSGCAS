@@ -1,0 +1,4 @@
+https://english-department-psgcas.vercel.app/
+https://english-department-psgcas.vercel.app/events
+https://english-department-psgcas.vercel.app/events/aTaleOfThreeQuizzes
+https://english-department-psgcas.vercel.app/register
