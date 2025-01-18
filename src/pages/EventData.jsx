@@ -8,10 +8,10 @@ const eventData = {
       name: "As You Like Lit",
       time: "09:00 a.m - 04:00 p.m",
       date: "23 January 2025",
-      location: "GRD Auditorium, PSG College of Arts & Science",
+      location: "E block & GRD Auditorium, PSG College of Arts & Science",
       eventFor: "PSG College of Arts & Science",
-      imageUrl: "/asYouLikeIt-poster.webp",
-      registerationFeeInfo: "₹30 per person (Individual Registration)",
+      imageUrl: "/asYouLikeLit-poster.webp",
+      registerationFeeInfo: "Free registration (Individual Registration)",
     },
   ],
 
