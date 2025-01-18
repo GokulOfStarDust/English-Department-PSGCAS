@@ -101,7 +101,7 @@ export default function CompetitionList({ eventId }) {
                             alt="Calendar Icon to represent event date"
                             className="object-contain size-5"
                           />
-                          <p >{competition.date}</p>
+                          <p>{competition.date}</p>
                         </div>
                         <img
                           src="/separatorLine.png"
@@ -125,21 +125,28 @@ export default function CompetitionList({ eventId }) {
                         />
                         <p>{competition.location}</p>
                       </div>
-                      {"RegisterationFee" in competition && <div className="flex flex-row items-center p-4 pl-0 pt-0 space-x-2">
-                        <img
-                          src="/cash-pool-logo.png"
-                          alt="cash pool icon to represent event cash prize"
-                          className="object-contain size-5"
-                        />
-                        <p>Registeration Fee: ₹{competition.RegisterationFee} {competition.registerationFeeInfo}</p>
-                      </div>}
+                      {"RegisterationFee" in competition && (
+                        <div className="flex flex-row items-center p-4 pl-0 pt-0 space-x-2">
+                          <img
+                            src="/cash-pool-logo.png"
+                            alt="cash pool icon to represent event cash prize"
+                            className="object-contain size-5"
+                          />
+                          <p>
+                            Registeration Fee: ₹{competition.RegisterationFee}{" "}
+                            {competition.registerationFeeInfo}
+                          </p>
+                        </div>
+                      )}
                       <div className="flex flex-row items-center p-4 pl-0 pt-0 space-x-2">
                         <img
                           src="/register-icon.png"
                           alt="register icon to represent on-spot registration"
                           className="object-contain size-6 opacity-70"
                         />
-                        <p>On-spot registration is available on the event day.</p>
+                        <p>
+                          On-spot registration is available on the event day.
+                        </p>
                       </div>
                     </div>
                   </motion.div>
@@ -155,10 +162,12 @@ export default function CompetitionList({ eventId }) {
                     <div
                       className="flex flex-row justify-center items-center mx-4 bg-[url('/eventSubmitBg.png')] bg-cover mt-3 xxl:mt-[2.3%] bottom-2 text-center text-base md:text-lg xxl:text-xl font-plex font-bold tracking-widest rounded-full px-5 py-4 cursor-pointer"
                       onClick={() => {
-                        competition.status == "open" &&  navigate(`/register`);
+                        competition.status == "open" && navigate(`/register`);
                       }}
                     >
-                      {competition.status == "open" ? "Click to Register" : "Registration Closed"}
+                      {competition.status == "open"
+                        ? "Click to Register"
+                        : "Registration Closed"}
                     </div>
                   </div>
                 </motion.div>

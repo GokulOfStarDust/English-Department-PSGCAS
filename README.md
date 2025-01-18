@@ -1,4 +1,4 @@
-# Website for Department of English (Aided) of PSGCAS 
+# Website for Department of English (Aided) of PSGCAS
 
 [![Website](https://img.shields.io/website?down_color=red&down_message=offline&up_color=green&up_message=online&url=https%3A%2F%2Fenglish-department-psgcas.vercel.app)](https://english-department-psgcas.vercel.app)
 [![Made with React](https://img.shields.io/badge/Made%20with-React-blue)](https://reactjs.org/)
@@ -101,8 +101,7 @@ Follow these steps to run the project locally:
    ```
 
 4. Build for production:
-5. 
-   ```bash
+5. ```bash
    npm run build
    # or
    yarn build
@@ -133,8 +132,8 @@ Here's how you can help:
 - Optimize image loading and compression.
 - Implement Locomotive Scroll for smooth scrolling
 
-
 ### 📋 Code Style Guidelines
+
 - Follow existing code formatting patterns
 - Write meaningful commit messages
 - Write clear, descriptive commit messages
@@ -145,6 +144,7 @@ Here's how you can help:
 - Follow WCAG guidelines
 
 ## 📄 License
+
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
 
 ---
@@ -160,4 +160,3 @@ If you like this project, consider giving it a ⭐️ on GitHub!
 This website is created and maintained by **Gokul**.  
 GitHub username: [GokulOfStarDust](https://github.com/GokulOfStarDust)
 Email: [Click here to mail](mailto:gokulgopalan18@gmail.com)
-

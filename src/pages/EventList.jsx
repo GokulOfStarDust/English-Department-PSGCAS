@@ -50,101 +50,108 @@ export default function EventList() {
         >
           UPCOMING EVENTS
         </div>
-        {eventData.upcomingEvents.length ==  0 ? 
-        <li className="font-bebas text-4xl md:text-5xl text-[#232323] font-medium text-center p-6">ALL THE WORLD'S A STAGE, BUT NO EVENTS ARE PLAYING RIGHT NOW—<br/>STAY TUNED FOR THE NEXT ACT!</li> 
-        :
-        eventData.upcomingEvents.map((event) => {
-          return (
-            <li key={event.id} className="list-none">
-              <div
-                onClick={() => {
-                  navigate(`/events/${event.id}`);
-                }}
-              >
-                <motion.div className="flex flex-col bg-event-card-black w-[88svw] md:w-[65svw] p-7 pt-7 space-y-5 rounded-3xl ">
-                  <motion.div className="flex flex-row justify-center">
-                    <img
-                      className={`w-[85svw] md:w-[75svw] h-[45svh] md:h-[45svh] object-cover object-center rounded-xl text-white`}
-                      src={event.imageUrl}
-                      alt="Poster of 'A Tale of Three Quizzes'"
-                      onLoad={imageLoadHandle}
-                    />
-                  </motion.div>
-                  <motion.div className="font-josefin text-white font-bold italic text-3xl xl:text-4xl">
-                    {event.name}
-                  </motion.div>
-                  <motion.div className="font-plex font-light text-white text-sm md:text-sm lg:text-base !mt-2">
-                    <div className="flex flex-col w-full">
-                      <div className="flex flex-row flex-wrap w-full items-center">
-                        <div className="flex flex-row items-center p-4 pl-0 space-x-2 mr-9 divide-breakpoint:mr-0">
+        {eventData.upcomingEvents.length == 0 ? (
+          <li className="font-bebas text-4xl md:text-5xl text-[#232323] font-medium text-center p-6">
+            ALL THE WORLD'S A STAGE, BUT NO EVENTS ARE PLAYING RIGHT NOW—
+            <br />
+            STAY TUNED FOR THE NEXT ACT!
+          </li>
+        ) : (
+          eventData.upcomingEvents.map((event) => {
+            return (
+              <li key={event.id} className="list-none">
+                <div
+                  onClick={() => {
+                    navigate(`/events/${event.id}`);
+                  }}
+                >
+                  <motion.div className="flex flex-col bg-event-card-black w-[88svw] md:w-[65svw] p-7 pt-7 space-y-5 rounded-3xl ">
+                    <motion.div className="flex flex-row justify-center">
+                      <img
+                        className={`w-[85svw] md:w-[75svw] h-[45svh] md:h-[45svh] object-cover object-center rounded-xl text-white`}
+                        src={event.imageUrl}
+                        alt="Poster of 'A Tale of Three Quizzes'"
+                        onLoad={imageLoadHandle}
+                      />
+                    </motion.div>
+                    <motion.div className="font-josefin text-white font-bold italic text-3xl xl:text-4xl">
+                      {event.name}
+                    </motion.div>
+                    <motion.div className="font-plex font-light text-white text-sm md:text-sm lg:text-base !mt-2">
+                      <div className="flex flex-col w-full">
+                        <div className="flex flex-row flex-wrap w-full items-center">
+                          <div className="flex flex-row items-center p-4 pl-0 space-x-2 mr-9 divide-breakpoint:mr-0">
+                            <img
+                              src="/calendar-event-icon.png"
+                              alt="Calendar Icon to represent event date"
+                              className="object-contain size-5"
+                            />
+                            <p>{event.date}</p>
+                          </div>
                           <img
-                            src="/calendar-event-icon.png"
-                            alt="Calendar Icon to represent event date"
+                            src="/separatorLine.png"
+                            alt="line"
+                            className="hidden divide-breakpoint:block object-contain size-7 md-4 mr-3 "
+                          />
+                          <div className="flex flex-row items-center p-4 pl-0 pt-0 divide-breakpoint:pt-4  space-x-2">
+                            <img
+                              src="/time-event-icon.png"
+                              alt="Clock icon to represent event time"
+                              className="object-contain size-5 "
+                            />
+                            <p>{event.time}</p>
+                          </div>
+                        </div>
+                        <div className="flex flex-row items-center p-4 pl-0 pt-0 space-x-2">
+                          <img
+                            src="/locationPin-event-icon.png"
+                            alt="location pin icon to represent event location"
                             className="object-contain size-5"
                           />
-                          <p>{event.date}</p>
+                          <p>{event.location}</p>
                         </div>
-                        <img
-                          src="/separatorLine.png"
-                          alt="line"
-                          className="hidden divide-breakpoint:block object-contain size-7 md-4 mr-3 "
-                        />
-                        <div className="flex flex-row items-center p-4 pl-0 pt-0 divide-breakpoint:pt-4  space-x-2">
+                        {"cashPrizeInfo" in event && (
+                          <div className="flex flex-row items-center p-4 pl-0 pt-0 space-x-2">
+                            <img
+                              src="/cash-pool-logo.png"
+                              alt="cash pool icon to represent event cash prize"
+                              className="object-contain size-5"
+                            />
+                            <p>{event.cashPrizeInfo}</p>
+                          </div>
+                        )}
+                        <div className="flex flex-row items-center p-4 pl-0 pt-0 space-x-2">
                           <img
-                            src="/time-event-icon.png"
-                            alt="Clock icon to represent event time"
-                            className="object-contain size-5 "
+                            src="/register-icon.png"
+                            alt="register icon to represent on-spot registration"
+                            className="object-contain size-6 opacity-70"
                           />
-                          <p>{event.time}</p>
+                          <p>On-spot registration is available.</p>
+                        </div>
+                        <div className="flex flex-row items-center p-4 pl-0 pt-0 space-x-2">
+                          <img
+                            src="/cash-pool-logo.png"
+                            alt="register icon to represent on-spot registration"
+                            className="object-contain size-6 opacity-70"
+                          />
+                          <p>Registeration Fee: {event.registerationFeeInfo}</p>
                         </div>
                       </div>
-                      <div className="flex flex-row items-center p-4 pl-0 pt-0 space-x-2">
-                        <img
-                          src="/locationPin-event-icon.png"
-                          alt="location pin icon to represent event location"
-                          className="object-contain size-5"
-                        />
-                        <p>{event.location}</p>
-                      </div>
-                      {"cashPrizeInfo" in event && <div className="flex flex-row items-center p-4 pl-0 pt-0 space-x-2">
-                        <img
-                          src="/cash-pool-logo.png"
-                          alt="cash pool icon to represent event cash prize"
-                          className="object-contain size-5"
-                        />
-                        <p>{event.cashPrizeInfo}</p>
-                      </div>}
-                      <div className="flex flex-row items-center p-4 pl-0 pt-0 space-x-2">
-                        <img
-                          src="/register-icon.png"
-                          alt="register icon to represent on-spot registration"
-                          className="object-contain size-6 opacity-70"
-                        />
-                        <p>On-spot registration is available.</p>
-                      </div>
-                      <div className="flex flex-row items-center p-4 pl-0 pt-0 space-x-2">
-                        <img
-                          src="/cash-pool-logo.png"
-                          alt="register icon to represent on-spot registration"
-                          className="object-contain size-6 opacity-70"
-                        />
-                        <p>Registeration Fee: {event.registerationFeeInfo}</p>
-                      </div>
+                    </motion.div>
+                    <div
+                      className="flex flex-row justify-center mx-auto bg-[url('/eventSubmitBg.png')] bg-cover  min-w-[250px] !mt-9 md:!mt-[2%] text-md md:text-lg text-center font-plex font-bold tracking-widest rounded-full p-4 cursor-pointer"
+                      onClick={() => {
+                        navigate(`/events/${event.id}`);
+                      }}
+                    >
+                      Click to view the competitions!
                     </div>
                   </motion.div>
-                  <div
-                    className="flex flex-row justify-center mx-auto bg-[url('/eventSubmitBg.png')] bg-cover  min-w-[250px] !mt-9 md:!mt-[2%] text-md md:text-lg text-center font-plex font-bold tracking-widest rounded-full p-4 cursor-pointer"
-                    onClick={() => {
-                      navigate(`/events/${event.id}`);
-                    }}
-                  >
-                    Click to view the competitions!
-                  </div>
-                </motion.div>
-              </div>
-            </li>
-          );
-        })}
+                </div>
+              </li>
+            );
+          })
+        )}
       </motion.ul>
 
       {/*worst way (increase redunduncy) used to display past events */}

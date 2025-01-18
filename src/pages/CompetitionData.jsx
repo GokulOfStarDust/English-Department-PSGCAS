@@ -6,7 +6,8 @@ const competitionData = {
       id: "photo-ery",
       status: "open",
       name: "Photo-ery (photography)",
-      description: "Capture the world through your lens and unveil the stories that lie beyond the surface. From fleeting moments to timeless perspectives, this photography competition celebrates the art of visual storytelling. Are you ready to frame the extraordinary in the ordinary?",
+      description:
+        "Capture the world through your lens and unveil the stories that lie beyond the surface. From fleeting moments to timeless perspectives, this photography competition celebrates the art of visual storytelling. Are you ready to frame the extraordinary in the ordinary?",
       imageUrl: "/photo-ery-poster.webp",
       imageCompactURL: "/photo-ery-poster.webp",
       eventFor: "PSG College of Arts & Science",
@@ -22,9 +23,7 @@ const competitionData = {
         "OD will be provided for PSGCAS students.",
       ],
       rules: {
-        "General Rules": [
-          "Rules will be anounced soon.",
-        ],
+        "General Rules": ["Rules will be anounced soon."],
       },
     },
 
@@ -32,7 +31,8 @@ const competitionData = {
       id: "picture-perfect-poem",
       status: "open",
       name: "Picture Perfect Poem (poetry)",
-      description: "Where words meet imagery, and poetry paints vivid pictures in the mind. This competition celebrates the artistry of crafting verses that evoke emotion, inspire thought, and create timeless beauty. Can your pen capture the essence of a masterpiece?",
+      description:
+        "Where words meet imagery, and poetry paints vivid pictures in the mind. This competition celebrates the artistry of crafting verses that evoke emotion, inspire thought, and create timeless beauty. Can your pen capture the essence of a masterpiece?",
       imageUrl: "/picture-perfect-poem-poster.webp",
       imageCompactURL: "/picture-perfect-poem-poster.webp",
       eventFor: "PSG College of Arts & Science",
@@ -45,11 +45,9 @@ const competitionData = {
         "The theme will be announced on the spot.",
         "Participants must bring their own writing materials.",
         "OD will be provided for PSGCAS students.",
-      ],      
+      ],
       rules: {
-        "General Rules": [
-          "Rules will be anounced soon.",
-        ],
+        "General Rules": ["Rules will be anounced soon."],
       },
     },
 
@@ -57,7 +55,8 @@ const competitionData = {
       id: "sirens-call",
       status: "open",
       name: "Siren's Call (shipwreck)",
-      description: "Dive into the depths of maritime mysteries and unravel tales of legendary shipwrecks. This competition explores the allure of the ocean's secrets, blending history, mythology, and storytelling. Will you answer the call and navigate through these haunting waters?",
+      description:
+        "Dive into the depths of maritime mysteries and unravel tales of legendary shipwrecks. This competition explores the allure of the ocean's secrets, blending history, mythology, and storytelling. Will you answer the call and navigate through these haunting waters?",
       imageUrl: "/sirens-call-poster.webp",
       imageCompactURL: "/sirens-call-poster.webp",
       eventFor: "PSG College of Arts & Science",
@@ -71,9 +70,7 @@ const competitionData = {
         "OD will be provided for PSGCAS students.",
       ],
       rules: {
-        "General Rules": [
-          "Rules will be anounced soon.",
-        ],
+        "General Rules": ["Rules will be anounced soon."],
       },
     },
 
@@ -81,7 +78,8 @@ const competitionData = {
       id: "brushstroker-and-beyond",
       status: "open",
       name: "Brushstroker & Beyond (Object painting)",
-      description: "Unleash your creativity on the canvas, where every stroke tells a story. This competition invites you to explore the beauty of object painting, transcending the ordinary to reveal the extraordinary. Can you transform the mundane into a masterpiece with just a brush and your imagination?",
+      description:
+        "Unleash your creativity on the canvas, where every stroke tells a story. This competition invites you to explore the beauty of object painting, transcending the ordinary to reveal the extraordinary. Can you transform the mundane into a masterpiece with just a brush and your imagination?",
       imageUrl: "/brushstroker-and-beyond-poster.webp",
       imageCompactURL: "/brushstroker-and-beyond-poster.webp",
       eventFor: "PSG College of Arts & Science",
@@ -96,9 +94,7 @@ const competitionData = {
         "OD will be provided for PSGCAS students.",
       ],
       rules: {
-        "General Rules": [
-          "Rules will be anounced soon.",
-        ],
+        "General Rules": ["Rules will be anounced soon."],
       },
     },
 
@@ -106,7 +102,8 @@ const competitionData = {
       id: "the-babel-bridge",
       status: "open",
       name: "The Babel Bridge (Translation)",
-      description: "Cross the boundaries of language and culture to bridge the gap between worlds. This competition celebrates the art of translation, where words become a gateway to understanding and connection. Can you capture the essence of a story and bring it to life in a new language?",
+      description:
+        "Cross the boundaries of language and culture to bridge the gap between worlds. This competition celebrates the art of translation, where words become a gateway to understanding and connection. Can you capture the essence of a story and bring it to life in a new language?",
       imageUrl: "/the-babel-bridge-poster.webp",
       imageCompactURL: "/the-babel-bridge-poster.webp",
       eventFor: "PSG College of Arts & Science",
@@ -121,9 +118,7 @@ const competitionData = {
         "OD will be provided for PSGCAS students.",
       ],
       rules: {
-        "General Rules": [
-          "Rules will be anounced soon.",
-        ],
+        "General Rules": ["Rules will be anounced soon."],
       },
     },
 
@@ -131,7 +126,8 @@ const competitionData = {
       id: "zap-to-fame",
       status: "open",
       name: "Zap to Fame (Adzap)",
-      description: "Step into the spotlight and unleash your creativity in this high-energy adzap competition. From catchy jingles to quirky skits, this event challenges you to think on your feet and captivate the audience. Can you create an ad that zaps to fame?",
+      description:
+        "Step into the spotlight and unleash your creativity in this high-energy adzap competition. From catchy jingles to quirky skits, this event challenges you to think on your feet and captivate the audience. Can you create an ad that zaps to fame?",
       imageUrl: "/zap-to-fame-poster.webp",
       imageCompactURL: "/zap-to-fame-poster.webp",
       eventFor: "PSG College of Arts & Science",
@@ -145,9 +141,7 @@ const competitionData = {
         "OD will be provided for PSGCAS students.",
       ],
       rules: {
-        "General Rules": [
-          "Rules will be anounced soon.",
-        ],
+        "General Rules": ["Rules will be anounced soon."],
       },
     },
 
@@ -155,7 +149,8 @@ const competitionData = {
       id: "logic-labyrinth",
       status: "open",
       name: "Logic Labyrinth (Connection)",
-      description: "Navigate through a maze of puzzles and challenges that test your wit and reasoning. Connect the dots and find your way through intricate problems. Can you solve the puzzle and emerge victorious?",
+      description:
+        "Navigate through a maze of puzzles and challenges that test your wit and reasoning. Connect the dots and find your way through intricate problems. Can you solve the puzzle and emerge victorious?",
       imageUrl: "/logic-labyrinth-poster.webp",
       imageCompactURL: "/logic-labyrinth-poster.webp",
       eventFor: "PSG College of Arts & Science",
@@ -164,13 +159,9 @@ const competitionData = {
       location: "PSG College of Arts & Science",
       RegisterationFee: 0,
       registerationFeeInfo: "(Pay ₹30 and attend all the competitions)",
-      guidelines: [
-        "OD will be provided for PSGCAS students.",
-      ],
+      guidelines: ["OD will be provided for PSGCAS students."],
       rules: {
-        "General Rules": [
-          "Rules will be anounced soon.",
-        ],
+        "General Rules": ["Rules will be anounced soon."],
       },
     },
 
@@ -178,7 +169,8 @@ const competitionData = {
       id: "the-story-foundry",
       status: "open",
       name: "The Story Foundry (Plot making)",
-      description: "Craft a tale that weaves together imagination, intrigue, and emotion. This competition challenges you to create a compelling plot that captivates the audience and leaves them wanting more. Can you forge a story that stands the test of time?",
+      description:
+        "Craft a tale that weaves together imagination, intrigue, and emotion. This competition challenges you to create a compelling plot that captivates the audience and leaves them wanting more. Can you forge a story that stands the test of time?",
       imageUrl: "/the-story-foundry-poster.webp",
       imageCompactURL: "/the-story-foundry-poster.webp",
       eventFor: "PSG College of Arts & Science",
@@ -192,9 +184,7 @@ const competitionData = {
         "OD will be provided for PSGCAS students.",
       ],
       rules: {
-        "General Rules": [
-          "Rules will be anounced soon.",
-        ],
+        "General Rules": ["Rules will be anounced soon."],
       },
     },
   ],
@@ -214,7 +204,7 @@ const competitionData = {
       location: "Vaigai Hall, Q-Block, PSG College of Arts & Science",
       quizMaster: "Vidhya Hanumanth K",
       RegisterationFee: 20,
-      registerationFeeInfo : "per person (Individual Registration)",
+      registerationFeeInfo: "per person (Individual Registration)",
       guidelines: [
         "Each team can have upto 2 members.",
         "Solo Participation is Allowed",
@@ -246,7 +236,7 @@ const competitionData = {
       location: "Vaigai Hall, Q-Block, PSG College of Arts & Science",
       quizMaster: "Manashika 🤝 Mithra",
       RegisterationFee: 20,
-      registerationFeeInfo : "per person (Individual Registration)",
+      registerationFeeInfo: "per person (Individual Registration)",
       guidelines: [
         "Each team can have upto 2 members.",
         "Solo Participation is Allowed",
@@ -277,7 +267,7 @@ const competitionData = {
       location: "Vaigai Hall, Q-Block, PSG College of Arts & Science",
       quizMaster: "RK Rohit 🤝 JS Rohit",
       RegisterationFee: 30,
-      registerationFeeInfo : "per person (Individual Registration)",
+      registerationFeeInfo: "per person (Individual Registration)",
       guidelines: [
         "Each team can have upto 2 members.",
         "Solo Participation is Allowed",

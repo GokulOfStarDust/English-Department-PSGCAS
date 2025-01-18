@@ -62,7 +62,7 @@ export default function Homepage() {
             className="w-[97vw] h-[90svh] max-w-full max-h-full object-cover rounded-2xl blur-[0.2px] relative"
           />
 
-          <h1 
+          <h1
             className="absolute top-[15%] w-[88vw] max-w-full drop-shadow-md mx-auto flex flex-col
                 animate-fadeIn 
                 font-bebas  text-[#242424] font-extrabold text-center tracking-[0.12em] leading-[1.15] lg:leading-none mr-3
@@ -101,19 +101,20 @@ export default function Homepage() {
               transition={{ duration: 1 }}
               className="w-full md:min-w-[450px] lg:w-2/4 text-justify text-sm md:text-base lg:text-base xl:text-lg xxl:text-xl tracking-tighter lg:tracking-wide p-8 lg:pl-14 text-text-black font-plex font-normal"
             >
-              The English Department at PSG College of Arts & Science is dedicated
-              to fostering a love for literature and advancing language skills
-              that are essential in today's global landscape. With a comprehensive
-              curriculum that spans classical and contemporary literature,
-              language studies, and communication, the department empowers
-              students to explore diverse perspectives and enhances critical
-              thinking. Through engaging courses, workshops, and literary events,
-              students are encouraged to develop creativity, analytical skills,
-              and effective communication, preparing them for successful careers
-              in academia, media, and other fields.
+              The English Department at PSG College of Arts & Science is
+              dedicated to fostering a love for literature and advancing
+              language skills that are essential in today's global landscape.
+              With a comprehensive curriculum that spans classical and
+              contemporary literature, language studies, and communication, the
+              department empowers students to explore diverse perspectives and
+              enhances critical thinking. Through engaging courses, workshops,
+              and literary events, students are encouraged to develop
+              creativity, analytical skills, and effective communication,
+              preparing them for successful careers in academia, media, and
+              other fields.
             </motion.p>
             <img
-              loading="lazy" 
+              loading="lazy"
               src="/dept-logo.webp"
               alt="Department of English logo"
               onLoad={imageLoadHandle}
@@ -127,24 +128,19 @@ export default function Homepage() {
   );
 }
 
-
-
-
-
-
-
-  {/* <p className="absolute top-1/4 w-[88vw] rounded-3xl max-w-full
+{
+  /* <p className="absolute top-1/4 w-[88vw] rounded-3xl max-w-full
                 animate-fadeIn
                 font-holtwood text-stroke text-transparent text-center tracking-wide  leading-normal text-shadow-title
                 text-4xl sm:text-5xl sm:leading-tight md:text-7xl lg:text-8xl xl:text-9xl z-20 ">
                 DEPARTMENT OF <br/> ENGLISH
-                </p> */}
+                </p> */
+}
 
-
-
-
- {/* <img
+{
+  /* <img
           src="/deptEngHeroText.png"
           alt="deptEngHeroText"
           className="absolute animate-fadeIn top-28 p-3 "
-        /> */}
+        /> */
+}

@@ -93,7 +93,9 @@ export default function EventRuleCard({ competitionId }) {
             competition.status == "open" && navigate(`/register`);
           }}
         >
-          {competition.status == "open" ? "Click to Register" : "Registration Closed"}
+          {competition.status == "open"
+            ? "Click to Register"
+            : "Registration Closed"}
         </div>
       </motion.div>
     </motion.div>

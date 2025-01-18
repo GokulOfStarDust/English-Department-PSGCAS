@@ -22,7 +22,7 @@ export default function Register() {
         return value != false && value != true;
       },
     );
-    console.log(data)
+    console.log(data);
     try {
       const response = await fetch("https://sheetdb.io/api/v1/89rbvgd4govry", {
         //have to change the api endpoint
@@ -60,21 +60,21 @@ export default function Register() {
   useEffect(() => {
     console.log(totalRegistrationFee);
     setUPIRegistratoinLink(
-        `upi://pay?pa=vidhyahanumanthk@okicici&pn=Vidhya%20Hanumanth%20Kanagaraj&am=${totalRegistrationFee}&cu=INR&aid=uGICAgMDoj7-7Jg`,
-      );
+      `upi://pay?pa=vidhyahanumanthk@okicici&pn=Vidhya%20Hanumanth%20Kanagaraj&am=${totalRegistrationFee}&cu=INR&aid=uGICAgMDoj7-7Jg`,
+    );
   }, [totalRegistrationFee]);
 
-//As general quiz had same name and as it was under eventFor: "All" category, when psgcas user selected general quiz, and shift to select other college, the general quiz checkbox was already selected without increment in the total registration fee. So, to avoid this, the checkboxes are reset when the college name is changed.
+  //As general quiz had same name and as it was under eventFor: "All" category, when psgcas user selected general quiz, and shift to select other college, the general quiz checkbox was already selected without increment in the total registration fee. So, to avoid this, the checkboxes are reset when the college name is changed.
   useEffect(() => {
     setTotalRegistrationFee(0);
-    setSelectedEvent("Select any event")
-    setValue("selectedCompetition.general-quiz", "");  // Reset all checkboxes
+    setSelectedEvent("Select any event");
+    setValue("selectedCompetition.general-quiz", ""); // Reset all checkboxes
     reset({ ...watch(), selectedCompetition: [] });
   }, [collegeName]);
 
-//There is no registration fee for particular competition, therefore set the total registration fee to 30 (registration fee for the whole event -> As You Like It)
+  //There is no registration fee for particular competition, therefore set the total registration fee to 30 (registration fee for the whole event -> As You Like It)
   useEffect(() => {
-    selectedEvent == "As You Like Lit" && setTotalRegistrationFee(30)
+    selectedEvent == "As You Like Lit" && setTotalRegistrationFee(30);
   }, [selectedEvent]);
 
   return (
@@ -263,7 +263,7 @@ export default function Register() {
                   setCollegeDropdown(false);
                   setCollegeName(event.target.innerText);
                   reset({ ...watch(), selectedCompetition: {} });
-                  
+
                   setValue("collegeName", event.target.innerText);
                 }}
                 className="w-full rounded-xl p-3 hover:bg-[#373636] hover:text-white cursor-pointer"
@@ -276,7 +276,7 @@ export default function Register() {
                   setCollegeDropdown(false);
                   reset({ ...watch(), selectedCompetition: {} });
                   setCollegeName(event.target.innerText);
-                  
+
                   setValue("collegeName", event.target.innerText);
                 }}
                 className="w-full rounded-xl p-3 hover:bg-[#373636] hover:text-white cursor-pointer"
@@ -395,33 +395,44 @@ export default function Register() {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
             >
-              {eventData.upcomingEvents.length == 0 ? 
-              <li key={"noEvents"} className="w-full rounded-xl p-3 hover:bg-[#373636] hover:text-white cursor-pointer"
-              onClick={()=>{setEventDropdown(false);}}>
-                No events at the moment.
-              </li> :
-              eventData.upcomingEvents.map((event, index) => {
-                return (
-                 (collegeName === event.eventFor ||
-                  event.eventFor == "All") ?
-                   <li
-                    key={`${index}`}
-                    onClick={(event) => {
-                      setEventDropdown(false);
-                      setSelectedEvent(event.target.innerText);
-                      setValue("selectedEvent", event.target.innerText);
-                    }}
-                    className="w-full rounded-xl p-3 hover:bg-[#373636] hover:text-white cursor-pointer"
-                  >
-                    {event.name}
-                  </li>
-                  :
-                  <li key={"noEventsDropdown"} className="w-full rounded-xl p-3 hover:bg-[#373636] hover:text-white cursor-pointer"
-                    onClick={()=>{setEventDropdown(false);}}>
+              {eventData.upcomingEvents.length == 0 ? (
+                <li
+                  key={"noEvents"}
+                  className="w-full rounded-xl p-3 hover:bg-[#373636] hover:text-white cursor-pointer"
+                  onClick={() => {
+                    setEventDropdown(false);
+                  }}
+                >
+                  No events at the moment.
+                </li>
+              ) : (
+                eventData.upcomingEvents.map((event, index) => {
+                  return collegeName === event.eventFor ||
+                    event.eventFor == "All" ? (
+                    <li
+                      key={`${index}`}
+                      onClick={(event) => {
+                        setEventDropdown(false);
+                        setSelectedEvent(event.target.innerText);
+                        setValue("selectedEvent", event.target.innerText);
+                      }}
+                      className="w-full rounded-xl p-3 hover:bg-[#373636] hover:text-white cursor-pointer"
+                    >
+                      {event.name}
+                    </li>
+                  ) : (
+                    <li
+                      key={"noEventsDropdown"}
+                      className="w-full rounded-xl p-3 hover:bg-[#373636] hover:text-white cursor-pointer"
+                      onClick={() => {
+                        setEventDropdown(false);
+                      }}
+                    >
                       No events at the moment.
-                  </li>
-                );
-              })}
+                    </li>
+                  );
+                })
+              )}
             </motion.ul>
 
             <input
@@ -445,7 +456,8 @@ export default function Register() {
             <legend className="font-plex text-white tracking-widest font-medium text-sm md:text-lg mt-10 ">
               SELECT THE COMPETITIONS :
             </legend>
-            {(collegeName == "Select your college" || selectedEvent == "Select any event") ? (
+            {collegeName == "Select your college" ||
+            selectedEvent == "Select any event" ? (
               <p className="font-plex text-white font-medium text-sm md:text-lg my-3">
                 (Select your college & any event to view the competitions)
               </p>
@@ -460,7 +472,8 @@ export default function Register() {
                 ).map((event, index) => {
                   return (
                     (collegeName === event.eventFor ||
-                      event.eventFor == "All") && (event.status == "open") && (
+                      event.eventFor == "All") &&
+                    event.status == "open" && (
                       <div
                         key={index}
                         className="flex flex-row  p-3 mx-2 md:mx-6 space-x-3"
@@ -521,13 +534,18 @@ export default function Register() {
 
         <div className="bg-[url('/registrationFormBg.webp')] bg-cover bg-center flex flex-col justify-center items-center w-[88svw] max-w-[1280px] text-white p-5 pt-10 md:p-8 rounded-3xl space-y-2">
           <p className="font-plex font-bold mb-4">SCAN THE QR CODE TO PAY</p>
-          {totalRegistrationFee == 0 ? <p className="size-[18.2rem] flex flex-row items-center justify-center text-sm outline outline-white outline-1 p-7">(Select the competition to view the QR Code.)</p> :
-          <a href={UPIRegistratoinLink} target="_blank">
-              <img src={`${totalRegistrationFee}.jpeg`} alt="QR Code to pay the registration fee" className="size-72 object-contain"/>
-          </a>
-            
-          }
-          
+          {totalRegistrationFee == 0 ? (
+            <p className="size-[18.2rem] flex flex-row items-center justify-center text-sm outline outline-white outline-1 p-7">
+              (Select the competition to view the QR Code.)
+            </p>
+          ) : (
+            <img
+              src={`${totalRegistrationFee}.jpeg`}
+              alt="QR Code to pay the registration fee"
+              className="size-72 object-contain"
+            />
+          )}
+
           {/* <a className="pb-1 bg-white" href={UPIRegistratoinLink}>
             <QRCodeCanvas
               value={UPIRegistratoinLink}
@@ -538,7 +556,8 @@ export default function Register() {
             Amount to be paid : {totalRegistrationFee}
           </p>
           <p className="font-plex text-center text-[0.75rem] sm:text-sm lg:text-base font-medium pb-7">
-            If the QR Code doesn't work, send the coressponding registration fee to this number: 9791440504 <br/> (Sorry for the Inconvenicence :/ )
+            If the QR Code doesn't work, send the coressponding registration fee
+            to this number: 9791440504 <br /> (Sorry for the Inconvenicence :/ )
           </p>
           <label
             className="font-plex text-sm font-medium"

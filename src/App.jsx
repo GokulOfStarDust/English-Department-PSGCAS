@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React, { Suspense } from "react";
-import { SpeedInsights } from "@vercel/speed-insights/react"
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import Layout from "./components/Layout.jsx";
 import LoadingAnimation from "./pages/LoadingAnimation.jsx";
 import ScrollToTop from "./pages/ScrollToTop.jsx";
@@ -14,7 +14,7 @@ const Events = React.lazy(() => import("./pages/Events.jsx"));
 function App() {
   return (
     <>
-      <SpeedInsights/>
+      <SpeedInsights />
       <BrowserRouter>
         <ScrollToTop />
         <Suspense fallback={<LoadingAnimation />}>
