@@ -1,4 +1,6 @@
 {
+  "name": "English Department Aided PSGCAS",
+  "alias": "english-department.psgcas.vercel.app",
   "rewrites": [{ "source": "/(.*)", "destination": "/" }],
   "headers": [
     {
