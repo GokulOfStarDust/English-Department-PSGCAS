@@ -217,19 +217,18 @@ const competitionData = {
     },
 
     {
-      id: "beyond-the-net",
+      id: "logic-labyrinth",
       status: "open",
-      name: "Behind the Net (Quiz)",
-      quizMaster: "Vidhya Hanumanth 🤝 Manashika 🤝 Mithra",
+      name: "Logic Labyrinth (Connections)",
       description:
-        "Beyond the Net is a General Quiz on Literature, Mass Culture, etc and more. The event will test quick thinking, teamwork, and depth of understanding through two exciting rounds. Are you ready to dive into the world of knowledge and emerge as the ultimate quiz champion?",
-      imageUrl: "/beyond-the-net-poster.webp",
-      imageCompactURL: "/beyond-the-net-poster.webp",
+        "Embark on a journey through the maze of connections, where every link leads to a new discovery. This competition challenges you to unravel the threads that bind ideas, concepts, and knowledge. Can you navigate the labyrinth of logic and emerge victorious?",
+      imageUrl: "/logic-labyrinth-poster.webp",
+      imageCompactURL: "/logic-labyrinth-poster.webp",
       eventFor: "PSG College of Arts & Science",
-      time: "09:30 p.m - 12:30 a.m",
+      time: "09:00 p.m - 12:30 a.m",
       date: "23 January 2025",
       location: "GRD Auditorium, PSG College of Arts & Science",
-      organizers:["Mithra - 9344271026", "Manashika - 7558192386"],
+      organizers:["Mithra - 9344271026"],
       RegisterationFee: 0,
       registerationFeeInfo: "(Free registeration)",
       guidelines: [
@@ -240,11 +239,10 @@ const competitionData = {
       rules: {
         "General Rules": [
           "The event consists of two rounds.",
-          "Prelims will be a written round consisting of 20 questions.",
-          "The top 6 teams will compete in the finals.",
-          "The finals will have different rounds, and rules will be explained on the spot.",
-          "Usage of mobile phones is strictly not allowed.",
-          "Questions will be based on general knowledge.",
+          "Round 1: A total of 20 questions will be asked, Each correct answer earns 1 mark.",
+          "Round 2: A total of 10 questions will be asked, Each correct answer earns 5 marks",
+          "The top 6 teams/participants with the highest scores from Round 1 will advance to Round 2.",
+          "The use of mobile phones, smartwatches, or anyother electronic devices is strictly prohibited during the game.",
         ],
       },
     },
