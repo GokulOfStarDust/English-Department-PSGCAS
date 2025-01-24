@@ -182,7 +182,7 @@ export default function EventList() {
           return (
             <li key={event.id} className="list-none" role="listitem">
               <div>
-                <motion.div className="flex flex-col bg-event-card-black w-[88svw] md:w-[65svw] p-7 pt-7 space-y-5 rounded-3xl ">
+                <motion.div className="flex flex-col bg-event-card-black w-[88svw] md:w-[65svw] p-7 pt-7 mb-20 pb-7 space-y-5 rounded-3xl ">
                   <motion.div className="flex flex-row justify-center">
                     <img
                       className={`w-[85svw] md:w-[75svw] h-[45svh] md:h-[45svh] object-cover object-center rounded-xl text-white`}
@@ -227,14 +227,16 @@ export default function EventList() {
                         />
                         <p>{event.location}</p>
                       </div>
-                      <div className="flex flex-row items-center p-4 pl-0 pt-0 space-x-2">
-                        <img
-                          src="/cash-pool-logo.png"
-                          alt="Cash pool icon to represent event cash prize"
-                          className="object-contain size-5"
-                        />
-                        <p>{event.cashPrizeInfo}</p>
-                      </div>
+                      {"cashPrizeInfo" in event && (
+                          <div className="flex flex-row items-center p-4 pl-0 pt-0 space-x-2">
+                            <img
+                              src="/cash-pool-logo.png"
+                              alt="Cash pool icon to represent event cash prize"
+                              className="object-contain size-5"
+                            />
+                            <p>{event.cashPrizeInfo}</p>
+                          </div>
+                        )}
                       <div className="flex flex-row items-center p-4 pl-0 pt-0 space-x-2">
                         <img
                           src="/register-icon.png"

@@ -4,7 +4,7 @@ const competitionData = {
   asYouLikeLit: [
     {
       id: "photo-ery",
-      status: "open",
+      status: "closed",
       name: "Photo-ery (photography)",
       description:
         "Capture the world through your lens and unveil the stories that lie beyond the surface. From fleeting moments to timeless perspectives, this photography competition celebrates the art of visual storytelling. Are you ready to frame the extraordinary in the ordinary?",
@@ -36,7 +36,7 @@ const competitionData = {
 
     {
       id: "picture-perfect-poem",
-      status: "open",
+      status: "closed",
       name: "Picture Perfect Poem (poetry)",
       description:
         "Where words meet imagery, and poetry paints vivid pictures in the mind. This competition celebrates the artistry of crafting verses that evoke emotion, inspire thought, and create timeless beauty. Can your pen capture the essence of a masterpiece?",
@@ -71,7 +71,7 @@ const competitionData = {
 
     {
       id: "sirens-call",
-      status: "open",
+      status: "closed",
       name: "Siren's Call (shipwreck)",
       description:
         "Dive into the depths of maritime mysteries and unravel tales of legendary shipwrecks. This competition explores the allure of the ocean's secrets, blending history, mythology, and storytelling. Will you answer the call and navigate through these haunting waters?",
@@ -103,7 +103,7 @@ const competitionData = {
 
     {
       id: "the-charcoal-chronicles",
-      status: "open",
+      status: "closed",
       name: "The Charcoal Chronicles (Object painting)",
       description:
         "Unleash your creativity on the canvas, where every stroke tells a story. This competition invites you to explore the beauty of object painting, transcending the ordinary to reveal the extraordinary. Can you transform the mundane into a masterpiece with just a brush and your imagination?",
@@ -138,7 +138,7 @@ const competitionData = {
 
     {
       id: "the-babel-tower",
-      status: "open",
+      status: "closed",
       name: "The Babel Tower (Translation)",
       description:
         "Cross the boundaries of language and culture to bridge the gap between worlds. This competition celebrates the art of translation, where words become a gateway to understanding and connection. Can you capture the essence of a story and bring it to life in a new language?",
@@ -172,7 +172,7 @@ const competitionData = {
 
     {
       id: "lit-ad-genius",
-      status: "open",
+      status: "closed",
       name: "Lit Ad Genius (Adzap)",
       description:
         "Step into the spotlight and unleash your creativity in this high-energy adzap competition. From catchy jingles to quirky skits, this event challenges you to think on your feet and captivate the audience. Can you create an ad that zaps to fame?",
@@ -218,7 +218,7 @@ const competitionData = {
 
     {
       id: "logic-labyrinth",
-      status: "open",
+      status: "closed",
       name: "Logic Labyrinth (Connections)",
       description:
         "Embark on a journey through the maze of connections, where every link leads to a new discovery. This competition challenges you to unravel the threads that bind ideas, concepts, and knowledge. Can you navigate the labyrinth of logic and emerge victorious?",
@@ -249,7 +249,7 @@ const competitionData = {
 
     {
       id: "the-story-foundry",
-      status: "open",
+      status: "closed",
       name: "The Story Foundry (Plot making)",
       description:
         "Craft a tale that weaves together imagination, intrigue, and emotion. This competition challenges you to create a compelling plot that captivates the audience and leaves them wanting more. Can you forge a story that stands the test of time?",
