@@ -45,7 +45,7 @@ export default function EventRuleCard({ competitionId }) {
           <img
             className="w-[55svw] h-[45svh] object-contain rounded-xl"
             src={competition.imageUrl}
-            alt="Lazy to specify one"
+            alt={`Poster of ${competition.name}`}
           />
         </motion.div>
         <motion.div

@@ -69,7 +69,7 @@ export default function CompetitionList({ eventId }) {
                     layoutId={`card-image-container-${competition.id}`}
                   >
                     <img
-                      className={`w-[85svw] md:w-[75svw] h-[45svh] md:h-[45svh] object-cover mt-3  bg-top rounded-xl`}
+                      className={`w-[85svw] md:w-[75svw] h-[45svh] md:h-[45svh] object-cover mt-3  bg-top rounded-xl text-white`}
                       src={competition.imageCompactURL}
                       alt={`Poster of ${competition.name}`}
                       onLoad={imageLoadHandle}

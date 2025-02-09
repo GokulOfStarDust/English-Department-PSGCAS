@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
+import { set, useForm } from "react-hook-form";
 import eventData from "./EventData";
 import competitionData from "./CompetitionData";
 
@@ -26,7 +26,7 @@ export default function Register() {
     );
     console.log(data);
     try {
-      const response = await fetch("https://sheetdb.io/api/v1/1rlwb3uncxpv0", {
+      const response = await fetch("https://sheetdb.io/api/v1/lzpg334sf0xb1", {
         
         method: "POST",
         headers: {
@@ -74,6 +74,9 @@ export default function Register() {
     reset({ ...watch(), selectedCompetition: [] });
   }, [collegeName]);
 
+  useEffect(() => {
+    if(selectedEvent === "Phoenix '25") setTotalRegistrationFee(200);
+  },[selectedEvent])
 
   return (
     <motion.div
@@ -101,8 +104,6 @@ export default function Register() {
             </h1>
             {loadingAnimation || (
               <p className="text-sm font-plex pt-2 px-5 text-center">
-                You'll receive a confirmation mail soon.
-                <br />
                 Don’t let your partner miss out! Drag them here to register!{" "}
               </p>
             )}
@@ -617,16 +618,18 @@ export default function Register() {
                             { onChange: true },
                           )}
                           onChange={(e) => {
-                            if (e.target.checked) {
-                              setTotalRegistrationFee(
-                                (prev) => prev + event.RegisterationFee,
-                              );
-                            } else {
-                              setTotalRegistrationFee(
-                                (prev) => prev - event.RegisterationFee,
-                              );
-                            }
-                          }}
+                            const selectedCompetition = watch("selectedCompetition") || {};
+                            console.log(selectedCompetition);
+                          
+                            if(!selectedEvent in ["Phoenix '25"]) {
+                              if (e.target.checked) {
+                                  setTotalRegistrationFee((prev) => prev + event.RegisterationFee);
+                              } else {
+                                  setTotalRegistrationFee((prev) => prev - event.RegisterationFee);
+                              }
+                            }}
+                        }
+                          
                           aria-labelledby={`label-${event.id}`} // Added aria-labelledby
                         />
                         <label
@@ -651,7 +654,21 @@ export default function Register() {
           </fieldset>
         </div>
 
-        {eventData.upcomingEvents.find(event => event.name === selectedEvent)?.registerationFeeInfo.includes("Free") || <div className="bg-[url('/registrationFormBg.webp')] bg-cover bg-center flex flex-col justify-center items-center w-[88svw] max-w-[1280px] text-white p-5 pt-10 md:p-8 rounded-3xl space-y-2"
+        {eventData.upcomingEvents.find(event => event.name === selectedEvent)?.registerationFeeInfo.includes("Free") ||
+        eventData.upcomingEvents.find(event => event.name === selectedEvent)?.registerationFeeInfo.includes("₹") ? 
+        <div className="bg-[url('/registrationFormBg.webp')] bg-cover bg-center flex flex-col justify-center items-center w-[88svw] max-w-[1280px] text-white p-5 pt-10 md:p-8 rounded-3xl space-y-2"
+          role="region" // Added role
+          aria-labelledby="paymentSection" // Added aria-labelledby
+        >
+          <p id="paymentSection" className="font-plex font-bold text-sm sm:text-base md:text-lg lg:text-xl xl:text-3xl">Attention, Wordsmiths!</p>
+          <p className="p-8 font-plex font-medium text-center text-[0.75rem] sm:text-sm lg:text-base xl:text-lg">In keeping with tradition (and the charm of live encounters),the online payment is unavailable.<br/><br/>  Your registration fee of amount : ₹{totalRegistrationFee} is to be paid on the event day only. </p>
+          
+           
+
+        </div>
+        
+        :
+        <div className="bg-[url('/registrationFormBg.webp')] bg-cover bg-center flex flex-col justify-center items-center w-[88svw] max-w-[1280px] text-white p-5 pt-10 md:p-8 rounded-3xl space-y-2"
           role="region" // Added role
           aria-labelledby="paymentSection" // Added aria-labelledby
         >

@@ -1,6 +1,226 @@
 import { desc, time } from "framer-motion/client";
 
 const competitionData = {
+  phoenix: [
+    {
+      id: "quiz",
+      status: "open",
+      name: "Quiz",
+      description:" ", 
+      imageUrl: " ",
+      imageCompactURL: " ",
+      eventFor: "Others",
+      time: "TBA",
+      date: "24 February 2025",
+      location: "TBA",
+      organizers:["TBA"],
+      guidelines: [
+        "TBA",
+      ],
+      rules: {
+        "General Rules": [
+          "TBA"
+        ],
+      },
+    },
+    {
+      id: "shipwreck",
+      status: "open",
+      name: "Shipwreck",
+      description:" ", 
+      imageUrl: " ",
+      imageCompactURL: " ",
+      eventFor: "Others",
+      time: "TBA",
+      date: "24 February 2025",
+      location: "TBA",
+      organizers:["TBA"],
+      guidelines: [
+        "TBA",
+      ],
+      rules: {
+        "General Rules": [
+          "TBA"
+        ],
+      },
+    },
+    {
+      id: "tableau",
+      status: "open",
+      name: "Tableau",
+      description:" ", 
+      imageUrl: " ",
+      imageCompactURL: " ",
+      eventFor: "Others",
+      time: "TBA",
+      date: "24 February 2025",
+      location: "TBA",
+      organizers:["TBA"],
+      guidelines: [
+        "TBA",
+      ],
+      rules: {
+        "General Rules": [
+          "TBA"
+        ],
+      },
+    },
+
+    {
+      id: "skit",
+      status: "open",
+      name: "Skit",
+      description:" ", 
+      imageUrl: " ",
+      imageCompactURL: " ",
+      eventFor: "Others",
+      time: "TBA",
+      date: "24 February 2025",
+      location: "TBA",
+      organizers:["TBA"],
+      guidelines: [
+        "TBA",
+      ],
+      rules: {
+        "General Rules": [
+          "TBA"
+        ],
+      },
+    },
+
+    {
+      id: "sonnet-writing",
+      status: "open",
+      name: "Sonnet Writing",
+      description:" ", 
+      imageUrl: " ",
+      imageCompactURL: " ",
+      eventFor: "Others",
+      time: "TBA",
+      date: "24 February 2025",
+      location: "TBA",
+      organizers:["TBA"],
+      guidelines: [
+        "TBA",
+      ],
+      rules: {
+        "General Rules": [
+          "TBA"
+        ],
+      },
+    },
+
+    {
+      id: "plot-making",
+      status: "open",
+      name: "Plot Making",
+      description:" ", 
+      imageUrl: " ",
+      imageCompactURL: " ",
+      eventFor: "Others",
+      time: "TBA",
+      date: "24 February 2025",
+      location: "TBA",
+      organizers:["TBA"],
+      guidelines: [
+        "TBA",
+      ],
+      rules: {
+        "General Rules": [
+          "TBA"
+        ],
+      },
+    },
+
+    {
+      id: "book-cover-dressing",
+      status: "open",
+      name: "Book Cover Dressing",
+      description:" ", 
+      imageUrl: " ",
+      imageCompactURL: " ",
+      eventFor: "Others",
+      time: "TBA",
+      date: "24 February 2025",
+      location: "TBA",
+      organizers:["TBA"],
+      guidelines: [
+        "TBA",
+      ],
+      rules: {
+        "General Rules": [
+          "TBA"
+        ],
+      },
+    },
+
+    {
+      id: "caption-writing",
+      status: "open",
+      name: "Caption Writing",
+      description:" ", 
+      imageUrl: " ",
+      imageCompactURL: " ",
+      eventFor: "Others",
+      time: "TBA",
+      date: "24 February 2025",
+      location: "TBA",
+      organizers:["TBA"],
+      guidelines: [
+        "TBA",
+      ],
+      rules: {
+        "General Rules": [
+          "TBA"
+        ],
+      },
+    },
+
+    {
+      id: "photography",
+      status: "open",
+      name: "Photography",
+      description:" ", 
+      imageUrl: " ",
+      imageCompactURL: " ",
+      eventFor: "Others",
+      time: "TBA",
+      date: "24 February 2025",
+      location: "TBA",
+      organizers:["TBA"],
+      guidelines: [
+        "TBA",
+      ],
+      rules: {
+        "General Rules": [
+          "TBA"
+        ],
+      },
+    },
+
+    {
+      id: "translation",
+      status: "open",
+      name: "Translation",
+      description:" ", 
+      imageUrl: " ",
+      imageCompactURL: " ",
+      eventFor: "Others",
+      time: "TBA",
+      date: "24 February 2025",
+      location: "TBA",
+      organizers:["TBA"],
+      guidelines: [
+        "TBA",
+      ],
+      rules: {
+        "General Rules": [
+          "TBA"
+        ],
+      },
+    },
+  ],
+
   asYouLikeLit: [
     {
       id: "photo-ery",

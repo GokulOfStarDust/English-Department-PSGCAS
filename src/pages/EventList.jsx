@@ -9,7 +9,7 @@ export default function EventList() {
   const [imageLoaded, setImageLoaded] = useState(0);
 
   useEffect(() => {
-    if (imageLoaded === eventData.upcomingEvents.length) {
+    if (imageLoaded <= eventData.upcomingEvents.length) {
       setTimeout(() => {
         setLoadingState(false);
       }, 1500);

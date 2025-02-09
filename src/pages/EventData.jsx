@@ -2,7 +2,18 @@ import { register } from "swiper/element";
 
 const eventData = {
   //array of upcoming event's objects
-  upcomingEvents: [  ],
+  upcomingEvents: [ 
+    {
+      id: "phoenix",
+      name: "Phoenix '25",
+      time: "09:00 a.m - 04:00 p.m",
+      date: "24 February 2025",
+      location: "E block & GRD Auditorium, PSG College of Arts & Science",
+      eventFor: "Others",
+      imageUrl: "/phoenix-poster.webp",
+      registerationFeeInfo: "₹200 (Individual Registration)",
+    },
+  ],
 
   pastEvents: [
     {
