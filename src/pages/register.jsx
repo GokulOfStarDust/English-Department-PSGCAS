@@ -660,8 +660,8 @@ export default function Register() {
           role="region" // Added role
           aria-labelledby="paymentSection" // Added aria-labelledby
         >
-          <p id="paymentSection" className="font-plex font-bold text-sm sm:text-base md:text-lg lg:text-xl xl:text-3xl">Attention, Wordsmiths!</p>
-          <p className="p-8 font-plex font-medium text-center text-[0.75rem] sm:text-sm lg:text-base xl:text-lg">In keeping with tradition (and the charm of live encounters),the online payment is unavailable.<br/><br/>  Your registration fee of amount : ₹{totalRegistrationFee} is to be paid on the event day only. </p>
+          <p id="paymentSection" className="font-plex font-bold text-xl lg:text-2xl xl:text-3xl">Attention, Wordsmiths!</p>
+          <p className="p-2 pt-8 font-plex font-normal text-center text-base lg:text-lg xl:text-xl">In keeping with tradition (and the charm of live encounters),the online payment is unavailable.<br/><br/>  Your registration fee of amount : ₹{totalRegistrationFee} is to be paid on the event day only. </p>
           
            
 
