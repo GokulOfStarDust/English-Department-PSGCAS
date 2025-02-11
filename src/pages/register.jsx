@@ -173,8 +173,11 @@ export default function Register() {
             </label>
             <input
               id="phoneNumber"
-              className="w-[90%] min-w-[300px] font-poppins text-black rounded-3xl p-2 pl-4 focus:outline-none"
+              className="w-[90%] min-w-[300px] font-poppins text-black rounded-3xl p-2 pl-4 focus:outline-none appearance-none"
               type="tel"
+              inputmode="numeric"
+              pattern="[0-9]*"
+              placeholder="Eg: 9789642676"
               {...register("phoneNumber", {
                 required: "Number is required",
                 minLength: { value: 10, message: "There must be 10 digits" },

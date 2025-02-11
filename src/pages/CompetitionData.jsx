@@ -5,7 +5,7 @@ const competitionData = {
     {
       id: "quiz",
       status: "open",
-      name: "Quiz",
+      name: "Witty by Nature (Quiz)",
       description: "Test your knowledge and quick thinking in our exciting quiz competition. Whether you're a trivia buff or just love a good challenge, this event is perfect for you. Compete against others to see who can answer the most questions correctly and claim the title of quiz champion. Get ready for a fun and engaging experience that will put your brain to the test!",
       imageUrl: "phoenix-quiz.webp",
       imageCompactURL: "phoenix-quiz-compact.webp",
@@ -15,18 +15,24 @@ const competitionData = {
       location: "TBA",
       organizers:["TBA"],
       guidelines: [
-        "TBA",
+        "A team must consist of two participants.",
+        "Any number of teams can participate from a college.",
+        "Teams must adhere to the rules and guidelines set by the organizers.",
+        "Any form of cheating or misconduct will result in disqualification.",
       ],
       rules: {
         "General Rules": [
-          "TBA"
+          "Level 1 – Prelims (Written): Elimination round",
+          "All teams will participate in a written quiz.",
+          "The top 5 teams with the highest scores will be selected for Level 2.",
+          "Further details about Level 2 and subsequent rounds will be shared on the spot."
         ],
       },
     },
     {
       id: "shipwreck",
       status: "open",
-      name: "Shipwreck",
+      name: "Siren’s Call (Shipwreck)",
       description: "Navigate the treacherous waters of our Shipwreck event, where wit and creativity are your lifeboats. Defend your chosen character from literary history and convince the judges why they deserve to be saved from the sinking ship. Will you sink or swim?",
       imageUrl: "phoenix-shipwreck.webp",
       imageCompactURL: "phoenix-shipwreck-compact.webp",
@@ -36,19 +42,24 @@ const competitionData = {
       location: "TBA",
       organizers:["TBA"],
       guidelines: [
-        "TBA",
+        "A ship with different characters get imprisoned in a mystical island by the spirits of the island. The character’s should defend themselves and prove their worth to the spirits to be released.",
+        "There will be two rounds"
       ],
       rules: {
         "General Rules": [
-          "TBA"
+          "The first round will contain fun cartoon characters and public figures.",
+          "The second round will have a literary figure, author or fictional personality.",
+          "Characters will be chosen by drawing lots.",
+          "Each round will have 10-15 minutes of preparation and the participants will be allowed to surf the internet.",
+          "2-3 minutes will be given to enact."
         ],
       },
     },
     {
       id: "tableau",
       status: "open",
-      name: "Tableau",
-      description: "Bring literature to life in our Tableau event. Create a living picture that captures the essence of a literary scene. Use your creativity and teamwork to impress the judges with your interpretation and presentation.",
+      name: "Story Viz (Tableau)",
+      description: "Join us for “Story Viz” a unique immersive literary experience that explores the art of capturing the essence of a single moment. Tableau is a theatrical technique in which actors freeze in poses that create a picture of one important moment in the play. Explore the power of words to pause time and transport us to another era, place, and emotion.  Expect a dynamic and engaging atmosphere that celebrates the power of literature. Don’t wait for the perfect moment, take the moment and make it perfect.",
       imageUrl: "phoenix-tableau.webp",
       imageCompactURL: "phoenix-tableau-compact.webp",
       eventFor: "Others",
@@ -57,18 +68,26 @@ const competitionData = {
       location: "TBA",
       organizers:["TBA"],
       guidelines: [
-        "TBA",
+        "Participants: minimum 2 per team and maximum 7 per team",
       ],
       rules: {
         "General Rules": [
-          "TBA"
+          "Tableau should be based on a scene from a literary work related to nature.",
+          "Participants must bring their own props and costumes.",
+          "Background music and soundtrack can be played.",
         ],
+
+        "Time Limit (8 minutes)": [
+          "Setting: 5 minutes",
+          "Presentation: 2 minutes",
+          "Narration: 1 minute"
+        ]
       },
     },
     {
       id: "skit",
       status: "open",
-      name: "Skit",
+      name: "The Playhouse Arena (Skit)",
       description: "Step into the spotlight and showcase your acting skills in our Skit competition. Perform a short play based on a literary work or theme. Impress the audience and judges with your creativity, humor, and dramatic flair.",
       imageUrl: "phoenix-skit.webp",
       imageCompactURL: "phoenix-skit-compact.webp",
@@ -78,18 +97,24 @@ const competitionData = {
       location: "TBA",
       organizers:["TBA"],
       guidelines: [
-        "TBA",
+        "One team per college, with a maximum of 7 participants.",
       ],
       rules: {
         "General Rules": [
-          "TBA"
+          "Enact any English literary drama related to the given theme.",
+          "Performance must be in English language only.",
+          "Duration: 5 to 8 minutes.",
+          "Participants must bring their own properties and costumes for the event.",
+          "Background music (if necessary) should be brought on a USB drive and submitted at the registration desk.",
+          "Maintain modesty in appearance.",
+          "Any form of vulgarity will result in disqualification.",
         ],
       },
     },
     {
       id: "sonnet-writing",
       status: "open",
-      name: "Sonnet Writing",
+      name: "Weaving Verse (Sonnet Writing)",
       description: "Channel your inner Shakespeare and craft a beautiful sonnet in our Sonnet Writing competition. Use your poetic skills to create a 14-line masterpiece that captures the judges' hearts and minds.",
       imageUrl: "phoenix-sonnet-writing.webp",
       imageCompactURL: "phoenix-sonnet-writing-compact.webp",
@@ -99,19 +124,42 @@ const competitionData = {
       location: "TBA",
       organizers:["TBA"],
       guidelines: [
-        "TBA",
+        "Individual participation.",
+        "The first round tests fundamental sonnet-writing skills.",
+        "The second round introduces a wildcard element, making it more challenging and exciting.",
       ],
       rules: {
-        "General Rules": [
-          "TBA"
+        "Round 1 (Thematic Sonnet Writing) ": [
+          "The sonnet must align with the given theme, which will be revealed at the start of the round.",
+          "The sonnet must be written in English.",
+          "The sonnet must follow a standard form (e.g., Shakespearean {ABAB CDCD EFEF GG}, Petrarchan {ABBAABBA CDCDCD}, or Spenserian {ABAB BCBC CDCD EE}) with 14 lines and a consistent rhyme scheme.",
+          "Participants will have 60 minutes to compose their sonnet.",
+          "The work must be original. Any form of plagiarism will lead to disqualification.",
+          "No external references, books, or digital devices are allowed.",
+          "Entries will be evaluated based on adherence to structure, creativity, thematic relevance, language, and overall impact.",
+          "The top performers from Round 1 will qualify for Round 2. The number of qualifiers will be decided based on the total number of participants."
         ],
+
+        "Round 2 (Wildcard Word Challenge) ": [
+          "The theme from Round 1 remains the same, but each participant will receive a wildcard word that they must include in their new sonnet.",
+          "Participants must write a new 14 line sonnet incorporating the assigned wildcard word creatively.",
+          "Structure (Shakespearean, Petrarchan, or Spenserian) must be followed.",
+          "The wildcard word must fit naturally within the poem while maintaining poetic quality.",
+          "Time: 45 minutes to compose the sonnet.",
+          "The poem must be newly written in this round without external help.",
+          "The content must maintain literary decorum, avoiding inappropriate or offensive language.",
+          "No external references, books, or digital devices are allowed.",
+          "In addition to the previous round’s criteria, judges will also evaluate how effectively the wildcard word is incorporated into the sonnet.",
+          "Based on scores from Round 2, the best entry will be declared the winner.",
+
+        ]
       },
     },
     {
       id: "plot-making",
       status: "open",
-      name: "Plot Making",
-      description: "Unleash your storytelling prowess in our Plot Making competition. Create an engaging and original plot that captivates the judges and leaves them wanting more. Will your story stand out from the rest?",
+      name: "Talesmith (Plot Making)",
+      description: "Join us for TALESMITH and unleash your Inner storyteller. Craft captivating Narratives inspired by the World around us. Bring images to life with words, weaving tales of Nature’s Wonders and our place within it. Join us for an event where Imagination meets the Environment.",
       imageUrl: "phoenix-plot-making.webp",
       imageCompactURL: "phoenix-plot-making-compact.webp",
       eventFor: "Others",
@@ -120,18 +168,21 @@ const competitionData = {
       location: "TBA",
       organizers:["TBA"],
       guidelines: [
-        "TBA",
+        "Solo Participation.",
       ],
       rules: {
         "General Rules": [
-          "TBA"
+          "Participants must choose ONE Image among FOUR Images displayed on the screen.",
+          "The plot must adhere to the theme and convey a moral message.",
+          "Word limit: 2000 Words.",
+          "Time Limit: 60 mins",
         ],
       },
     },
     {
       id: "book-cover-dressing",
       status: "open",
-      name: "Book Cover Dressing",
+      name: "Greed Hounds Nature (Book Cover Dressing)",
       description: "Design a captivating book cover that captures the essence of a literary work in our Book Cover Dressing competition. Use your artistic skills to create a visual masterpiece that stands out on the shelf.",
       imageUrl: "phoenix-book-cover-dressing.webp",
       imageCompactURL: "phoenix-book-cover-dressing-compact.webp",
@@ -141,19 +192,25 @@ const competitionData = {
       location: "TBA",
       organizers:["TBA"],
       guidelines: [
-        "TBA",
+        "Individual participation.",
+        "Charts or Drawing Sheets will be provided.",
+        "The theme will be given on the spot.",
       ],
       rules: {
         "General Rules": [
-          "TBA"
+          "Participants must bring the necessary materials.",
+          "The design must align with the given theme provided.",
+          "Work must be original, genuine and created solely for this event.",
+          "Avoid using any offensive language, imagery and symbols.",
+          "The time limit will be One Hour.",
         ],
       },
     },
     {
       id: "caption-writing",
       status: "open",
-      name: "Caption Writing",
-      description: "Show off your wit and creativity in our Caption Writing competition. Create clever and engaging captions for a series of images. Can you make the judges laugh, think, and be impressed with your wordplay?",
+      name: "Eco-Expression (Caption Writing)",
+      description: "A caption is a title or brief explanation accompanying an illustration, cartoon, or poster. Join us for Eco- Expressions, an event to bring out the caption writers in you. Entwine your imaginations with nature to produce catchy and thoughtful captions!",
       imageUrl: "phoenix-caption-writing.webp",
       imageCompactURL: "phoenix-caption-writing-compact.webp",
       eventFor: "Others",
@@ -162,18 +219,22 @@ const competitionData = {
       location: "TBA",
       organizers:["TBA"],
       guidelines: [
-        "TBA",
+        "Solo or Dual Participation.",
+        "There will be three rounds."
       ],
       rules: {
         "General Rules": [
-          "TBA"
+          "Participants must view the visual shown on the screen and write a caption based on the same.",
+          "Word limit: 10-20 words",
+          "Profane or offensive words must not be used.",
+          "Total time- 1 hour.",
         ],
       },
     },
     {
       id: "photography",
       status: "open",
-      name: "Photography",
+      name: "Ecolens (Photography)",
       description: "Capture the beauty of the world through your lens in our Photography competition. Submit your best shots that tell a story, evoke emotion, and showcase your photographic skills.",
       imageUrl: "phoenix-photography.webp",
       imageCompactURL: "phoenix-photography-compact.webp",
@@ -183,18 +244,23 @@ const competitionData = {
       location: "TBA",
       organizers:["TBA"],
       guidelines: [
-        "TBA",
+        "Open to all students of the college",
+        "Theme will be given on Spot.",
       ],
       rules: {
         "General Rules": [
-          "TBA"
+          "Photos must be original and clicked by the participant; plagiarism will lead to disqualification.",
+          "Basic enhancements (brightness, contrast, cropping) are allowed, but excessive manipulation is not permitted.",
+          "Images must be submitted in JPEG/PNG format (30 MB).",
+          "Each submission must include a brief caption (max 30 words) explaining the photo.",
+          "All entries must be submitted before the specified deadline of One Hour.",
         ],
       },
     },
     {
-      id: "translation",
+      id: "lingua-bridge",
       status: "open",
-      name: "Translation",
+      name: "Lingua Bridge (Translation)",
       description: "Bridge the gap between languages and cultures in our Translation competition. Translate a given text into another language while preserving its meaning, tone, and style. Show off your linguistic skills and cultural understanding.",
       imageUrl: "phoenix-translation.webp",
       imageCompactURL: "phoenix-translation-compact.webp",
@@ -204,11 +270,14 @@ const competitionData = {
       location: "TBA",
       organizers:["TBA"],
       guidelines: [
-        "TBA",
+        "2 participants per team.",
+        "The duration of the event is 60 minutes.",
       ],
       rules: {
         "General Rules": [
-          "TBA"
+          "The participants should translate the given English and Tamil text into Tamil and English respectively.",
+          "Evaluation will be based on the close relevance to the source language text.",
+          "Offensive language should be strictly avoided.",
         ],
       },
     },
