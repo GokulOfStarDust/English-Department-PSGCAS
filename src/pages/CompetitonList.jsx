@@ -90,6 +90,16 @@ export default function CompetitionList({ eventId }) {
                       Quiz Master: {competition.quizMaster}
                     </motion.div>
                   )}
+
+                  {"subTheme" in competition && (
+                    <motion.div
+                      className="font-plex font-light text-white text-sm md:text-base xxl:text-lg !mt-1 !-mb-1"
+                      layoutId={`card-title-container-${competition.id}`}
+                    >
+                      Theme: {competition.subTheme}
+                    </motion.div>
+                  )}
+                  
                   <motion.div
                     className="font-plex font-light text-white text-sm md:text-base xxl:text-lg"
                     layoutId={`card-desc-container-${competition.id}`}
