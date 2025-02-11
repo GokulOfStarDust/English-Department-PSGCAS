@@ -1,4 +1,4 @@
-import { desc, time } from "framer-motion/client";
+import { desc, sub, time } from "framer-motion/client";
 
 const competitionData = {
   phoenix: [
@@ -6,6 +6,7 @@ const competitionData = {
       id: "quiz",
       status: "open",
       name: "Witty by Nature (Quiz)",
+      subTheme: "Nature narratives",
       description: "Test your knowledge and quick thinking in our exciting quiz competition. Whether you're a trivia buff or just love a good challenge, this event is perfect for you. Compete against others to see who can answer the most questions correctly and claim the title of quiz champion. Get ready for a fun and engaging experience that will put your brain to the test!",
       imageUrl: "phoenix-quiz.webp",
       imageCompactURL: "phoenix-quiz-compact.webp",
@@ -33,6 +34,7 @@ const competitionData = {
       id: "shipwreck",
       status: "open",
       name: "Siren’s Call (Shipwreck)",
+      subTheme: "Survive the Storm: A Battle of Wit and Persuasion",
       description: "Navigate the treacherous waters of our Shipwreck event, where wit and creativity are your lifeboats. Defend your chosen character from literary history and convince the judges why they deserve to be saved from the sinking ship. Will you sink or swim?",
       imageUrl: "phoenix-shipwreck.webp",
       imageCompactURL: "phoenix-shipwreck-compact.webp",
@@ -42,8 +44,7 @@ const competitionData = {
       location: "TBA",
       organizers:["TBA"],
       guidelines: [
-        "A ship with different characters get imprisoned in a mystical island by the spirits of the island. The character’s should defend themselves and prove their worth to the spirits to be released.",
-        "There will be two rounds"
+        "There will be two rounds.",
       ],
       rules: {
         "General Rules": [
@@ -88,6 +89,7 @@ const competitionData = {
       id: "skit",
       status: "open",
       name: "The Playhouse Arena (Skit)",
+      subTheme: "Eco Resilience – A Sustainable Odyssey",
       description: "Step into the spotlight and showcase your acting skills in our Skit competition. Perform a short play based on a literary work or theme. Impress the audience and judges with your creativity, humor, and dramatic flair.",
       imageUrl: "phoenix-skit.webp",
       imageCompactURL: "phoenix-skit-compact.webp",
@@ -115,6 +117,7 @@ const competitionData = {
       id: "sonnet-writing",
       status: "open",
       name: "Weaving Verse (Sonnet Writing)",
+      subTheme: "Human- Nature Relationship",
       description: "Channel your inner Shakespeare and craft a beautiful sonnet in our Sonnet Writing competition. Use your poetic skills to create a 14-line masterpiece that captures the judges' hearts and minds.",
       imageUrl: "phoenix-sonnet-writing.webp",
       imageCompactURL: "phoenix-sonnet-writing-compact.webp",
@@ -159,6 +162,7 @@ const competitionData = {
       id: "plot-making",
       status: "open",
       name: "Talesmith (Plot Making)",
+      subTheme: "Eco Fiction",
       description: "Join us for TALESMITH and unleash your Inner storyteller. Craft captivating Narratives inspired by the World around us. Bring images to life with words, weaving tales of Nature’s Wonders and our place within it. Join us for an event where Imagination meets the Environment.",
       imageUrl: "phoenix-plot-making.webp",
       imageCompactURL: "phoenix-plot-making-compact.webp",
@@ -210,6 +214,7 @@ const competitionData = {
       id: "caption-writing",
       status: "open",
       name: "Eco-Expression (Caption Writing)",
+      subTheme: "Eco feminism",
       description: "A caption is a title or brief explanation accompanying an illustration, cartoon, or poster. Join us for Eco- Expressions, an event to bring out the caption writers in you. Entwine your imaginations with nature to produce catchy and thoughtful captions!",
       imageUrl: "phoenix-caption-writing.webp",
       imageCompactURL: "phoenix-caption-writing-compact.webp",
@@ -235,6 +240,7 @@ const competitionData = {
       id: "photography",
       status: "open",
       name: "Ecolens (Photography)",
+      subTheme: "Eco-Reckoning",
       description: "Capture the beauty of the world through your lens in our Photography competition. Submit your best shots that tell a story, evoke emotion, and showcase your photographic skills.",
       imageUrl: "phoenix-photography.webp",
       imageCompactURL: "phoenix-photography-compact.webp",
@@ -261,6 +267,7 @@ const competitionData = {
       id: "lingua-bridge",
       status: "open",
       name: "Lingua Bridge (Translation)",
+      subTheme: "Eco consciousness",
       description: "Bridge the gap between languages and cultures in our Translation competition. Translate a given text into another language while preserving its meaning, tone, and style. Show off your linguistic skills and cultural understanding.",
       imageUrl: "phoenix-translation.webp",
       imageCompactURL: "phoenix-translation-compact.webp",
