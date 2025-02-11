@@ -11,7 +11,7 @@ const eventData = {
       location: "E block & GRD Auditorium, PSG College of Arts & Science",
       eventFor: "Others",
       imageUrl: "/phoenix-poster.webp",
-      registerationFeeInfo: "₹200 (Individual Registration)",
+      registerationFeeInfo: "₹250 (Individual Registration)",
     },
   ],
 

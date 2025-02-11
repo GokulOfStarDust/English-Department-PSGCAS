@@ -188,6 +188,7 @@ const competitionData = {
       id: "book-cover-dressing",
       status: "open",
       name: "Greed Hounds Nature (Book Cover Dressing)",
+      subTheme:"Will be given on-spot",
       description: "Design a captivating book cover that captures the essence of a literary work in our Book Cover Dressing competition. Use your artistic skills to create a visual masterpiece that stands out on the shelf.",
       imageUrl: "phoenix-book-cover-dressing.webp",
       imageCompactURL: "phoenix-book-cover-dressing-compact.webp",

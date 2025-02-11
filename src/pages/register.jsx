@@ -75,7 +75,7 @@ export default function Register() {
   }, [collegeName]);
 
   useEffect(() => {
-    if(selectedEvent === "Phoenix '25") setTotalRegistrationFee(200);
+    if(selectedEvent === "Phoenix '25") setTotalRegistrationFee(250);
   },[selectedEvent])
 
   return (
