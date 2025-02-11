@@ -657,86 +657,75 @@ export default function Register() {
           </fieldset>
         </div>
 
-        {eventData.upcomingEvents.find(event => event.name === selectedEvent)?.registerationFeeInfo.includes("Free") ||
-        eventData.upcomingEvents.find(event => event.name === selectedEvent)?.registerationFeeInfo.includes("₹") ? 
-        <div className="bg-[url('/registrationFormBg.webp')] bg-cover bg-center flex flex-col justify-center items-center w-[88svw] max-w-[1280px] text-white p-5 pt-10 md:p-8 rounded-3xl space-y-2"
-          role="region" // Added role
-          aria-labelledby="paymentSection" // Added aria-labelledby
-        >
-          <p id="paymentSection" className="font-plex font-bold text-xl lg:text-2xl xl:text-3xl">Attention, Wordsmiths!</p>
-          <p className="py-8 font-plex font-normal text-center text-sm md:text-base lg:text-lg xl:text-xl">In keeping with tradition (and the charm of live encounters),the online payment is unavailable.<br/><br/>  Your registration fee of amount : ₹{totalRegistrationFee} is to be paid on the event day only. </p>
-          
-           
-
-        </div>
-        
-        :
-        <div className="bg-[url('/registrationFormBg.webp')] bg-cover bg-center flex flex-col justify-center items-center w-[88svw] max-w-[1280px] text-white p-5 pt-10 md:p-8 rounded-3xl space-y-2"
-          role="region" // Added role
-          aria-labelledby="paymentSection" // Added aria-labelledby
-        >
-          <p id="paymentSection" className="font-plex font-bold mb-4">SCAN THE QR CODE TO PAY</p>
-          {totalRegistrationFee == 0 ? (
-            <p className="size-[18.2rem] flex flex-row items-center justify-center text-sm outline outline-white outline-1 p-7">
-              (Select the competition to view the QR Code.)
-            </p>
-          ) : (
-            <img
-              src={`${totalRegistrationFee}.jpeg`}
-              alt="QR Code to pay the registration fee" // Added alt text
-              className="size-72 object-contain"
-            />
-          )}
-
-          {/* <a className="pb-1 bg-white" href={UPIRegistratoinLink}>
-            <QRCodeCanvas
-              value={UPIRegistratoinLink}
-              className="size-60 object-contain m-3"
-            />
-          </a> */}
-          <p className="font-plex font-bold pb-7">
-            Amount to be paid : {totalRegistrationFee}
-          </p>
-          <p className="font-plex text-center text-[0.75rem] sm:text-sm lg:text-base font-medium pb-7">
-            If the QR Code doesn't work, send the coressponding registration fee
-            to this number: 9791440504 <br /> (Sorry for the Inconvenicence :/ )
-          </p>
-          <label
-            className="font-plex text-sm font-medium"
-            htmlFor="transactionID"
+        {selectedEvent !== "Select any event" &&
+        (eventData.upcomingEvents.find(event => event.name === selectedEvent)?.registerationFeeInfo.includes("Free") ||
+        eventData.upcomingEvents.find(event => event.name === selectedEvent)?.registerationFeeInfo.includes("₹")) ? (
+          <div className="bg-[url('/registrationFormBg.webp')] bg-cover bg-center flex flex-col justify-center items-center w-[88svw] max-w-[1280px] text-white p-5 pt-10 md:p-8 rounded-3xl space-y-2"
+            role="region" // Added role
+            aria-labelledby="paymentSection" // Added aria-labelledby
           >
-            Enter UPI transaction ID<sup>*</sup>
-          </label>
-          <input
-            id="transactionID"
-            type="text"
-            placeholder="Eg: 12345678XXXX"
-            className="text-text-black rounded-3xl p-2 pl-4"
-            {...register("transactionID", {
-              required: "UPI transaction ID is required",
-              minLength: { value: 12, message: "There must be 12 digits" },
-              maxLength: { value: 12, message: "There must be 12 digits" },
-            })}
-            aria-required="true" // Added aria-required
-            aria-invalid={errors.transactionID ? "true" : "false"} // Added aria-invalid
-          />
-          {errors.transactionID && (
-            <p className="text-red-500 text-sm">
-              {errors.transactionID.message}
+            <p id="paymentSection" className="font-plex font-bold text-xl lg:text-2xl xl:text-3xl">Attention, Wordsmiths!</p>
+            <p className="py-8 font-plex font-normal text-center text-sm md:text-base lg:text-lg xl:text-xl">
+              In keeping with tradition (and the charm of live encounters), the online payment is unavailable.<br/><br/>
+              Your registration fee of amount : ₹{totalRegistrationFee} is to be paid on the event day only.
             </p>
-          )}
-        </div>}
+          </div>
+        ) : (
+          selectedEvent !== "Select any event" && (
+            <div className="bg-[url('/registrationFormBg.webp')] bg-cover bg-center flex flex-col justify-center items-center w-[88svw] max-w-[1280px] text-white p-5 pt-10 md:p-8 rounded-3xl space-y-2"
+              role="region" // Added role
+              aria-labelledby="paymentSection" // Added aria-labelledby
+            >
+              <p id="paymentSection" className="font-plex font-bold mb-4">SCAN THE QR CODE TO PAY</p>
+              {totalRegistrationFee == 0 ? (
+                <p className="size-[18.2rem] flex flex-row items-center justify-center text-sm outline outline-white outline-1 p-7">
+                  (Select the competition to view the QR Code.)
+                </p>
+              ) : (
+                <img
+                  src={`${totalRegistrationFee}.jpeg`}
+                  alt="QR Code to pay the registration fee" // Added alt text
+                  className="size-72 object-contain"
+                />
+              )}
+              <p className="font-plex font-bold pb-7">Amount to be paid : {totalRegistrationFee}</p>
+              <p className="font-plex text-center text-[0.75rem] sm:text-sm lg:text-base font-medium pb-7">
+                If the QR Code doesn't work, send the corresponding registration fee to this number: 9791440504 <br />
+                (Sorry for the inconvenience :/ )
+              </p>
+              <label className="font-plex text-sm font-medium" htmlFor="transactionID">
+                Enter UPI transaction ID<sup>*</sup>
+              </label>
+              <input
+                id="transactionID"
+                type="text"
+                placeholder="Eg: 12345678XXXX"
+                className="text-text-black rounded-3xl p-2 pl-4"
+                {...register("transactionID", {
+                  required: "UPI transaction ID is required",
+                  minLength: { value: 12, message: "There must be 12 digits" },
+                  maxLength: { value: 12, message: "There must be 12 digits" },
+                })}
+                aria-required="true" // Added aria-required
+                aria-invalid={errors.transactionID ? "true" : "false"} // Added aria-invalid
+              />
+              {errors.transactionID && (
+                <p className="text-red-500 text-sm">{errors.transactionID.message}</p>
+              )}
+            </div>
+          )
+        )
+      }
 
-        <button
-          type="submit"
-          className="bg-[url('/registrationFormBg.webp')] bg-cover bg-center w-[30%] min-w-[200px] text-lg md:text-3xl text-white font-plex font-bold tracking-widest rounded-3xl p-4 !my-32 "
-          onClick={() => {
-            setLoadindAnimation(true);
-          }}
-          aria-label="Submit registration form" // Added aria-label
-        >
-          SUBMIT
-        </button>
+      <button
+        type="submit"
+        className="bg-[url('/registrationFormBg.webp')] bg-cover bg-center w-[30%] min-w-[200px] text-lg md:text-3xl text-white font-plex font-bold tracking-widest rounded-3xl p-4 !my-32"
+        onClick={() => setLoadindAnimation(true)}
+        aria-label="Submit registration form" // Added aria-label
+      >
+        SUBMIT
+      </button>
+
       </form>
     </motion.div>
   );

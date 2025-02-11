@@ -60,6 +60,7 @@ const competitionData = {
       id: "tableau",
       status: "open",
       name: "Story Viz (Tableau)",
+      subTheme: "Nature",
       description: "Join us for “Story Viz” a unique immersive literary experience that explores the art of capturing the essence of a single moment. Tableau is a theatrical technique in which actors freeze in poses that create a picture of one important moment in the play. Explore the power of words to pause time and transport us to another era, place, and emotion.  Expect a dynamic and engaging atmosphere that celebrates the power of literature. Don’t wait for the perfect moment, take the moment and make it perfect.",
       imageUrl: "phoenix-tableau.webp",
       imageCompactURL: "phoenix-tableau-compact.webp",
