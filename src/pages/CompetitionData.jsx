@@ -243,7 +243,7 @@ const competitionData = {
       status: "open",
       name: "Ecolens (Photography)",
       subTheme: "Eco-Reckoning - A Photographic Symphony of Change",
-      description: "Capture the beauty of the world through your lens in our Photography competition. Submit your best shots that tell a story, evoke emotion, and showcase your photographic skills.",
+      description: "n the core of nature’s cadence, we gather with a lens in hand, prepared to seize the subtle murmurs of the earth in a fleeting moment. EcoReckoning invites you to narrate the tale of our existence—how it transforms, how it persists, and how it urges us to perceive the reality through the lens of the natural world.Are you ready to answer the call of EcoReckoning?",
       imageUrl: "phoenix-photography.webp",
       imageCompactURL: "phoenix-photography-compact.webp",
       eventFor: "Others",
