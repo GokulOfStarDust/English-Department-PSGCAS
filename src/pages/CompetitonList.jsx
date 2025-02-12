@@ -177,13 +177,13 @@ export default function CompetitionList({ eventId }) {
                           { "organizers" in competition && competition.organizers.map((organizer, index) => {
                             return (
                               <div key={index} className="flex flex-row items-center space-x-2">
-                                <a href={`tel:${organizer.contact}`}>
+                                {/* <a href={`tel:${organizer.contact}`}> */}
                                   <img
                                     src="/phone-icon.svg"
                                     alt="Phone icon to represent Organizer's contact number"
                                     className="object-contain size-5"
                                   />
-                                </a>
+                                {/* </a> */}
                                 <p className="hover:underline hover:cursor-pointer hover:underline-offset-2	">{organizer}</p>
                               </div>
                             );
