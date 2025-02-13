@@ -13,7 +13,7 @@ const competitionData = {
       eventFor: "Others",
       time: "10:30 AM - 3:00 PM",
       date: "24 February 2025",
-      location: "E-113 (E block)",
+      location: "Prelims: E-113 (E block), Finals: GRD Auditorium",
       organizers:["Ms. Nidhya Gowdhami T M - +91 9789334645", "Geeth sree K - +91 6382126100"],
       guidelines: [
         "A team must consist of two participants.",
