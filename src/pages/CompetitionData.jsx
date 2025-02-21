@@ -11,7 +11,7 @@ const competitionData = {
       imageUrl: "/phoenix-quiz.webp",
       imageCompactURL: "/phoenix-quiz.webp",
       eventFor: "Others",
-      time: "10:30 AM - 3:00 PM",
+      time: "Prelims: 10:30 AM - 11:30 AM, Finals: 2:00 PM - 3:00 PM",
       date: "24 February 2025",
       location: "Prelims: E-113 (E block), Finals: GRD Auditorium",
       organizers:["Ms. Nidhya Gowdhami T M - +91 9789334645", "Geeth sree K - +91 6382126100"],
