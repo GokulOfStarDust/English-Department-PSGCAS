@@ -3,6 +3,10 @@ import { register } from "swiper/element";
 const eventData = {
   //array of upcoming event's objects
   upcomingEvents: [ 
+    
+  ],
+
+  pastEvents: [
     {
       id: "phoenix",
       name: "Phoenix '25",
@@ -13,9 +17,6 @@ const eventData = {
       imageUrl: "/phoenix-poster.webp",
       registerationFeeInfo: "₹250 (Individual Registration)",
     },
-  ],
-
-  pastEvents: [
     {
       id: "asYouLikeLit",
       name: "As You Like Lit",
