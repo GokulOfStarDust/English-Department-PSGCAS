@@ -13,6 +13,14 @@ body {
   background-color: #f6f2e4;
 }
 
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+
 sup {
   font-weight: 400;
   margin-left: 2px;

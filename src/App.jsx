@@ -24,10 +24,7 @@ function App() {
               <Route path="Register" element={<Register />} />
               <Route path="events" element={<Events />} />
               <Route path="events/:eventId" element={<Competition />} />
-              <Route
-                path="events/:eventId/:competitionId"
-                element={<Competition />}
-              />
+              <Route path="events/:eventId/:competitionId" element={<Competition />}/>
             </Route>
           </Routes>
         </Suspense>

@@ -3,6 +3,16 @@ import { useEffect, useState } from "react";
 
 import "/src/index.css";
 import "./CompetitionData";
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+import SwiperElement from "./CouncilBearersCarousel";
+// import required modules
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 export default function Homepage() {
   const [loadingState, setLoadingState] = useState(true);
@@ -122,6 +132,29 @@ export default function Homepage() {
               className="w-[70%] sm:w-[60%] md:w-[40%] md:min-w-[319px] lg:w-[40%] h-[70%] lg:h-[80%] mt-10 -mb-5 lg:!mb-10 object-contain mx-auto"
             />
           </div>
+        </motion.div>
+      </section>
+
+      <section aria-label="Council Bearer">
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 2 }} 
+          className="bg-[url('/office-bearers-bg.webp')] bg-cover bg-center flex flex-col items-center w-[97svw] min-h-[644px]  rounded-2xl mt-2 pb-4 mb-9 mx-auto gap-y-16">
+            
+            <div className="w-[94vw] h-[9svh] min-h-[64px] mt-3 flex flex-row justify-center items-center border border-white outline-1 outline-slate-200 backdrop-blur-lg rounded-[45px]">
+            <h2
+              className="text-white text-center font-josefin rounded-[45px]
+                    text-4xl md:text-5xl"
+            >
+              Office Bearers
+            </h2>
+          </div>
+          {/* bg-[#F6F2E4] */}
+
+          <CouncilBearersCarousel />
+
         </motion.div>
       </section>
     </main>
