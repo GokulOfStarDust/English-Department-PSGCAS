@@ -4,7 +4,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+// src/index.js (or src/main.js)
 import '/src/index.css';
+
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
@@ -13,15 +15,15 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 const councilBearers = [
   {
-    header : "/joint-secretaries-header.webp",
+    header : "/secretaries-header.webp",
     male: {
       name: "Sriram",
-      position: "Joint Secretary",
+      position: "Secretary",
       image: "/sriram-secretary.webp",
     },
     female: {
       name: "Deepana",
-      position: "Joint Secretary",
+      position: "Secretary",
       image: "/deepana-secretary.webp",
     }
   },

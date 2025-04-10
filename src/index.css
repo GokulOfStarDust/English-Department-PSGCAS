@@ -12,7 +12,25 @@
 body {
   background-color: #f6f2e4;
 }
+/* src/index.css */
 
+/* Inactive pagination bullets */
+.swiper .swiper-pagination-bullet {
+  background: #ffffff !important; /* Red for inactive */
+  opacity: 0.5 !important;
+}
+
+/* Active pagination bullet */
+.swiper .swiper-pagination-bullet-active {
+  background: #ffffff !important; /* Green for active */
+  opacity: 1 !important;
+}
+
+/* Next and previous buttons */
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev {
+  color: #ffffff !important; /* Blue for arrows */
+}
 
 
 .swiper {

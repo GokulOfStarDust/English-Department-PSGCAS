@@ -9,6 +9,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import CouncilBearersCarousel from "./CouncilBearersCarousel";
 
 import SwiperElement from "./CouncilBearersCarousel";
 // import required modules
