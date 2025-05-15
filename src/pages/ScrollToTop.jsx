@@ -20,7 +20,6 @@ const ScrollToTop = () => {
 
     prePathRefs.current = pathname;
 
-
   }, [pathname]);
 
   return null;
