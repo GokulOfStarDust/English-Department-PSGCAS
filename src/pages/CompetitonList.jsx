@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import competitionData from "./CompetitionData";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { use } from "framer-motion/m";
 
 export default function CompetitionList({ eventId }) {
   const navigate = useNavigate();
@@ -20,6 +21,10 @@ export default function CompetitionList({ eventId }) {
   const imageLoadHandle = () => {
     setImageLoaded((prev) => prev + 1);
   };
+
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
 
   return (
     <>
