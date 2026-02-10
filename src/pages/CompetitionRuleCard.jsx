@@ -55,7 +55,7 @@ export default function EventRuleCard({ competitionId }) {
           {competition.description}
         </motion.div>
         {competition.guidelines.length != 0 && <div className="flex flex-col font-plex text-event-card-black">
-          <p className="text-xl font-bold">Guidelines :</p>
+          <p className="text-xl font-bold">General Guidelines :</p>
           <ol className="text-sm md:text-md lg:text-lg space-y-4 mt-4">
             {competition.guidelines.map((guideline, index) => {
               return (
@@ -77,7 +77,7 @@ export default function EventRuleCard({ competitionId }) {
                     {competition.rules[round].map((rule, index) => {
                       return (
                         <li key={index}>
-                          {index + 1}. {rule}
+                          • {rule}
                         </li>
                       );
                     })}

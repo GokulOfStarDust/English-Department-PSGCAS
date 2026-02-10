@@ -10,7 +10,7 @@ const eventData = {
       date: "20 February 2026",
       location: "GRD Auditorium, PSG College of Arts & Science",
       eventFor: "Others",
-      imageUrl: "/phoenix26-poster.webp",
+      imageUrl: "/phoenix'26-poster.webp",
       registerationFeeInfo: "₹200 (Individual Registration)",
       organizers: ["Dr. T.M. Nidhya Gowdhami", "Mr. T. Palanisamy", "Dakshmitha G (Chairperson) - 9942445559", "Venketrajah D (Chairperson) - 8825578611"]
     },

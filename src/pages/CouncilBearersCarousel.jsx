@@ -17,28 +17,28 @@ const councilBearers = [
   {
     header : "/secretaries-header.webp",
     male: {
-      name: "Sriram",
+      name: "",
       position: "Secretary",
-      image: "/sriram-secretary.webp",
+      image: "",
     },
     female: {
-      name: "Deepana",
+      name: "",
       position: "Secretary",
-      image: "/deepana-secretary.webp",
+      image: "",
     }
   },
   {
 
     header : "/chairperson-header.webp",
     male: {
-      name: "Arun",
+      name: "Venketrajah D",
       position: "Chairperson",
-      image: "/arun-chairperson.webp",
+      image: "/venketrajah-chairperson.webp",
     },
     female: {
-      name: "Gopika",
+      name: "Dakshmitha G",
       position: "Chairperson",
-      image: "/gopika-chairperson.webp",
+      image: "/dakshmitha-chairperson.webp",
     }
   },
 ]
@@ -71,11 +71,11 @@ export default function CouncilBearersCarousel() {
                     <div className="w-full flex flex-row justify-around items-center">
                       <div className="flex flex-col items-center justify-center w-full gap-y-2">
                         <img src={councilBearer.male.image} alt="" className="object-contain w-[29%] lg:-mt-10 min-w-[140px] divide-breakpoint:min-w-[190px]" />
-                        <p className="text-white text-xl md:text-2xl lg:text-3xl font-josefin font-semibold italic">{councilBearer.male.name}</p>
+                        <p className="text-white text-xl md:text-2xl lg:text-3xl font-josefin font-semibold italic mt-20">{councilBearer.male.name}</p>
                       </div>
                       <div className="flex flex-col items-center justify-center w-full gap-y-2">
                         <img src={councilBearer.female.image} alt="" className="object-contain w-[29%] lg:-mt-10 min-w-[140px] divide-breakpoint:min-w-[190px]" /> 
-                        <p className="text-white text-xl md:text-2xl lg:text-3xl font-josefin font-semibold italic">{councilBearer.female.name}</p>
+                        <p className="text-white text-xl md:text-2xl lg:text-3xl font-josefin font-semibold italic mt-20">{councilBearer.female.name}</p>
                       </div>
                     </div>
                   </div>
