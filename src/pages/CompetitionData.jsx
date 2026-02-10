@@ -1,6 +1,395 @@
 import { desc, sub, time } from "framer-motion/client";
 
 const competitionData = {
+
+  phoenix26: [
+  {
+    id: "soliloquy",
+    status: "open",
+    name: "Echoes Unheard (Soliloquy)",
+    subTheme: "Mythology",
+    description:
+      "Echoes Unheard is an individual soliloquy event that invites participants to step into the psyche of mythological characters and voice their inner thoughts, struggles, emotions, and conflicts. This event offers a powerful platform to explore mythology through personal expression, dramatic intensity, and emotional depth, allowing performers to bring legendary figures to life through spoken word.",
+    imageUrl: "/phoenix26-soliloquy.webp",
+    eventFor: "Others",
+    time: "10:30 AM",
+    date: "20 February 2026",
+    location: "GRD Auditorium",
+    guidelines: [
+      
+    ],
+    rules: {
+      "General Rules": [
+        "Time limit: 3 Minutes.",
+        "Theme: Mythology.",
+        "Participation: Individual.",
+        "Participants must deliver the soliloquy in English.",
+        "Reading from scripts or mobile phones is not permitted.",
+        "Costumes must be appropriate.",
+        "Background display and music (to be brought on the day in MP3, MP4 format in USB).",
+        "Participants may use minimal props if required."
+      ]
+    }
+  },
+
+  {
+    id: "lit-parade",
+    status: "open",
+    name: "Masque of Myth (Lit Parade)",
+    subTheme: "Mythology",
+    description:
+      "Masque of Myth is a visually engaging literary parade where participants embody mythological characters through costumes, expressions, and movement. Teams present a parade-style walk that highlights the essence, symbolism, and identity of their chosen characters. This event celebrates mythology through theatrical presentation, creativity, and character interpretation.",
+    imageUrl: "/phoenix26-lit-parade.webp",
+    eventFor: "Others",
+    time: "11:00 AM",
+    date: "20 February 2026",
+    location: "GRD Auditorium",
+    guidelines: [
+      
+    ],
+    rules: {
+      "General Rules": [
+        "Time Limit: 2 Minutes.",
+        "Theme: Mythology.",
+        "Participation: 3 – 7 per team.",
+        "Participants can represent mythological characters or creative adaptations of mythological characters, provided the core identity is retained.",
+        "Teams will present a parade-style walk portraying their chosen character.",
+        "Participants are encouraged to submit the following prior to the event:",
+        "Name of the characters represented",
+        "Audio and/or video clips (if required – for LED/background display)",
+        "Teams can use props and costumes to enhance character representations.",
+        "Participants must be prepared to answer questions related to the character(s) they portray.",
+        "Costumes must be appropriate to the chosen theme."
+      ]
+    }
+  },
+
+  {
+    id: "oracle-groove",
+    status: "open",
+    name: "The Oracle’s Groove (Group Dance)",
+    subTheme: "Mythology",
+    description:
+      "The Oracle’s Groove is a high-energy group dance competition under Theatrics that transforms mythological stories into dynamic movement and rhythm. Teams bring legends to life through coordinated choreography, expressive formations, and thematic storytelling using dance styles ranging from Western to Contemporary.",
+    imageUrl: "/phoenix26-group-dance.webp",
+    eventFor: "Others",
+    time: "11:45 AM",
+    date: "20 February 2026",
+    location: "GRD Auditorium",
+    guidelines: [
+     
+    ],
+    rules: {
+      "General Rules": [
+        "Time limit: 3 – 5 Minutes.",
+        "Participation: 4 – 8 Members.",
+        "Each group must bring their music track and/or background visuals in MP3 and MP4 format on USB.",
+        "Western, Hip-Hop, Fusion and Contemporary dance styles are permitted.",
+        "Inappropriate or offensive gestures and vulgarity in music and lyrics are strictly forbidden.",
+        "Costumes must be appropriate and participants may use props if required.",
+        "Hazardous materials like fire, sharp objects, flammable and liquids are strictly prohibited."
+      ]
+    }
+  },
+
+  {
+    id: "echoes-of-time",
+    status: "open",
+    name: "Echoes of Time (Drama)",
+    subTheme: "Mythology",
+    description:
+      "Echoes of Time is a stage drama event that challenges participants to dramatize mythological narratives and characters while preserving their original essence. Teams can creatively adapt existing stories or present original interpretations rooted in mythology, blending performance, dialogue, costumes, and music into a compelling theatrical experience.",
+    imageUrl: "/phoenix26-drama.webp",
+    eventFor: "Others",
+    time: "11:45 AM",
+    date: "20 February 2026",
+    location: "GRD Auditorium",
+    guidelines: [
+     
+    ],
+    rules: {
+      "General Rules": [
+        "Time limit: 4 – 7 Minutes.",
+        "Participation: 3 – 8 Members.",
+         "Perform a short drama based on mythology/mythological characters.",
+      "Adaptations of existing works are encouraged as well, however, originality of mythological features must be retained.",
+      "Bring your own props, costumes, and background music (if needed, on a USB for submission in MP3 and MP4 format).",
+      "Maintain modesty in appearance."
+      ]
+    }
+  },
+
+  {
+    id: "ballads-of-songbirds",
+    status: "open",
+    name: "Ballads of the Songbirds (Solo Singing)",
+    subTheme: "Mythology",
+    description:
+      "Ballads of the Songbirds is a solo singing competition where participants convey mythological themes and narratives through voice and music. This event focuses on lyrical clarity, emotional delivery, and thematic relevance, allowing singers to channel mythology into melodic expression.",
+    imageUrl: "/phoenix26-solo-singing.webp",
+    eventFor: "Others",
+    time: "11:45 AM",
+    date: "20 February 2026",
+    location: "GRD Auditorium",
+    guidelines: [
+     
+    ],
+    rules: {
+      "General Rules": [
+        "Time limit: 3 Minutes.",
+        "Participation: Individual.",
+         "Songs should be performed only in English.",
+      "Lyrics must be appropriate and non-offensive.",
+      "Karaoke tracks without backing vocals may be used which must be brought in a USB in MP3 format.",
+      "Musical instruments are not permitted."
+      ]
+    }
+  },
+
+  {
+    id: "adaptunes",
+    status: "open",
+    name: "Terpsichore’s Trail (Adaptunes)",
+    subTheme: "Mythology",
+    description:
+      "Terpsichore’s Trail is a dance adaptation challenge that tests creativity, synchronization, and adaptability. Participants must interpret music provided on stage, either individually or as a duo, creating fluid movements that reflect harmony, rhythm, and responsiveness.",
+    imageUrl: "/phoenix26-adaptunes.webp",
+    eventFor: "Others",
+    time: "02:00 PM",
+    date: "20 February 2026",
+    location: "GRD Auditorium",
+    guidelines: [
+    
+    ],
+    rules: {
+      "General Rules": [
+        "Participation: Individual / Duo.",
+        "Maximum two participants per college.",
+          "Solo participants shall make use of the properties provided on stage by the event committee and dance adapting to the music.",
+      "The duo participants should present a mirror dance in which one person should take up the lead to song and the other should follow and copy the same steps like a reflection in the mirror.",
+      "Both of the dancers should maintain synchronization."
+      ]
+    }
+  },
+
+  {
+    id: "treasure-hunt",
+    status: "open",
+    name: "Odyssey: The Chase (Treasure Hunt)",
+    subTheme: "Mythology",
+    description:
+      "Odyssey: The Chase is a campus-wide treasure hunt inspired by epic mythological journeys. Teams navigate a series of clues that test logic, reasoning, teamwork, and mythological knowledge as they race to uncover the final destination.",
+    imageUrl: "/phoenix26-treasure-hunt.webp",
+    eventFor: "Others",
+    time: "10:30 AM",
+    date: "20 February 2026",
+    location: "On Campus",
+    guidelines: [
+      
+    ],
+    rules: {
+      "General Rules": [
+        "Participation: Maximum 4 members.",
+        "Participants shall find the placement to the next clue upon solving the previous one provided to them.",
+      "All participants of team must be present while receiving consecutive clues.",
+      "Teams must substantiate their reasoning towards solving the clue.",
+      "Successive clues shall be provided on a first come first serve basis.",
+      "Communication outside team members and/or with other teams is prohibited.",
+      "Usage of Mobile Phones/Electronic/Smart/AI devices is prohibited."
+      ]
+    }
+  },
+
+  {
+    id: "photography",
+    status: "open",
+    name: "Lit Frames (Photography)",
+    subTheme: "Mythology",
+    description:
+      "Lit Frames is a photography competition that encourages participants to capture mythological symbolism and storytelling through visual frames. This event focuses on originality, composition, and thematic relevance without digital manipulation.",
+    imageUrl: "/phoenix26-photography.webp",
+    eventFor: "Others",
+    time: "10:30 AM",
+    date: "20 February 2026",
+    location: "On Campus",
+    guidelines: [
+     
+    ],
+    rules: {
+      "General Rules": [
+        "Time limit: 30 – 45 Minutes.",
+        "Participation: Duo Participation.",
+         "No editings allowed.",
+      "Photos need to be submitted in document format."
+      ]
+    }
+  },
+
+  {
+    id: "quiz",
+    status: "open",
+    name: "Mythos Knockout (Quiz)",
+    subTheme: "Greek, Roman, Norse, and Indian Mythology",
+    description:
+      "Mythos Knockout is a competitive quiz event that challenges teams on their knowledge of global mythologies. From ancient legends to iconic deities, this event rewards quick thinking, accuracy, and depth of understanding.",
+    imageUrl: "/phoenix26-quiz.webp",
+    eventFor: "Others",
+    time: "10:30 AM",
+    date: "20 February 2026",
+    location: "E - 113",
+    guidelines: [
+      
+    ],
+    rules: {
+      "General Rules": [
+        "Participation: 3 members per team.",
+        "Maximum 2 teams per college.",
+        "Top 5 teams selected from prelims will succeed to finals."
+      ]
+    }
+  },
+
+  {
+    id: "shipwreck",
+    status: "open",
+    name: "Wrath of Poseidon (Shipwreck)",
+    subTheme: "Mythology",
+    description:
+      "Wrath of Poseidon is a role-play and persuasion game where participants portray mythological characters stranded after a shipwreck. Teams must convincingly argue their worth and survival through character-driven persuasion.",
+    imageUrl: "/phoenix26-shipwreck.webp",
+    eventFor: "Others",
+    time: "10:30 AM",
+    date: "20 February 2026",
+    location: "E - 114",
+    guidelines: [
+
+    ],
+    rules: {
+      "General Rules": [
+        "Time limit: 5 Minutes.",
+        "Participation: Duo Participation.",
+              "A Game of Role Play & Persuasion.",
+      "You are a passenger stranded after a shipwreck. With limited lifeboats available, participants must convince the captain why they deserve to be saved by enacting their assigned character.",
+      "3 Minutes will be provided for online research.",
+      "One team member shall role-play the assigned character.",
+      "The participant must persuade the captain within the given time."
+      ]
+    }
+  },
+
+  {
+    id: "art",
+    status: "open",
+    name: "The Eternal Muse (Art Event)",
+    subTheme: "Mythology",
+    description:
+      "The Eternal Muse is an individual art event that allows participants to express mythological themes through visual creativity. Any medium may be used to interpret the given theme, encouraging originality and artistic freedom.",
+    imageUrl: "/phoenix26-art.webp",
+    eventFor: "Others",
+    time: "10:30 AM",
+    date: "20 February 2026",
+    location: "E - 316",
+    guidelines: [
+      
+    ],
+    rules: {
+      "General Rules": [
+        "Time limit: 1 Hour 30 Minutes.",
+        "Participation: Individual.",
+        "Theme will be provided on the spot.",
+      "Any preferred art medium can be used.",
+      "Charts will be provided.",
+      "Participants must bring their own preferred art supplies.",
+      "Use of phones for reference is not allowed."
+      ]
+    }
+  },
+
+  {
+    id: "potpourri",
+    status: "open",
+    name: "Helio’s Gauntlet (Potpourri)",
+    subTheme: "Mythology",
+    description:
+      "Helio’s Gauntlet is a fast-paced potpourri event combining logic, performance, and myth-inspired challenges. Teams compete across multiple rounds including connections, charades, and themed tasks to claim victory.",
+    imageUrl: "/phoenix26-potpourri.webp",
+    eventFor: "Others",
+    time: "02:00 PM",
+    date: "20 February 2026",
+    location: "E - 113",
+    guidelines: [
+      
+    ],
+    rules: {
+      "General Rules": [
+        "Participation: Duo Participation.",
+        "A mix of fun and mind games.",
+      "Potpourri is a three round team event of Connections, Charades and Myth-Inspired tasks.",
+      "No substitution of team members allowed.",
+      "Answers once given cannot be changed.",
+      "Any form of malpractice shall lead to disqualification.",
+      "The team that completes all final tasks shall be crowned the winner."
+      ]
+    }
+  },
+
+  {
+    id: "spell-bee",
+    status: "open",
+    name: "Mythic Spells (Spell Bee)",
+    subTheme: "Greek, Norse, Roman, Egyptian, Indian Mythology",
+    description:
+      "Mythic Spells is a spell bee competition that tests participants on spelling mythological terms, names, and concepts across cultures. Precision, focus, and linguistic skill are key to advancing through multiple rounds.",
+    imageUrl: "/phoenix26-spellbee.webp",
+    eventFor: "Others",
+    time: "02:00 PM",
+    date: "20 February 2026",
+    location: "E - 114",
+    guidelines: [
+      
+    ],
+    rules: {
+      "General Rules": [
+        "Participation: Duo Participation.",
+        "Maximum of 2 teams per college.",
+        "Rounds: Preliminary, Semi-finals, Finals.",
+        "Top 5 teams selected from Semi-finals will succeed to Finals.",
+        "No electronic devices, references or external assistance shall be used during the event.",
+      "Clarification requests are allowed only before the timer starts.",
+      "Any malpractice shall lead to disqualification."
+      ]
+    }
+  },
+
+  {
+    id: "poetry",
+    status: "open",
+    name: "Mythokavya (Poetry Writing)",
+    subTheme: "Mythology",
+    description:
+      "Mythokavya is a poetry writing competition that invites participants to explore mythology through verse. Poets express mythological narratives, emotions, and symbolism across two structured rounds.",
+    imageUrl: "/phoenix26-poetry.webp",
+    eventFor: "Others",
+    time: "02:00 PM",
+    date: "20 February 2026",
+    location: "E - 316",
+    guidelines: [
+      
+    ],
+    rules: {
+      "General Rules": [
+        "Time limit: 45 – 60 Minutes.",
+        "Participation: Individual.",
+        "Theme: Mythology.",
+        "There will be two rounds: Round I: Poem Writing, Round II: Poem Appreciation (Written).",
+      "Participants selected from round I will move to the final round.",
+      "Topic and paper will be given on spot.",
+      "The poem should be within 24 lines, English language."
+      ]
+    }
+  }
+],
+
   phoenix: [
     {
       id: "quiz",

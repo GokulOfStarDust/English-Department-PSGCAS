@@ -167,7 +167,7 @@ export default function CompetitionList({ eventId }) {
                           On-spot registration is available on the event day.
                         </p>
                       </div>
-                      <div className="flex flex-row flex-wrap items-start p-4 pl-0 pt-0 space-x-0">
+                      {"organizers" in competition && <div className="flex flex-row flex-wrap items-start p-4 pl-0 pt-0 space-x-0">
                         <div className="flex flex-row flex-nowrap items-center p-4 pl-0 pt-0 space-x-2">
                           <img
                             src="/organizer-icon.svg"
@@ -195,7 +195,7 @@ export default function CompetitionList({ eventId }) {
                           }) || console.log("No organizers found.")}
 
                         </div>
-                      </div>
+                      </div>}
                     </div>
                   </motion.div>
                   <div className="flex flex-row flex-wrap justify-center items-center">

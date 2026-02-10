@@ -54,7 +54,7 @@ export default function EventRuleCard({ competitionId }) {
         >
           {competition.description}
         </motion.div>
-        <div className="flex flex-col font-plex text-event-card-black">
+        {competition.guidelines.length != 0 && <div className="flex flex-col font-plex text-event-card-black">
           <p className="text-xl font-bold">Guidelines :</p>
           <ol className="text-sm md:text-md lg:text-lg space-y-4 mt-4">
             {competition.guidelines.map((guideline, index) => {
@@ -65,7 +65,7 @@ export default function EventRuleCard({ competitionId }) {
               );
             })}
           </ol>
-        </div>
+        </div>}
         <div className="flex flex-col font-plex text-event-card-black gap-y-5">
           <p className="font-bold text-xl">Rules :</p>
           <div>

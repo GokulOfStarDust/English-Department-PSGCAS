@@ -1,0 +1,20 @@
+ {/*To ask whether team lead or not */}
+                    <div className="w-full flex flex-col justify-center font-plex items-center text-white p-4 mt-9 space-y-4 border-y-2 border-white">
+                        <div className="flex flex-row space-x-7">
+                            <p className="text-lg md:text-2xl">Are you drama team leader?</p>
+                            <label className="text-md md:text-xl flex flex-row justify-center items-center cursor-pointer">
+                                <input type="radio" value="yes" className="size-4 m-2 accent-[#ca9b6f]"
+                                {...register("teamLead",{required: "Select if you're Team leader or not."})}
+                                />
+                                Yes
+                            </label>
+                            <label className="text-md md:text-xl flex flex-row justify-center items-center cursor-pointer">
+                                <input type="radio" value="no" className="size-4 m-2 accent-[#ca9b6f] "
+                                {...register("teamLead",{required: "Select if you're Team leader or not."})}
+                                />
+                                No
+                            </label>
+                        </div>
+                        {errors.teamLead && <p className="text-red-500 text-sm">{errors.teamLead.message}</p>}
+                        
+                    </div>

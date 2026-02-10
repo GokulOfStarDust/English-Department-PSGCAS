@@ -26,7 +26,7 @@ export default function Register() {
     );
     console.log(data);
     try {
-      const response = await fetch("https://sheetdb.io/api/v1/lzpg334sf0xb1", {
+      const response = await fetch("https://sheetdb.io/api/v1/d4tr80nn9fpw7", {
         
         method: "POST",
         headers: {
@@ -76,6 +76,7 @@ export default function Register() {
 
   useEffect(() => {
     if(selectedEvent === "Phoenix '25") setTotalRegistrationFee(250);
+    if(selectedEvent === "Phoenix '26") setTotalRegistrationFee(200);
   },[selectedEvent])
 
   return (

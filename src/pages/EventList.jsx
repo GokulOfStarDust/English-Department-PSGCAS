@@ -66,9 +66,9 @@ export default function EventList() {
             return (
               <li key={event.id} className="list-none" role="listitem">
                 <div
-                  onClick={() => {
-                    navigate(`/events/${event.id}`);
-                  }}
+                  // onClick={() => {
+                  //   navigate(`/events/${event.id}`);
+                  // }}
                 >
                   <motion.div className="flex flex-col bg-event-card-black w-[88svw] md:w-[65svw] p-7 pt-7 space-y-5 rounded-3xl ">
                     <motion.div className="flex flex-row justify-center">
@@ -142,6 +142,35 @@ export default function EventList() {
                           />
                           <p>Registration Fee: {event.registerationFeeInfo}</p>
                         </div>
+                        {"organizers" in event && <div className="flex flex-row flex-wrap items-start p-4 pl-0 pt-0 space-x-0">
+                        <div className="flex flex-row flex-nowrap items-center p-4 pl-0 pt-0 space-x-2">
+                          <img
+                            src="/organizer-icon.svg"
+                            alt="Organizer icon to represent Organizer's contact details"
+                            className="object-contain size-6 opacity-70"
+                          />
+                          <p>
+                            Organizers :
+                          </p>
+                        </div>
+                        <div className="flex flex-col justify-center p-4 pl-0 pt-0 space-y-2">
+                          { "organizers" in event && event.organizers.map((organizer, index) => {
+                            return (
+                              <div key={index} className="flex flex-row items-center space-x-2">
+                                {/* <a href={`tel:${organizer.contact}`}> */}
+                                  <img
+                                    src="/phone-icon.svg"
+                                    alt="Phone icon to represent Organizer's contact number"
+                                    className="object-contain size-5"
+                                  />
+                                {/* </a> */}
+                                <p className="">{organizer}</p>
+                              </div>
+                            );
+                          }) || console.log("No organizers found.")}
+
+                        </div>
+                      </div>}
                       </div>
                     </motion.div>
                     <div

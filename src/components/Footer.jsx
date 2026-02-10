@@ -56,19 +56,19 @@ export default function Footer() {
           <h1 className="text-base font-semibold">Contact Us</h1>
           <div className="flex flex-col items-start space-y-1 md:space-y-2 w-full text-[0.75rem] md:text-sm">
             <p className="font-light">
-              <span className="">N S Muguntharajan</span>
-              <span className="text-gray-200"> (Staff Incharge)</span> -
-              <a href="tel:9789642676" className=" hover:underline">
-                {" "}
-                9789642676
-              </a>
-            </p>
-            <p className="font-light">
-              <span className="">Gopika</span>
+              <span className="">Dakshmitha G</span>
               <span className="text-gray-200"> (Chairperson)</span> -
               <a href="tel:9789642676" className=" hover:underline">
                 {" "}
-                8248598428
+                9942445559
+              </a>
+            </p>
+            <p className="font-light">
+              <span className="">Venketrajah D</span>
+              <span className="text-gray-200"> (Chairperson)</span> -
+              <a href="tel:9789642676" className=" hover:underline">
+                {" "}
+                8825578611
               </a>
             </p>
           </div>
